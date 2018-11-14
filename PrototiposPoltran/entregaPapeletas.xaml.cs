@@ -39,6 +39,7 @@ namespace PrototiposPoltran
 
         private void dataGrid1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            int i = 0;
 
         }
 
