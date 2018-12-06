@@ -34,12 +34,15 @@ namespace PrototiposPoltran
 
         private void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
+            resultadosBúsqueda resultado = new resultadosBúsqueda();
+            this.contenedor.Content = resultado;
 
         }
 
         private void btnSalir_Click(object sender, RoutedEventArgs e)
         {
             scrollContenedor.Content = null;
+
         }
     }
 }

@@ -12,7 +12,7 @@
         <TextBox x:Name="txtCip" HorizontalAlignment="Left" Height="23" Margin="211,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169"/>
         <TextBox x:Name="txtContraseña" HorizontalAlignment="Left" Height="23" Margin="211,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169"/>
         <Label x:Name="label1_Copy" Content="Ingrese sus Credenciales" HorizontalAlignment="Left" Margin="134,47,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="24,17,0,0" VerticalAlignment="Top" Width="79" Source="pnpok.png" Stretch="Fill"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="24,17,0,0" VerticalAlignment="Top" Width="79" Source="C:\Users\Alonso\Documents\Visual Studio 2015\Projects\PrototiposPoltran\PrototiposPoltran\pnpok.png" Stretch="Fill"/>
         <Button x:Name="btnIngresar" Content="Ingresar" HorizontalAlignment="Left" Margin="191,280,0,0" VerticalAlignment="Top" Width="92" Click="btnIngresar_Click" Height="42" FontSize="18"/>
 
     </Grid>
