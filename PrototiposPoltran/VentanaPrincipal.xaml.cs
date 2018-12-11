@@ -28,7 +28,10 @@ namespace PrototiposPoltran
             btnBusquedaPapeleta.Visibility = Visibility.Hidden;
             btnBusquedaPlaca.Visibility = Visibility.Hidden;
             btnBusquedaOtros.Visibility = Visibility.Hidden;
-
+            btnPapeletasIngresadas.Visibility = Visibility.Hidden;
+            btnExportarInfo.Visibility = Visibility.Hidden;
+            btnCuadroMensual.Visibility = Visibility.Hidden;
+            
         }
 
         private void btnMesaPart1_Click(object sender, RoutedEventArgs e)
@@ -64,6 +67,10 @@ namespace PrototiposPoltran
                 
 
         }
+        private void buttonReportes_Click(object sender, RoutedEventArgs e)
+        {
+            ocultarMostrarBotones(3);
+        }
         private void ocultarMostrarBotones(int id)
         {
             switch (id)
@@ -81,6 +88,11 @@ namespace PrototiposPoltran
                     btnBusquedaPapeleta.Visibility = Visibility.Hidden;
                     btnBusqueda.Visibility = Visibility.Visible;
                     imgBusqueda.Visibility = Visibility.Visible;
+                    btnPapeletasIngresadas.Visibility = Visibility.Hidden;
+                    btnExportarInfo.Visibility = Visibility.Hidden;
+                    btnCuadroMensual.Visibility = Visibility.Hidden;
+                    btnReportes.Visibility = Visibility.Visible;
+                    image_Reportes.Visibility = Visibility.Visible;
                     break;
                 case 2:  
                     btnBusqueda.Visibility = Visibility.Hidden;       
@@ -94,7 +106,31 @@ namespace PrototiposPoltran
                     btnMesaPart.Visibility = Visibility.Visible;
                     btnMesaPart1.Visibility = Visibility.Visible;
                     imgMesaPart.Visibility = Visibility.Visible;
+                    btnPapeletasIngresadas.Visibility = Visibility.Hidden;
+                    btnExportarInfo.Visibility = Visibility.Hidden;
+                    btnCuadroMensual.Visibility = Visibility.Hidden;
+                    btnReportes.Visibility = Visibility.Visible;
+                    image_Reportes.Visibility = Visibility.Visible;
                     break;
+                case 3:
+                    btnMesaPart.Visibility = Visibility.Visible;
+                    btnMesaPart1.Visibility = Visibility.Visible;
+                    imgMesaPart.Visibility = Visibility.Visible;
+                    btnBusqueda.Visibility = Visibility.Visible;
+                    imgBusqueda.Visibility = Visibility.Visible;
+                    btnEntregaCom.Visibility = Visibility.Hidden;
+                    btnEntregaEfec.Visibility = Visibility.Hidden;
+                    btnIngresoDev.Visibility = Visibility.Hidden;
+                    btnBusquedaPapeleta.Visibility = Visibility.Hidden;
+                    btnBusquedaPlaca.Visibility = Visibility.Hidden;
+                    btnBusquedaOtros.Visibility = Visibility.Hidden;
+                    btnReportes.Visibility = Visibility.Hidden;
+                    image_Reportes.Visibility = Visibility.Hidden;
+                    btnPapeletasIngresadas.Visibility = Visibility.Visible;
+                    btnExportarInfo.Visibility = Visibility.Visible;
+                    btnCuadroMensual.Visibility = Visibility.Visible;
+                    break;
+
             }
 
             
@@ -108,6 +144,29 @@ namespace PrototiposPoltran
             busquedapapel.VerticalAlignment = VerticalAlignment.Stretch;
         }
 
-        
+        private void btnPapeletasIngresadas_Click(object sender, RoutedEventArgs e)
+        {
+
+            Reporte_PapeletaIngresadas objeto1 = new Reporte_PapeletaIngresadas(this.scrollContenedor);
+            this.scrollContenedor.Content = objeto1;
+            objeto1.HorizontalAlignment = HorizontalAlignment.Stretch;
+            objeto1.VerticalAlignment = VerticalAlignment.Stretch;
+        }
+
+        private void btnExportarInfo_Click(object sender, RoutedEventArgs e)
+        {
+            ExportarInfo objeto2 = new ExportarInfo(this.scrollContenedor);
+            this.scrollContenedor.Content = objeto2;
+            objeto2.HorizontalAlignment = HorizontalAlignment.Stretch;
+            objeto2.VerticalAlignment = VerticalAlignment.Stretch;
+        }
+
+        private void btnCuadroMensual_Click(object sender, RoutedEventArgs e)
+        {
+            CuadroConductores objeto3 = new CuadroConductores(this.scrollContenedor);
+            this.scrollContenedor.Content = objeto3;
+            objeto3.HorizontalAlignment = HorizontalAlignment.Stretch;
+            objeto3.VerticalAlignment = VerticalAlignment.Stretch;
+        }
     }
 }

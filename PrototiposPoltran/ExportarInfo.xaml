@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="PrototiposPoltran.ExportarInfo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PrototiposPoltran"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Background="#2E2E2E" Width="1006.5" Height="636.5">
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="256" Margin="10,0,0,0" VerticalAlignment="Top" Width="996">
+            <Label x:Name="label" Content="NRO. DE OFICIO&#xD;&#xA;" HorizontalAlignment="Left" Margin="18,10,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="18"/>
+            <Label x:Name="label_Copy" Content="AÑO DEL OFICIO&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Margin="18,99,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="18"/>
+            <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="22" Margin="208,20,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="150"/>
+            <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="22" Margin="208,109,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="150"/>
+            <Button x:Name="button"  HorizontalAlignment="Left" Margin="495,63,0,0" VerticalAlignment="Top" Width="88" Height="72" Background="Transparent">
+                <Image Source="C:\Users\Peter\Source\Repos\AlonsoPinto77\Law-Order\PrototiposPoltran\minibusquedaLogo.png"/>
+            </Button>
+            <Button x:Name="button_Copy"  HorizontalAlignment="Left" Margin="751,63,0,0" VerticalAlignment="Top" Width="88" Height="72" Background="Transparent">
+                <Image Source="C:\Users\Peter\Source\Repos\AlonsoPinto77\Law-Order\PrototiposPoltran\salirLogo.png"></Image>
+            </Button>
+        </Grid>
+
+    </Grid>
+</UserControl>

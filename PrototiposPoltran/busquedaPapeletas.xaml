@@ -13,7 +13,7 @@
                     <Label x:Name="label" Content="N° de Papeleta: " HorizontalAlignment="Left" Margin="9,31,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Foreground="White"/>
                     <TextBox x:Name="textBox" Margin="160,31,634,38" TextWrapping="Wrap" FontSize="18"/>
                     <Button x:Name="btnBuscar" Margin="394,15,516,25" Background="Transparent" Click="btnBuscar_Click">
-                        <Image Source="C:\Users\Alonso\Documents\Visual Studio 2015\Projects\PrototiposPoltran\PrototiposPoltran\minibusquedaLogo.png"/>
+                        <Image Source="C:\Users\Peter\Source\Repos\AlonsoPinto77\Law-Order\PrototiposPoltran\minibusquedaLogo.png"/>
                     </Button>
                     <Button x:Name="button1" HorizontalAlignment="Left" Margin="763,528,0,0" VerticalAlignment="Top" Width="74">
                         <Image Source="imprimirLogo.png"></Image>
@@ -22,10 +22,10 @@
                         <Image Source="salirLogo.png"></Image>
                     </Button>
                     <Button x:Name="button3"  HorizontalAlignment="Left" Margin="736,10,0,0" VerticalAlignment="Top" Width="75" Height="72" Background="Transparent">
-                        <Image Source="C:\Users\Alonso\Documents\Visual Studio 2015\Projects\PrototiposPoltran\PrototiposPoltran\imprimirLogo.png"></Image>
+                        <Image Source="C:\Users\Peter\Source\Repos\AlonsoPinto77\Law-Order\PrototiposPoltran\imprimirLogo.png"></Image>
                     </Button>
                     <Button x:Name="btnSalir"  HorizontalAlignment="Left" Margin="900,10,0,0" VerticalAlignment="Top" Width="75" Height="72" Background="Transparent" Click="btnSalir_Click">
-                        <Image Source="C:\Users\Alonso\Documents\Visual Studio 2015\Projects\PrototiposPoltran\PrototiposPoltran\salirLogo.png"></Image>
+                        <Image Source="C:\Users\Peter\Source\Repos\AlonsoPinto77\Law-Order\PrototiposPoltran\salirLogo.png"></Image>
                     </Button>
                     <Label x:Name="label1" Content="IMPRIMIR" HorizontalAlignment="Left" Margin="739,82,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
                     <Label x:Name="label2" Content="SALIR" HorizontalAlignment="Left" Margin="916,82,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
