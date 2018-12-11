@@ -25,7 +25,7 @@
                             <Button x:Name="btnIngresoDev" Content="Ingreso Devolución de Papeletas" VerticalAlignment="Top" Height="28" FontWeight="Bold" FontSize="12" Margin="1,102,39,0"/>
                             <Button x:Name="btnMesaPart1" HorizontalAlignment="Left" Margin="40,10,0,0" VerticalAlignment="Top" Width="132" Height="120" Click="btnMesaPart1_Click">
                                 <StackPanel x:Name="btnMesaPart">
-                                    <Image x:Name="imgMesaPart" Source="C:\Users\Peter\Source\Repos\AlonsoPinto77\Law-Order\PrototiposPoltran\documentoLogo.jpg"/>
+                                    <Image x:Name="imgMesaPart" Source="C:\Users\Mauricio\source\repos\AlonsoPinto77\Law-Order\PrototiposPoltran\documentoLogo.jpg"/>
                                 </StackPanel>
                             </Button>
                         </Grid>
@@ -36,7 +36,7 @@
                             <Button x:Name="btnBusquedaPlaca" Content="Por Placa" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" Width="189"/>
                             <Button x:Name="btnBusquedaOtros" Content="Otros" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top" Width="189"/>
                             <Button x:Name="btnBusqueda" HorizontalAlignment="Left"  Margin="38,10,0,0" VerticalAlignment="Top" Width="132" Height="122" Background="Transparent" Click="btnBusqueda_Click">
-                                <Image x:Name="imgBusqueda" Source="C:\Users\Peter\Source\Repos\AlonsoPinto77\Law-Order\PrototiposPoltran\busquedaLogo.png">
+                                <Image x:Name="imgBusqueda" Source="C:\Users\Mauricio\source\repos\AlonsoPinto77\Law-Order\PrototiposPoltran\busquedaLogo.png">
 
                                 </Image>
                             </Button>
@@ -48,7 +48,7 @@
                             <Button x:Name="btnExportarInfo" Content="Exportar Informacion de Papeletas" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top" Width="194" FontSize="12" Height="28" Click="btnExportarInfo_Click"/>
                             <Button x:Name="btnCuadroMensual" Content="Cuadro Mensual de Conductores" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" Width="194" FontSize="12" Height="28" Click="btnCuadroMensual_Click"/>
                             <Button x:Name="btnReportes"  HorizontalAlignment="Left" Margin="36,10,0,0" VerticalAlignment="Top" Width="132" Click="buttonReportes_Click" Background="Transparent" Height="122">
-                                <Image x:Name="image_Reportes"  Source="C:\Users\Peter\Source\Repos\AlonsoPinto77\Law-Order\PrototiposPoltran\reporteLogo.png"/>
+                                <Image x:Name="image_Reportes"  Source="C:\Users\Mauricio\source\repos\AlonsoPinto77\Law-Order\PrototiposPoltran\reporteLogo.png"/>
                             </Button>
 
 
@@ -56,7 +56,14 @@
                     </GroupBox>
                     <Grid HorizontalAlignment="Left" Height="151" VerticalAlignment="Top" Width="357" Margin="16,164,0,0" Grid.Row="1"/>
                     <GroupBox x:Name="groupBox_Copy2" Header="Estadísticas" Height="182" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White" Margin="9,144,93,0" Grid.Row="1">
-                        <Grid HorizontalAlignment="Left" Height="151" VerticalAlignment="Top" Width="357" Margin="0,0,-2,0"/>
+                        <Grid HorizontalAlignment="Left" Height="154" Margin="0,0,-2,-2" VerticalAlignment="Top" Width="210">
+                            <Button x:Name="btn_PapeletasPorMes" Content="Papeletas por mes" Margin="10,10,10,0" FontSize="12" VerticalAlignment="Top" Height="28" Click="btn_PapeletasPorMes_Click"/>
+                            <Button x:Name="btn_PapeletasComisaria" Content="Papeletas por comisaria" HorizontalAlignment="Left" Margin="10,62,0,0" FontSize="12" VerticalAlignment="Top" Width="190" Height="28" Click="btn_PapeletasComisaria_Click"/>
+                            <Button x:Name="btn_PapeletasOficial" Content="Papeletas por Oficial" HorizontalAlignment="Left" Margin="10,116,0,0" FontSize="12" VerticalAlignment="Top" Width="190" Height="28"/>
+                            <Button x:Name="button" HorizontalAlignment="Left" Margin="21,10,0,0" VerticalAlignment="Top" Width="132" Click="buttonEstadisticas_Click" Background="Transparent" Height="122">
+                                <Image x:Name="image" Source="C:\Users\Mauricio\source\repos\AlonsoPinto77\Law-Order\PrototiposPoltran\estadisticas.png" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
+                            </Button>
+                        </Grid>
                     </GroupBox>
                     <GroupBox x:Name="groupBox_Copy3" Header="Utilidades" Height="182" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White" Margin="10,343,93,0" Grid.Row="1">
                         <Grid HorizontalAlignment="Left" Height="151" VerticalAlignment="Top" Width="357" Margin="0,0,-2,0"/>

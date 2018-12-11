@@ -84,6 +84,12 @@
     <Compile Include="ExportarInfo.xaml.cs">
       <DependentUpon>ExportarInfo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PapeletasComisaria.xaml.cs">
+      <DependentUpon>PapeletasComisaria.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PapeletasPorMes.xaml.cs">
+      <DependentUpon>PapeletasPorMes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Reporte_PapeletaIngresadas.xaml.cs">
       <DependentUpon>Reporte_PapeletaIngresadas.xaml</DependentUpon>
     </Compile>
@@ -121,6 +127,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PapeletasComisaria.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PapeletasPorMes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Reporte_PapeletaIngresadas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

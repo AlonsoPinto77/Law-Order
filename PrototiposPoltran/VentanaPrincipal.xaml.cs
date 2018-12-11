@@ -31,7 +31,10 @@ namespace PrototiposPoltran
             btnPapeletasIngresadas.Visibility = Visibility.Hidden;
             btnExportarInfo.Visibility = Visibility.Hidden;
             btnCuadroMensual.Visibility = Visibility.Hidden;
-            
+            btn_PapeletasPorMes.Visibility = Visibility.Hidden;
+            btn_PapeletasComisaria.Visibility = Visibility.Hidden;
+            btn_PapeletasOficial.Visibility = Visibility.Hidden;
+
         }
 
         private void btnMesaPart1_Click(object sender, RoutedEventArgs e)
@@ -71,6 +74,10 @@ namespace PrototiposPoltran
         {
             ocultarMostrarBotones(3);
         }
+        private void buttonEstadisticas_Click(object sender, RoutedEventArgs e)
+        {
+            ocultarMostrarBotones(4);
+        }
         private void ocultarMostrarBotones(int id)
         {
             switch (id)
@@ -93,6 +100,11 @@ namespace PrototiposPoltran
                     btnCuadroMensual.Visibility = Visibility.Hidden;
                     btnReportes.Visibility = Visibility.Visible;
                     image_Reportes.Visibility = Visibility.Visible;
+                    btn_PapeletasPorMes.Visibility = Visibility.Hidden;
+                    btn_PapeletasComisaria.Visibility = Visibility.Hidden;
+                    btn_PapeletasOficial.Visibility = Visibility.Hidden;
+                    button.Visibility = Visibility.Visible;
+                    image.Visibility = Visibility.Visible;
                     break;
                 case 2:  
                     btnBusqueda.Visibility = Visibility.Hidden;       
@@ -111,6 +123,11 @@ namespace PrototiposPoltran
                     btnCuadroMensual.Visibility = Visibility.Hidden;
                     btnReportes.Visibility = Visibility.Visible;
                     image_Reportes.Visibility = Visibility.Visible;
+                    btn_PapeletasPorMes.Visibility = Visibility.Hidden;
+                    btn_PapeletasComisaria.Visibility = Visibility.Hidden;
+                    btn_PapeletasOficial.Visibility = Visibility.Hidden;
+                    button.Visibility = Visibility.Visible;
+                    image.Visibility = Visibility.Visible;
                     break;
                 case 3:
                     btnMesaPart.Visibility = Visibility.Visible;
@@ -129,8 +146,36 @@ namespace PrototiposPoltran
                     btnPapeletasIngresadas.Visibility = Visibility.Visible;
                     btnExportarInfo.Visibility = Visibility.Visible;
                     btnCuadroMensual.Visibility = Visibility.Visible;
+                    btn_PapeletasPorMes.Visibility = Visibility.Hidden;
+                    btn_PapeletasComisaria.Visibility = Visibility.Hidden;
+                    btn_PapeletasOficial.Visibility = Visibility.Hidden;
+                    button.Visibility = Visibility.Visible;
+                    image.Visibility = Visibility.Visible;
                     break;
 
+                case 4:
+                    btnMesaPart.Visibility = Visibility.Visible;
+                    btnMesaPart1.Visibility = Visibility.Visible;
+                    imgMesaPart.Visibility = Visibility.Visible;
+                    btnBusqueda.Visibility = Visibility.Visible;
+                    imgBusqueda.Visibility = Visibility.Visible;
+                    btnEntregaCom.Visibility = Visibility.Hidden;
+                    btnEntregaEfec.Visibility = Visibility.Hidden;
+                    btnIngresoDev.Visibility = Visibility.Hidden;
+                    btnBusquedaPapeleta.Visibility = Visibility.Hidden;
+                    btnBusquedaPlaca.Visibility = Visibility.Hidden;
+                    btnBusquedaOtros.Visibility = Visibility.Hidden;
+                    btnReportes.Visibility = Visibility.Visible;
+                    image_Reportes.Visibility = Visibility.Visible;
+                    btnPapeletasIngresadas.Visibility = Visibility.Hidden;
+                    btnExportarInfo.Visibility = Visibility.Hidden;
+                    btnCuadroMensual.Visibility = Visibility.Hidden;
+                    btn_PapeletasPorMes.Visibility = Visibility.Visible;
+                    btn_PapeletasComisaria.Visibility = Visibility.Visible;
+                    btn_PapeletasOficial.Visibility = Visibility.Visible;
+                    button.Visibility = Visibility.Hidden;
+                    image.Visibility = Visibility.Hidden;
+                    break;
             }
 
             
@@ -167,6 +212,22 @@ namespace PrototiposPoltran
             this.scrollContenedor.Content = objeto3;
             objeto3.HorizontalAlignment = HorizontalAlignment.Stretch;
             objeto3.VerticalAlignment = VerticalAlignment.Stretch;
+        }
+
+        private void btn_PapeletasPorMes_Click(object sender, RoutedEventArgs e)
+        {
+            PapeletasPorMes objeto4 = new PapeletasPorMes(this.scrollContenedor);
+            this.scrollContenedor.Content = objeto4;
+            objeto4.HorizontalAlignment = HorizontalAlignment.Stretch;
+            objeto4.VerticalAlignment = VerticalAlignment.Stretch;
+        }
+
+        private void btn_PapeletasComisaria_Click(object sender, RoutedEventArgs e)
+        {
+            PapeletasComisaria objeto5 = new PapeletasComisaria(this.scrollContenedor);
+            this.scrollContenedor.Content = objeto5;
+            objeto5.HorizontalAlignment = HorizontalAlignment.Stretch;
+            objeto5.VerticalAlignment = VerticalAlignment.Stretch;
         }
     }
 }
