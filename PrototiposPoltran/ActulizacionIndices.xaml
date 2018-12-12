@@ -1,0 +1,65 @@
+﻿<Window x:Class="PrototiposPoltran.ActulizacionIndices"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PrototiposPoltran"
+        mc:Ignorable="d"
+        Title="ActulizacionIndices" Height="858" Width="999" Background="#1C1C1C" WindowState="Maximized">
+    <Grid>
+        <Border BorderBrush="White" BorderThickness="4" Margin="0,10,0,685" RenderTransformOrigin="0.498,0.363">
+            <Grid Margin="-6,6,-4,0" Height="195" VerticalAlignment="Top">
+                <Label x:Name="label" Content="Actualizacón de Indices " HorizontalAlignment="Left" Margin="197,45,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Foreground="White"/>
+                <TextBox x:Name="textBox" Margin="160,31,634,331" TextWrapping="Wrap" FontSize="18"/>
+                <Button x:Name="btnBuscar" Margin="394,15,516,331" Background="Transparent" Click="btnBuscar_Click">
+                    <Image Source="C:\Users\Alonso\Documents\Visual Studio 2015\Projects\PrototiposPoltran\PrototiposPoltran\minibusquedaLogo.png"/>
+                </Button>
+                <Button x:Name="button1" HorizontalAlignment="Left" Margin="763,528,0,0" VerticalAlignment="Top" Width="74">
+                    <Image Source="imprimirLogo.png"></Image>
+                </Button>
+                <Button x:Name="button2" HorizontalAlignment="Left" Margin="889,528,0,0" VerticalAlignment="Top" Width="76">
+                    <Image Source="salirLogo.png"></Image>
+                </Button>
+                <Button x:Name="btnSalir"  HorizontalAlignment="Left" Margin="818,15,0,0" VerticalAlignment="Top" Width="74" Height="72" Background="Transparent" Click="btnSalir_Click">
+                    <Image Source="C:\Users\Alonso\Documents\Visual Studio 2015\Projects\PrototiposPoltran\PrototiposPoltran\salirLogo.png"></Image>
+                </Button>
+                <Label x:Name="label2" Content="SALIR" HorizontalAlignment="Left" Margin="835,87,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
+            </Grid>
+        </Border>
+        <Grid Margin="10,120,-10,-34">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="236*"/>
+                <ColumnDefinition Width="31*"/>
+                <ColumnDefinition Width="229*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnProcesar" Content="Procesar" HorizontalAlignment="Left" Margin="22,-69,0,0" VerticalAlignment="Top" Width="162" Height="48" Grid.Column="2"/>
+            <Image x:Name="logPoltran" HorizontalAlignment="Left" Height="100" Margin="24,-89,0,0" VerticalAlignment="Top" Width="100"/>
+            <GroupBox x:Name="groupBox" Header="Elija una o mas opciones" HorizontalAlignment="Left" Margin="24,75,0,0" VerticalAlignment="Top" Height="462" Width="906" Foreground="White" FontSize="24" Grid.ColumnSpan="3">
+                <Grid HorizontalAlignment="Left" Height="383" Margin="10,45,-2,0" VerticalAlignment="Top" Width="886">
+                    <CheckBox x:Name="checkBox" Content="Maestro de papeletas - Papeleta.DBF" HorizontalAlignment="Left" Margin="0,31,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
+                    <CheckBox x:Name="checkBox1" Content="Movimiento de papeletas - Movimiento.DBF" HorizontalAlignment="Left" Margin="0,57,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
+                    <CheckBox x:Name="checkBox2" Content="Maestro de comisarias - Comisaria.DBF" HorizontalAlignment="Left" Margin="0,88,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
+                    <CheckBox x:Name="checkBox3" Content="Maestro de propietarios - Propiedad.DBF" HorizontalAlignment="Left" Margin="0,114,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
+                    <CheckBox x:Name="checkBox4" Content="Maestro de distritos - Distrito.DBF" HorizontalAlignment="Left" Margin="0,145,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
+                    <CheckBox x:Name="checkBox5" Content="Maestro de efectivos - Efectivo.DBF" HorizontalAlignment="Left" Margin="0,176,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
+                    <CheckBox x:Name="checkBox6" Content="Maestro de infracciones - Infraccion.DBF" HorizontalAlignment="Left" Margin="0,207,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
+                    <CheckBox x:Name="checkBox7" Content="Maestro de licencia - Licencia.DBF" HorizontalAlignment="Left" Margin="0,238,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
+                    <CheckBox x:Name="checkBox8" Content="Maestro de lugares - Lugares.DBF" HorizontalAlignment="Left" Margin="0,269,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
+                    <CheckBox x:Name="checkBox9" Content="Maestro entrega papeletas - MaestraComi.DBF" HorizontalAlignment="Left" Margin="0,300,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
+                    <CheckBox x:Name="checkBox10" Content="Maestro entrega papeletas - MaestraEfec.DBF" HorizontalAlignment="Left" Margin="0,336,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
+                    <CheckBox x:Name="checkBox11" Content="Maestro clase de Vehículos - MasClase.DBF" HorizontalAlignment="Left" Margin="432,31,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
+                    <CheckBox x:Name="checkBox12" Content="Estadisticas infracciones por mes - InfraMes.DBF" HorizontalAlignment="Left" Margin="432,62,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
+                    <CheckBox x:Name="checkBox13" Content="Estadisticas de Papeletas - SalePape.DBF" HorizontalAlignment="Left" Margin="432,88,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
+                    <CheckBox x:Name="checkBox14" Content="Parametros del sistema - Sistema.DBF" HorizontalAlignment="Left" Margin="432,114,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
+                    <CheckBox x:Name="checkBox15" Content="Maestro talonarios Recepcionados - Talonario.DBF" HorizontalAlignment="Left" Margin="432,145,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
+                    <CheckBox x:Name="checkBox16" Content="Base temporal -Temporal.DBF" HorizontalAlignment="Left" Margin="432,173,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
+                    <CheckBox x:Name="checkBox17" Content="Maestro de usuario -Usuario.DBF" HorizontalAlignment="Left" Margin="432,207,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
+                    <CheckBox x:Name="checkBox18" Content="Base de boletas - Boletas.DBF" HorizontalAlignment="Left" Margin="432,238,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
+                    <CheckBox x:Name="checkBox19" Content="control de ingresos -Control.DBF" HorizontalAlignment="Left" Margin="432,269,0,0" VerticalAlignment="Top" Foreground="White" FontSize="20"/>
+                </Grid>
+
+            </GroupBox>
+
+        </Grid>
+    </Grid>
+</Window>

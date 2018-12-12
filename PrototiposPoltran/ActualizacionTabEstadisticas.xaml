@@ -1,0 +1,58 @@
+﻿<Window x:Class="PrototiposPoltran.ActualizacionTabEstadisticas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PrototiposPoltran"
+        mc:Ignorable="d"
+        Title="ActualizacionTabEstadisticas" Height="858" Width="999" Background="#1C1C1C" WindowState="Maximized">
+    <Grid>
+        <Border BorderBrush="White" BorderThickness="4" Margin="0,10,0,685" RenderTransformOrigin="0.498,0.363">
+            <Grid Margin="-6,6,-4,0" Height="195" VerticalAlignment="Top">
+                <Label x:Name="label" Content="Actualizacón de Tablas Estadisticas " HorizontalAlignment="Left" Margin="70,36,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Foreground="White"/>
+                <TextBox x:Name="textBox" Margin="160,31,634,331" TextWrapping="Wrap" FontSize="18"/>
+                <Button x:Name="btnBuscar" Margin="394,15,516,331" Background="Transparent" Click="btnBuscar_Click">
+                    <Image Source="C:\Users\Alonso\Documents\Visual Studio 2015\Projects\PrototiposPoltran\PrototiposPoltran\minibusquedaLogo.png"/>
+                </Button>
+                <Button x:Name="button1" HorizontalAlignment="Left" Margin="763,528,0,0" VerticalAlignment="Top" Width="74">
+                    <Image Source="imprimirLogo.png"></Image>
+                </Button>
+                <Button x:Name="button2" HorizontalAlignment="Left" Margin="889,528,0,0" VerticalAlignment="Top" Width="76">
+                    <Image Source="salirLogo.png"></Image>
+                </Button>
+                <Button x:Name="btnSalir"  HorizontalAlignment="Left" Margin="824,15,0,0" VerticalAlignment="Top" Width="74" Height="72" Background="Transparent" Click="btnSalir_Click">
+                    <Image Source="C:\Users\KATY\Documents\Visual Studio 2015\Projects\Law-Order-master\PrototiposPoltran\salirLogo.png"></Image>
+                </Button>
+                <Label x:Name="label2" Content="SALIR" HorizontalAlignment="Left" Margin="835,87,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
+            </Grid>
+        </Border>
+        <Grid Margin="10,120,-10,-34">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="236*"/>
+                <ColumnDefinition Width="31*"/>
+                <ColumnDefinition Width="229*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnProcesar" Content="Procesar" HorizontalAlignment="Left" Margin="22,-69,0,0" VerticalAlignment="Top" Width="162" Height="48" Grid.Column="2"/>
+            <Image x:Name="logPoltran" HorizontalAlignment="Left" Height="100" Margin="24,-89,0,0" VerticalAlignment="Top" Width="100"/>
+            <GroupBox x:Name="groupBox" Header="" HorizontalAlignment="Left" Margin="24,75,0,0" VerticalAlignment="Top" Height="462" Width="906" Foreground="White" FontSize="24" Grid.ColumnSpan="3">
+                <Grid HorizontalAlignment="Left" Height="383" Margin="10,45,-2,0" VerticalAlignment="Top" Width="886">
+                    <CheckBox x:Name="checkBox" Content="SalePapeelta.DBF" HorizontalAlignment="Left" Margin="0,31,0,0" VerticalAlignment="Top" Foreground="White" FontSize="28"/>
+                    <CheckBox x:Name="checkBox1" Content="InfraccionMes.DBF" HorizontalAlignment="Left" Margin="0,124,0,0" VerticalAlignment="Top" Foreground="White" FontSize="28"/>
+                    <CheckBox x:Name="checkBox2" Content="Maestra.DBF" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Foreground="White" FontSize="28"/>
+                    <CheckBox x:Name="checkBox3" Content="ClaseVeh.DBF" HorizontalAlignment="Left" Margin="0,316,0,0" VerticalAlignment="Top" Foreground="White" FontSize="28"/>
+                    <Label x:Name="label1" Content="Almacena todas las papeletas que se ingresan" HorizontalAlignment="Center" Margin="339,33,24,0" VerticalAlignment="Top" Height="49.75" Width="523" Foreground="White" FontSize="24" BorderThickness="5,0,0,5" UseLayoutRounding="False"/>
+                    <Label x:Name="label3" Content=" dia a dia" HorizontalAlignment="Left" Margin="337,60,0,0" VerticalAlignment="Top" Height="50" Width="329" Foreground="White" FontSize="24"/>
+                    <Label x:Name="label4" Content=" almacena las fracciones por mes y año, segun " HorizontalAlignment="Left" Margin="339,121,0,0" VerticalAlignment="Top" Height="50" Width="501" Foreground="White" FontSize="24"/>
+                    <Label x:Name="label5" Content=" las pepeletas que se ve" HorizontalAlignment="Left" Margin="339,147,0,0" VerticalAlignment="Top" Height="50" Width="329" Foreground="White" FontSize="24"/>
+                    <Label x:Name="label6" Content=" Alamecna todas las papeletas que se entrega" HorizontalAlignment="Left" Margin="337,202,0,0" VerticalAlignment="Top" Height="50" Width="503" Foreground="White" FontSize="24"/>
+                    <Label x:Name="label7" Content=" a Comisarias y efectivos" HorizontalAlignment="Left" Margin="337,229,0,0" VerticalAlignment="Top" Height="50" Width="329" Foreground="White" FontSize="24"/>
+                    <Label x:Name="label8" Content=" Almacena todas las papeletas según la clase " HorizontalAlignment="Left" Margin="337,298,0,0" VerticalAlignment="Top" Height="50" Width="503" Foreground="White" FontSize="24"/>
+                    <Label x:Name="label9" Content=" del vehiculo por mes y año" HorizontalAlignment="Left" Margin="337,321,0,0" VerticalAlignment="Top" Height="50" Width="329" Foreground="White" FontSize="24"/>
+
+                </Grid>
+
+            </GroupBox>
+
+        </Grid>
+    </Grid>
+</Window>
