@@ -20,8 +20,8 @@
                 <Button x:Name="button2" HorizontalAlignment="Left" Margin="889,528,0,0" VerticalAlignment="Top" Width="76">
                     <Image Source="salirLogo.png"></Image>
                 </Button>
-                <Button x:Name="btnSalir"  HorizontalAlignment="Left" Margin="818,15,0,0" VerticalAlignment="Top" Width="74" Height="72" Background="Transparent" Click="btnSalir_Click">
-                    <Image Source="C:\Users\Alonso\Documents\Visual Studio 2015\Projects\PrototiposPoltran\PrototiposPoltran\salirLogo.png"></Image>
+                <Button x:Name="btnSalir"  HorizontalAlignment="Left" Margin="824,15,0,0" VerticalAlignment="Top" Width="74" Height="72" Background="Transparent" Click="btnSalir_Click">
+                    <Image Source="C:\Users\KATY\Documents\Visual Studio 2015\Projects\Law-Order-master\PrototiposPoltran\salirLogo.png"></Image>
                 </Button>
                 <Label x:Name="label2" Content="SALIR" HorizontalAlignment="Left" Margin="835,87,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
             </Grid>
