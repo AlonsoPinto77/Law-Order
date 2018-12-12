@@ -44,7 +44,7 @@
                     </GroupBox>
                     <GroupBox x:Name="groupBox_Copy1" Header="Reportes" Height="182" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White" Margin="10,404,93,0" Grid.RowSpan="2">
                         <Grid HorizontalAlignment="Left" Height="151" VerticalAlignment="Top" Width="357" Margin="0,0,-2,0">
-                            <Image x:Name="image_Copy2" HorizontalAlignment="Left" Height="195" Margin="0,0,0,-44" VerticalAlignment="Top" Width="204" Source="reporteLogo.png"/>
+                            <Image x:Name="image_Copy2" Height="195" Margin="0,0,153,-44" VerticalAlignment="Top" Source="reporteLogo.png"/>
                         </Grid>
                     </GroupBox>
                     <Grid HorizontalAlignment="Left" Height="151" VerticalAlignment="Top" Width="357" Margin="16,164,0,0" Grid.Row="1"/>
@@ -57,9 +57,9 @@
                 </Grid>
             </ScrollViewer>
         </DockPanel>
-        <Grid Margin="277,10,10,0">
+        <Grid Margin="277,10,0,0">
             <ContentControl x:Name="contentContenedor">
-                <ScrollViewer x:Name="scrollContenedor" IsTabStop="True"  ScrollViewer.HorizontalScrollBarVisibility="Visible" Margin="-5,0,5,0"/>
+                <ScrollViewer x:Name="scrollContenedor" IsTabStop="True"  ScrollViewer.HorizontalScrollBarVisibility="Visible" Margin="-5,0,0,0"/>
             </ContentControl>
         </Grid>
     </Grid>

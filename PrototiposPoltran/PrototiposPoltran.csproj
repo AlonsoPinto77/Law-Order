@@ -60,12 +60,17 @@
     <Compile Include="busquedaPapeletas.xaml.cs">
       <DependentUpon>busquedaPapeletas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Conexion.cs" />
     <Compile Include="entregaPapeletas.xaml.cs">
       <DependentUpon>entregaPapeletas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IngresarPapeleta.xaml.cs">
+      <DependentUpon>IngresarPapeleta.xaml</DependentUpon>
     </Compile>
     <Compile Include="resultadosBúsqueda.xaml.cs">
       <DependentUpon>resultadosBúsqueda.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Validacion.cs" />
     <Compile Include="VentanaPrincipal.xaml.cs">
       <DependentUpon>VentanaPrincipal.xaml</DependentUpon>
     </Compile>
@@ -74,6 +79,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="entregaPapeletas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IngresarPapeleta.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -124,6 +133,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="busquedaLogo.png" />
+    <Resource Include="documentoLogo.jpg" />
+    <Resource Include="documentoLogo.png" />
+    <Resource Include="guardarLogo.jpg" />
+    <Resource Include="imprimirLogo.png" />
+    <Resource Include="minibusquedaLogo.png" />
+    <Resource Include="pnpok.png" />
+    <Resource Include="reporteLogo.png" />
+    <Resource Include="salirLogo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -7,49 +7,59 @@
              mc:Ignorable="d" Background="#2E2E2E" Width="1006.5" Height="636.5">
     <Grid>
         <Grid Margin="0,0,731,0" Height="636" VerticalAlignment="Top">
-            <Label x:Name="label" Content="Buscar:" HorizontalAlignment="Left" Margin="3,0,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" FontSize="16"/>
-            <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="71,6,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199"/>
-            <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="0,36,0,0" Width="270" Height="592" VerticalAlignment="Top" RenderTransformOrigin="0.748,0.482" SelectionChanged="dataGrid_SelectionChanged"/>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="51*"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="label" Content="Buscar:" HorizontalAlignment="Left" Margin="3,0,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" FontSize="16" Grid.RowSpan="2"/>
+            <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="71,6,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="199" Grid.RowSpan="2"/>
+            <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="0,11.727,0,0" Width="270" Height="592" VerticalAlignment="Top" RenderTransformOrigin="0.748,0.482" SelectionChanged="dataGrid_SelectionChanged" Grid.Row="1"/>
         </Grid>
-        <DataGrid x:Name="dataGrid1" Margin="275,10,0,0" HorizontalAlignment="Left" Width="714" Height="299" VerticalAlignment="Top" SelectionChanged="dataGrid1_SelectionChanged"/>
-        <GroupBox x:Name="groupBox" Header="Datos Efectivo Receptor" Margin="290,329,0,0" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" Width="434" Height="186" VerticalAlignment="Top">
-            <Grid Margin="0,0,-2,3">
-                <TextBox x:Name="textBox1" Margin="89,10,17,0" TextWrapping="Wrap" Height="28" VerticalAlignment="Top"/>
-                <Label x:Name="label2" Content="Código CIP: " HorizontalAlignment="Left" Margin="10,10,0,110" FontWeight="Bold" Foreground="White"/>
-                <Label x:Name="nombreEfectivo" Content="" HorizontalAlignment="Left" Margin="248,7,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
-                <GroupBox x:Name="groupBox1" Header="Adjuntar Relación?" Margin="10,85,284,0" Height="75" VerticalAlignment="Top">
-                    <Grid Margin="10,10,7,3">
-                        <RadioButton x:Name="radioButton1" Content="NO" HorizontalAlignment="Left" Margin="3,25,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
-                        <RadioButton x:Name="radioButton" Content="SÍ" HorizontalAlignment="Left" Margin="3,2,0,0" VerticalAlignment="Top" Checked="radioButton_Checked" Foreground="White" FontWeight="Bold"/>
-                    </Grid>
-                </GroupBox>
-                <GroupBox x:Name="groupBox2" Header="Fecha" Margin="156,0,17,6" Height="70" VerticalAlignment="Bottom">
-                    <Grid Margin="0,0,-2,1">
-                        <DatePicker Margin="0,10,4,8"/>
-                    </Grid>
-                </GroupBox>
-                <Label x:Name="label7" Content="Efectivo: " HorizontalAlignment="Left" Margin="13,51,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
-            </Grid>
-        </GroupBox>
-        <GroupBox x:Name="groupBox3" Header="Rango de Papeletas" HorizontalAlignment="Left" Margin="747,366,0,0" VerticalAlignment="Top" Height="130" Width="222" FontWeight="Bold" Cursor="" Foreground="White">
-            <Grid HorizontalAlignment="Left" Height="100" Margin="10,6,0,0" VerticalAlignment="Top" Width="198">
-                <Label x:Name="label1" Content="Del:" HorizontalAlignment="Left" Margin="30,10,0,0" VerticalAlignment="Top" Foreground="White"/>
-                <Label x:Name="label3" Content="Al: " HorizontalAlignment="Left" Margin="34,41,0,0" VerticalAlignment="Top" Foreground="White"/>
-                <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" Margin="67,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="23" Margin="67,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-            </Grid>
-        </GroupBox>
-        <Button x:Name="btnGuardar" HorizontalAlignment="Left" Margin="625,528,0,0" VerticalAlignment="Top" Width="76" Background="Transparent">
-            <Image Source="guardarLogo.jpg"></Image>
-        </Button>
-        <Button x:Name="btnImprimir" HorizontalAlignment="Left" Margin="763,528,0,0" VerticalAlignment="Top" Width="74" Background="Transparent">
-            <Image Source="imprimirLogo.png"></Image>
-        </Button>
-        <Button x:Name="btnSalir" HorizontalAlignment="Left" Margin="889,528,0,0" VerticalAlignment="Top" Width="76" Background="Transparent" Click="btnSalir_Click">
-            <Image Source="salirLogo.png"></Image>
-        </Button>
-        <Label x:Name="label4" Content="Guardar" HorizontalAlignment="Left" Margin="633,607,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Foreground="White"/>
-        <Label x:Name="label5" Content="Imprimir Faltantes" HorizontalAlignment="Left" Margin="732,607,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Foreground="White"/>
-        <Label x:Name="label6" Content="Salir" HorizontalAlignment="Left" Margin="907,607,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14" Foreground="White"/>
+        <Grid Margin="275,0,0,0">
+            <DataGrid x:Name="dataGrid1" Margin="0,10,17,327" SelectionChanged="dataGrid1_SelectionChanged"/>
+            <GroupBox x:Name="groupBox" Header="Datos Efectivo Receptor" Margin="0,314,0,136" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" Width="434">
+                <Grid Margin="0,0,-2,3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="59*"/>
+                        <ColumnDefinition Width="365*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="textBox1" Margin="30.243,10,17,0" TextWrapping="Wrap" Height="28" VerticalAlignment="Top" Grid.Column="1"/>
+                    <Label x:Name="label2" Content="Código CIP: " HorizontalAlignment="Left" Margin="10,10,0,110" FontWeight="Bold" Foreground="White" Grid.ColumnSpan="2"/>
+                    <Label x:Name="nombreEfectivo" Content="" HorizontalAlignment="Left" Margin="189.243,7,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" Grid.Column="1"/>
+                    <GroupBox x:Name="groupBox1" Header="Adjuntar Relación?" Margin="10,85,284,1" Grid.ColumnSpan="2">
+                        <Grid Margin="10,10,7,3">
+                            <RadioButton x:Name="radioButton1" Content="NO" HorizontalAlignment="Left" Margin="3,25,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
+                            <RadioButton x:Name="radioButton" Content="SÍ" HorizontalAlignment="Left" Margin="3,2,0,0" VerticalAlignment="Top" Checked="radioButton_Checked" Foreground="White" FontWeight="Bold"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox x:Name="groupBox2" Header="Fecha" Margin="97,85,17,6" Grid.Column="1">
+                        <Grid Margin="0,0,-2,1">
+                            <DatePicker Margin="0,10,4,8"/>
+                        </Grid>
+                    </GroupBox>
+                    <Label x:Name="label7" Content="Efectivo: " HorizontalAlignment="Left" Margin="13,51,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White" Grid.ColumnSpan="2"/>
+                </Grid>
+            </GroupBox>
+            <GroupBox x:Name="groupBox3" Header="Rango de Papeletas" Margin="480,366,29,140" FontWeight="Bold" Cursor="" Foreground="White">
+                <Grid HorizontalAlignment="Left" Height="100" Margin="10,6,0,0" VerticalAlignment="Top" Width="198">
+                    <Label x:Name="label1" Content="Del:" HorizontalAlignment="Left" Margin="30,10,0,0" VerticalAlignment="Top" Foreground="White"/>
+                    <Label x:Name="label3" Content="Al: " HorizontalAlignment="Left" Margin="34,41,0,0" VerticalAlignment="Top" Foreground="White"/>
+                    <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" Margin="67,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="23" Margin="67,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                </Grid>
+            </GroupBox>
+            <Button x:Name="btnGuardar" HorizontalAlignment="Left" Margin="300,528,0,32" Width="76" Background="Transparent">
+                <Image Source="guardarLogo.jpg"></Image>
+            </Button>
+            <Button x:Name="btnImprimir" HorizontalAlignment="Left" Margin="440,528,0,34" Width="74" Background="Transparent">
+                <Image Source="imprimirLogo.png"></Image>
+            </Button>
+            <Button x:Name="btnSalir" HorizontalAlignment="Left" Margin="580,528,0,32" Width="76" Background="Transparent" Click="btnSalir_Click">
+                <Image Source="salirLogo.png"></Image>
+            </Button>
+            <Label x:Name="label4" Content="Guardar" HorizontalAlignment="Left" Margin="305,607,0,0" FontSize="14" FontWeight="Bold" Foreground="White"/>
+            <Label x:Name="label5" Content="Imprimir Faltantes" HorizontalAlignment="Left" Margin="415,607,0,0" FontSize="14" FontWeight="Bold" Foreground="White"/>
+            <Label x:Name="label6" Content="Salir" HorizontalAlignment="Left" Margin="600,607,0,0" FontWeight="Bold" FontSize="14" Foreground="White"/>
+        </Grid>
     </Grid>
 </UserControl>
