@@ -75,6 +75,7 @@
     <Compile Include="busquedaPapeletas.xaml.cs">
       <DependentUpon>busquedaPapeletas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Conexion.cs" />
     <Compile Include="CuadroConductores.xaml.cs">
       <DependentUpon>CuadroConductores.xaml</DependentUpon>
     </Compile>
@@ -96,6 +97,7 @@
     <Compile Include="resultadosBúsqueda.xaml.cs">
       <DependentUpon>resultadosBúsqueda.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Validacion.cs" />
     <Compile Include="VentanaPrincipal.xaml.cs">
       <DependentUpon>VentanaPrincipal.xaml</DependentUpon>
     </Compile>
