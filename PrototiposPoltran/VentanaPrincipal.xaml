@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PrototiposPoltran"
         mc:Ignorable="d"
-        Title="VentanaPrincipal" Height="1150" Width="1338.866" Background="#1C1C1C" WindowState="Maximized">
+        Title="VentanaPrincipal" Height="968.247" Width="1338.866" Background="#1C1C1C" WindowState="Maximized">
     <Grid>
         <DockPanel LastChildFill="False" Margin="0,0,1054,10">
             <ScrollViewer IsTabStop="True"  ScrollViewer.HorizontalScrollBarVisibility="Disabled" Width="263">
@@ -25,7 +25,7 @@
                             <Button x:Name="btnIngresoDev" Content="Ingreso Devolución de Papeletas" VerticalAlignment="Top" Height="28" FontWeight="Bold" FontSize="12" Margin="1,102,39,0"/>
                             <Button x:Name="btnMesaPart1" HorizontalAlignment="Left" Margin="40,10,0,0" VerticalAlignment="Top" Width="132" Height="120" Click="btnMesaPart1_Click">
                                 <StackPanel x:Name="btnMesaPart">
-                                    <Image x:Name="imgMesaPart" Source="C:\Users\KATY\Documents\Visual Studio 2015\Projects\Law-Order-master\PrototiposPoltran\documentoLogo.jpg"/>
+                                    <Image x:Name="imgMesaPart" Source="C:\Users\Alonso\Documents\Visual Studio 2015\Projects\PrototiposPoltran\PrototiposPoltran\documentoLogo.jpg"/>
                                 </StackPanel>
                             </Button>
                         </Grid>
@@ -36,7 +36,7 @@
                             <Button x:Name="btnBusquedaPlaca" Content="Por Placa" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" Width="189"/>
                             <Button x:Name="btnBusquedaOtros" Content="Otros" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top" Width="189"/>
                             <Button x:Name="btnBusqueda" HorizontalAlignment="Left"  Margin="38,10,0,0" VerticalAlignment="Top" Width="132" Height="122" Background="Transparent" Click="btnBusqueda_Click">
-                                <Image x:Name="imgBusqueda" Source="C:\Users\KATY\Documents\Visual Studio 2015\Projects\Law-Order-master\PrototiposPoltran\busquedaLogo.png">
+                                <Image x:Name="imgBusqueda" Source="C:\Users\Alonso\Documents\Visual Studio 2015\Projects\PrototiposPoltran\PrototiposPoltran\busquedaLogo.png">
 
                                 </Image>
                             </Button>
@@ -44,23 +44,30 @@
                     </GroupBox>
                     <GroupBox x:Name="groupBox_Copy1" Header="Reportes" Height="182" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White" Margin="10,404,93,0" Grid.RowSpan="2">
                         <Grid HorizontalAlignment="Left" Height="151" VerticalAlignment="Top" Width="357" Margin="0,0,-2,0">
-                            <Image x:Name="image_Copy2" HorizontalAlignment="Left" Height="195" Margin="0,0,0,-44" VerticalAlignment="Top" Width="204" Source="C:\Users\KATY\Documents\Visual Studio 2015\Projects\Law-Order-master\PrototiposPoltran\reporteLogo.png"/>
+                            <Button x:Name="btnPapeletasIngresadas" Content="Papeletas Ingresadas" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="194" FontSize="12" Height="28" Click="btnPapeletasIngresadas_Click"/>
+                            <Button x:Name="btnExportarInfo" Content="Exportar Informacion de Papeletas" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top" Width="194" FontSize="12" Height="28" Click="btnExportarInfo_Click"/>
+                            <Button x:Name="btnCuadroMensual" Content="Cuadro Mensual de Conductores" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" Width="194" FontSize="12" Height="28" Click="btnCuadroMensual_Click"/>
+                            <Button x:Name="btnReportes"  HorizontalAlignment="Left" Margin="36,10,0,0" VerticalAlignment="Top" Width="132" Click="buttonReportes_Click" Background="Transparent" Height="122">
+                                <Image x:Name="image_Reportes"  Source="C:\Users\Alonso\Documents\Visual Studio 2015\Projects\PrototiposPoltran\PrototiposPoltran\reporteLogo.png"/>
+                            </Button>
+
+
                         </Grid>
                     </GroupBox>
                     <Grid HorizontalAlignment="Left" Height="151" VerticalAlignment="Top" Width="357" Margin="16,164,0,0" Grid.Row="1"/>
                     <GroupBox x:Name="groupBox_Copy2" Header="Estadísticas" Height="182" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White" Margin="9,144,93,0" Grid.Row="1">
+                        <Grid HorizontalAlignment="Left" Height="154" Margin="0,0,-2,-2" VerticalAlignment="Top" Width="210">
+                            <Button x:Name="btn_PapeletasPorMes" Content="Papeletas por mes" Margin="10,10,10,0" FontSize="12" VerticalAlignment="Top" Height="28" Click="btn_PapeletasPorMes_Click"/>
+                            <Button x:Name="btn_PapeletasComisaria" Content="Papeletas por comisaria" HorizontalAlignment="Left" Margin="10,62,0,0" FontSize="12" VerticalAlignment="Top" Width="190" Height="28" Click="btn_PapeletasComisaria_Click"/>
+                            <Button x:Name="btn_PapeletasOficial" Content="Papeletas por Oficial" HorizontalAlignment="Left" Margin="10,116,0,0" FontSize="12" VerticalAlignment="Top" Width="190" Height="28"/>
+                            <Button x:Name="button" HorizontalAlignment="Left" Margin="34,10,0,0" VerticalAlignment="Top" Width="132" Click="buttonEstadisticas_Click" Background="Transparent" Height="122">
+                                <Image x:Name="image" Source="C:\Users\Alonso\Documents\Visual Studio 2015\Projects\PrototiposPoltran\PrototiposPoltran\estadisticas.png" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
+                            </Button>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox x:Name="groupBox_Copy3" Header="Utilidades" Height="182" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White" Margin="10,343,93,0" Grid.Row="1">
                         <Grid HorizontalAlignment="Left" Height="151" VerticalAlignment="Top" Width="357" Margin="0,0,-2,0"/>
                     </GroupBox>
-                    <GroupBox x:Name="groupBox_Copy3" Header="Utilidades" Height="234" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White" Margin="10,343,93,0" Grid.Row="1"/>
-                    <Grid HorizontalAlignment="Left" Height="215" Margin="16,362,0,0" Grid.Row="1" VerticalAlignment="Top" Width="213">
-                        <Button x:Name="btnMantenimientoTablas" Content="Mantenimiento de Tablas" FontSize="13" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top" Width="175" Click="btnMantenimientoTablas_Click"/>
-                        <Button x:Name="btnactualizacionIndices" Content="Actualización indices" FontSize="13" HorizontalAlignment="Left" Margin="10,22,0,0" VerticalAlignment="Top" Width="175" Click="btnactualizacionIndices_Click"/>
-                        <Button x:Name="btnBackup" Content="Backup" FontSize="15" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" Width="175" Click="btnBackup_Click"/>
-                        <Button x:Name="btnActualizacioTablasEstadisticas" Content="Actualizacion Tablas Estadisticas" FontSize="12" HorizontalAlignment="Left" Margin="10,131,0,0" VerticalAlignment="Top" Width="175" Click="btnActualizacioTablasEstadisticas_Click"/>
-                        <Button x:Name="btnSalir" Content="Salir" FontSize="13" HorizontalAlignment="Left" Margin="10,168,0,0" VerticalAlignment="Top" Width="175" Click="btnSalir_Click"/>
-
-
-                    </Grid>
                 </Grid>
             </ScrollViewer>
         </DockPanel>
