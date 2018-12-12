@@ -16,20 +16,19 @@ using System.Windows.Shapes;
 namespace PrototiposPoltran
 {
     /// <summary>
-    /// Lógica de interacción para busquedaPapeletas.xaml
+    /// Lógica de interacción para PapeletasPorMes.xaml
     /// </summary>
-    public partial class busquedaPapeletas : UserControl
+    public partial class PapeletasPorMes : UserControl
     {
         ScrollViewer scrollContenedor;
-        public busquedaPapeletas(ScrollViewer scroll)
+        public PapeletasPorMes(ScrollViewer scroll)
         {
             InitializeComponent();
             this.scrollContenedor = scroll;
         }
-
         private void button_Click(object sender, RoutedEventArgs e)
         {
-        
+
         }
 
         private void btnBuscar_Click(object sender, RoutedEventArgs e)
