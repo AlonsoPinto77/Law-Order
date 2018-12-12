@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PrototiposPoltran"
         mc:Ignorable="d"
-        Title="VentanaPrincipal" Height="968.247" Width="1338.866" Background="#1C1C1C" WindowState="Maximized">
+        Title="VentanaPrincipal" Height="1150" Width="1338.866" Background="#1C1C1C" WindowState="Maximized">
     <Grid>
         <DockPanel LastChildFill="False" Margin="0,0,1054,10">
             <ScrollViewer IsTabStop="True"  ScrollViewer.HorizontalScrollBarVisibility="Disabled" Width="263">
@@ -51,9 +51,16 @@
                     <GroupBox x:Name="groupBox_Copy2" Header="Estadísticas" Height="182" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White" Margin="9,144,93,0" Grid.Row="1">
                         <Grid HorizontalAlignment="Left" Height="151" VerticalAlignment="Top" Width="357" Margin="0,0,-2,0"/>
                     </GroupBox>
-                    <GroupBox x:Name="groupBox_Copy3" Header="Utilidades" Height="182" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White" Margin="10,343,93,0" Grid.Row="1">
-                        <Grid HorizontalAlignment="Left" Height="151" VerticalAlignment="Top" Width="357" Margin="0,0,-2,0"/>
-                    </GroupBox>
+                    <GroupBox x:Name="groupBox_Copy3" Header="Utilidades" Height="234" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White" Margin="10,343,93,0" Grid.Row="1"/>
+                    <Grid HorizontalAlignment="Left" Height="215" Margin="16,362,0,0" Grid.Row="1" VerticalAlignment="Top" Width="213">
+                        <Button x:Name="btnMantenimientoTablas" Content="Mantenimiento de Tablas" FontSize="13" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top" Width="175" Click="btnMantenimientoTablas_Click"/>
+                        <Button x:Name="btnactualizacionIndices" Content="Actualización indices" FontSize="13" HorizontalAlignment="Left" Margin="10,22,0,0" VerticalAlignment="Top" Width="175" Click="btnactualizacionIndices_Click"/>
+                        <Button x:Name="btnBackup" Content="Backup" FontSize="15" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" Width="175" Click="btnBackup_Click"/>
+                        <Button x:Name="btnActualizacioTablasEstadisticas" Content="Actualizacion Tablas Estadisticas" FontSize="12" HorizontalAlignment="Left" Margin="10,131,0,0" VerticalAlignment="Top" Width="175" Click="btnActualizacioTablasEstadisticas_Click"/>
+                        <Button x:Name="btnSalir" Content="Salir" FontSize="13" HorizontalAlignment="Left" Margin="10,168,0,0" VerticalAlignment="Top" Width="175" Click="btnSalir_Click"/>
+
+
+                    </Grid>
                 </Grid>
             </ScrollViewer>
         </DockPanel>

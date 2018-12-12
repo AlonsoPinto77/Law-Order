@@ -108,6 +108,35 @@ namespace PrototiposPoltran
             busquedapapel.VerticalAlignment = VerticalAlignment.Stretch;
         }
 
-        
+        private void btnactualizacionIndices_Click(object sender, RoutedEventArgs e)
+        {
+            ActulizacionIndices actuaIndi = new ActulizacionIndices(this.scrollContenedor);
+            this.scrollContenedor.Content = actuaIndi;
+            actuaIndi.HorizontalAlignment = HorizontalAlignment.Stretch;
+            actuaIndi.VerticalAlignment = VerticalAlignment.Stretch;
+        }
+
+        private void btnMantenimientoTablas_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnBackup_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnActualizacioTablasEstadisticas_Click(object sender, RoutedEventArgs e)
+        {
+            ActualizacionTabEstadisticas tab = new ActualizacionTabEstadisticas(this.scrollContenedor);
+            this.scrollContenedor.Content = tab;
+            tab.HorizontalAlignment = HorizontalAlignment.Stretch;
+            tab.VerticalAlignment = VerticalAlignment.Stretch;
+        }
+
+        private void btnSalir_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
