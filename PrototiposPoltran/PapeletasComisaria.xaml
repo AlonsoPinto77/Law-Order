@@ -8,28 +8,28 @@
              Background="#2E2E2E" Width="1006.5" Height="636.5">
     <Grid>
         <Grid>
-            <Border BorderBrush="White" BorderThickness="4" Margin="0,10,0,506">
-                <Grid>
+            <Border BorderBrush="White" BorderThickness="4" Margin="0,10,0,500">
+                <Grid Margin="0,0,0,-4">
                     <Label x:Name="label" Content="Comisaria: " HorizontalAlignment="Left" Margin="9,31,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Foreground="White"/>
                     <TextBox x:Name="textBox" Margin="160,31,634,38" TextWrapping="Wrap" FontSize="18"/>
-                    <Button x:Name="btnBuscar" Margin="394,15,516,25" Background="Transparent" Click="btnBuscar_Click">
-                        <Image Source="C:\Users\Peter\Source\Repos\AlonsoPinto77\Law-Order\PrototiposPoltran\minibusquedaLogo.png"/>
+                    <Button x:Name="btnBuscar" Margin="424,15,506,10" Background="Transparent" Click="btnBuscar_Click">
+                        <Grid Width="57">
+                            <Image Source="minibusquedaLogo.png" Margin="0,0,0,24"/>
+                            <Label x:Name="label1_Copy" Content="BUSCAR" Margin="0,66,0,-7" FontWeight="Bold" Foreground="White"/>
+                        </Grid>
                     </Button>
-                    <Button x:Name="button1" HorizontalAlignment="Left" Margin="763,528,0,0" VerticalAlignment="Top" Width="74">
-                        <Image Source="imprimirLogo.png"></Image>
+                    <Button x:Name="btnImprimir"  HorizontalAlignment="Left" Margin="736,15,0,10" Width="74" Background="Transparent">
+                        <Grid>
+                            <Image Source="imprimirLogo.png" Margin="0,0,0,24"></Image>
+                            <Label x:Name="label1" Content="IMPRIMIR" Margin="0,69,0,0" FontWeight="Bold" Foreground="White"/>
+                        </Grid>
                     </Button>
-                    <Button x:Name="button2" HorizontalAlignment="Left" Margin="889,528,0,0" VerticalAlignment="Top" Width="76">
-                        <Image Source="salirLogo.png"></Image>
+                    <Button x:Name="btnSalir"  HorizontalAlignment="Left" Margin="900,15,0,10" Width="68" Background="Transparent" Click="btnSalir_Click">
+                        <Grid>
+                            <Image Source="salirLogo.png" Margin="0,-5,0,24"></Image>
+                            <Label x:Name="label2" Content="SALIR" Margin="10,69,10,0" FontWeight="Bold" Foreground="White"/>
+                        </Grid>
                     </Button>
-                    <Button x:Name="button3"  HorizontalAlignment="Left" Margin="736,10,0,0" VerticalAlignment="Top" Width="75" Height="72" Background="Transparent">
-                        <Image Source="C:\Users\Peter\Source\Repos\AlonsoPinto77\Law-Order\PrototiposPoltran\imprimirLogo.png"></Image>
-                    </Button>
-                    <Button x:Name="btnSalir"  HorizontalAlignment="Left" Margin="900,10,0,0" VerticalAlignment="Top" Width="75" Height="72" Background="Transparent" Click="btnSalir_Click">
-                        <Image Source="C:\Users\Peter\Source\Repos\AlonsoPinto77\Law-Order\PrototiposPoltran\salirLogo.png"></Image>
-                    </Button>
-                    <Label x:Name="label1" Content="IMPRIMIR" HorizontalAlignment="Left" Margin="739,82,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
-                    <Label x:Name="label2" Content="SALIR" HorizontalAlignment="Left" Margin="916,82,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
-                    <Label x:Name="label1_Copy" Content="BUSCAR" HorizontalAlignment="Left" Margin="413,86,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
                 </Grid>
             </Border>
             <ContentControl x:Name="contenedor" Content="ContentControl" Margin="0,130,0,0"/>

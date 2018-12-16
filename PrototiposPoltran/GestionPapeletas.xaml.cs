@@ -16,32 +16,40 @@ using System.Windows.Shapes;
 namespace PrototiposPoltran
 {
     /// <summary>
-    /// Lógica de interacción para busquedaPapeletas.xaml
+    /// Lógica de interacción para GestionPapeletas.xaml
     /// </summary>
-    public partial class busquedaPapeletas : UserControl
+    public partial class GestionPapeletas : UserControl
     {
         ScrollViewer scrollContenedor;
-        public busquedaPapeletas(ScrollViewer scroll)
+        public GestionPapeletas(ScrollViewer scroll)
         {
             InitializeComponent();
             this.scrollContenedor = scroll;
         }
+
         private void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
-            resultadosBúsqueda resultado = new resultadosBúsqueda();
-            this.contenedor.Content = resultado;
+
+        }
+
+        private void btnAnadir_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnModificar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, RoutedEventArgs e)
+        {
 
         }
 
         private void btnSalir_Click(object sender, RoutedEventArgs e)
         {
-            scrollContenedor.Content = null;
-
-        }
-
-        private void btnImprimir_Click(object sender, RoutedEventArgs e)
-        {
-
+            scrollContenedor = null;
         }
     }
 }

@@ -16,32 +16,32 @@ using System.Windows.Shapes;
 namespace PrototiposPoltran
 {
     /// <summary>
-    /// Lógica de interacción para busquedaPapeletas.xaml
+    /// Lógica de interacción para ActualizacionIndices.xaml
     /// </summary>
-    public partial class busquedaPapeletas : UserControl
+    public partial class ActualizacionIndices : UserControl
     {
+
         ScrollViewer scrollContenedor;
-        public busquedaPapeletas(ScrollViewer scroll)
+        public ActualizacionIndices()
+        {
+            InitializeComponent();
+
+        }
+        public ActualizacionIndices(ScrollViewer scroll)
         {
             InitializeComponent();
             this.scrollContenedor = scroll;
         }
-        private void btnBuscar_Click(object sender, RoutedEventArgs e)
+
+        private void btnProcesar_Click(object sender, RoutedEventArgs e)
         {
-            resultadosBúsqueda resultado = new resultadosBúsqueda();
-            this.contenedor.Content = resultado;
 
         }
 
         private void btnSalir_Click(object sender, RoutedEventArgs e)
         {
-            scrollContenedor.Content = null;
 
         }
 
-        private void btnImprimir_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }
