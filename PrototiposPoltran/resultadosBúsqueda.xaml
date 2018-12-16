@@ -5,11 +5,11 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PrototiposPoltran"
              mc:Ignorable="d" 
-            Background="#2E2E2E" Width="1006.5" Height="506">
+            Background="#2E2E2E" Width="1006.5" Height="540">
     <Grid>
-        <Grid HorizontalAlignment="Left" Height="506" VerticalAlignment="Top" Width="1006">
-            <GroupBox x:Name="groupBox" Header="Datos de Búsqueda " FontSize="16" FontWeight="Bold" Foreground="White" Margin="0,0,0,436">
-                <Grid HorizontalAlignment="Left" Height="47" Margin="0,0,-2,-5" VerticalAlignment="Top" Width="996">
+        <Grid HorizontalAlignment="Left" Width="1006">
+            <GroupBox x:Name="groupBox" Header="Datos de Búsqueda " FontSize="16" FontWeight="Bold" Foreground="White" Margin="0,0,0,470">
+                <Grid Margin="0,0,0,-5">
                     <Label x:Name="label" Content="Nro. de Papeleta:" Margin="35,6,822,10" Foreground="White"/>
                     <Label x:Name="lblNumPapeleta" Content="lblNumPapeleta" Margin="179,6,686,10" Foreground="White"/>
                     <Label x:Name="label1" Content="Nro. de Placa:" Margin="403,6,479,10" Foreground="White"/>
@@ -18,7 +18,7 @@
                     <Label x:Name="lblFecha" Content="lblFecha" Margin="826,6,98,10" Foreground="White"/>
                 </Grid>
             </GroupBox>
-            <GroupBox x:Name="groupBox1" Header="Datos Generales del Conductor" Margin="0,75,511,220" FontWeight="Bold" FontSize="16" Foreground="White">
+            <GroupBox x:Name="groupBox1" Header="Datos Generales del Conductor" Margin="0,75,511,252" FontWeight="Bold" FontSize="16" Foreground="White">
                 <Grid Margin="-6,-12,-1,1">
                     <Label x:Name="label2" Content="Nro. Licencia:" Margin="10,10,343,147" FontSize="20" Foreground="Aqua"/>
                     <Label x:Name="label2_Copy" Content="Hora:" Margin="333,10,95,0" VerticalAlignment="Top" FontSize="20" Foreground="Aqua"/>
@@ -34,10 +34,9 @@
                     <Label x:Name="lblDistCdt" Content="lblDistCdt" Margin="333,157,54,0" RenderTransformOrigin="-0.06,0.387" FontSize="20" Foreground="White"/>
                     <Separator Margin="0,39,-3,137"/>
                     <Separator HorizontalAlignment="Left" Height="18" Margin="0,118,-3,0" VerticalAlignment="Top" Width="493"/>
-                    <Separator Margin="0,118,-3,58"/>
                 </Grid>
             </GroupBox>
-            <GroupBox x:Name="groupBox1_Copy" Header="Características y Propietario del Vehículo" Margin="516,75,10,140" FontWeight="Bold" FontSize="16" Foreground="White">
+            <GroupBox x:Name="groupBox1_Copy" Header="Características y Propietario del Vehículo" Margin="516,75,10,173" FontWeight="Bold" FontSize="16" Foreground="White">
                 <Grid Margin="-6,-12,-3,-2">
                     <Label x:Name="label2_Copy10" Content="Apellidos y Nombres:" Margin="10,10,256,230" FontSize="20" Foreground="Aqua"/>
                     <Label x:Name="lblNombreProp" Content="lblNombreProp" Margin="10,40,311,200" FontSize="20" FontWeight="Bold" Foreground="White"/>
@@ -52,12 +51,11 @@
                     <Label x:Name="label2_Copy15" Content="Año:" Margin="333,219,90,21" FontSize="20" Foreground="Aqua"/>
                     <Label x:Name="lblAnioV" Content="lblAnioV" Margin="333,238,53,2" FontSize="20" FontWeight="Bold" Foreground="White"/>
                     <Separator HorizontalAlignment="Left" Height="18" Margin="0,71,0,0" VerticalAlignment="Top" Width="477"/>
-                    <Separator Margin="0,206,0,53"/>
-                    <Separator Margin="0,71,0,188"/>
-                    <Separator Margin="0,139,0,120"/>
+                    <Separator Margin="0,215,0,44"/>
+                    <Separator Margin="0,146,0,113"/>
                 </Grid>
             </GroupBox>
-            <GroupBox x:Name="groupBox1_Copy1" Header="Lugar y Comisaría que Interviene" Margin="0,286,511,0" FontWeight="Bold" FontSize="16" Foreground="White">
+            <GroupBox x:Name="groupBox1_Copy1" Header="Lugar y Comisaría que Interviene" Margin="0,303,511,20" FontWeight="Bold" FontSize="16" Foreground="White">
                 <Grid Margin="-6,-12,-2,0">
                     <Label x:Name="label2_Copy5" Content="Lugar: " Margin="10,10,406,157" FontSize="20" Foreground="Aqua" RenderTransformOrigin="3.115,0.757"/>
                     <Label x:Name="label2_Copy6" Content="Distrito:" Margin="330,10,75,157" FontSize="20" Foreground="Aqua" RenderTransformOrigin="3.115,0.757"/>
@@ -73,18 +71,18 @@
                     <Separator Margin="0,128,-2,58"/>
                 </Grid>
             </GroupBox>
-            <GroupBox x:Name="groupBox1_Copy2" Header="Tipo de Infracción" Margin="516,371,10,41" FontWeight="Bold" FontSize="16" Foreground="White">
+            <GroupBox x:Name="groupBox1_Copy2" Header="Tipo de Infracción" Margin="516,382,10,59" FontWeight="Bold" FontSize="16" Foreground="White">
                 <Grid Margin="-6,-22,-6,-1">
-                    <Label x:Name="label4" Content="Infracción:" Margin="134,10,237,20" FontSize="20" Foreground="Aqua"/>
-                    <Label x:Name="lblInfrac" Content="lblInfrac" Margin="243,10,149,20" FontSize="20" Foreground="White"/>
-                    <Label x:Name="label5" Content="Oficio:" Margin="12,52,397,-22" FontSize="20" Foreground="Aqua"/>
-                    <Label x:Name="lblInfrac_Copy" Content="lblNumOfic" Margin="88,52,274,-22" FontSize="20" Foreground="White"/>
-                    <Label x:Name="label5_Copy" Content="Fecha de Envío:" Margin="211,52,114,-22" FontSize="20" Foreground="Aqua"/>
-                    <Label x:Name="lblFecEnv" Content="lblFecEnv" Margin="358,52,24,-22" FontSize="20" Foreground="White" RenderTransformOrigin="0.342,0.505"/>
-                    <Separator Margin="0,20,2,10"/>
+                    <Label x:Name="label4" Content="Infracción:" Margin="134,10,237,47" FontSize="20" Foreground="Aqua"/>
+                    <Label x:Name="lblInfrac" Content="lblInfrac" Margin="243,10,149,47" FontSize="20" Foreground="White"/>
+                    <Label x:Name="label5" Content="Oficio:" Margin="12,52,397,10" FontSize="20" Foreground="Aqua"/>
+                    <Label x:Name="lblInfrac_Copy" Content="lblNumOfic" Margin="88,52,274,10" FontSize="20" Foreground="White"/>
+                    <Label x:Name="label5_Copy" Content="Fecha de Envío:" Margin="211,52,114,0" FontSize="20" Foreground="Aqua"/>
+                    <Label x:Name="lblFecEnv" Content="lblFecEnv" Margin="358,52,24,0" FontSize="20" Foreground="White" RenderTransformOrigin="0.342,0.505"/>
+                    <Separator Margin="0,41,2,29"/>
                 </Grid>
             </GroupBox>
-            <Label x:Name="label6" Content="lblEstadoRegistro" Margin="621,456,79,-8" FontWeight="Bold" FontSize="36" Foreground="Green"/>
+            <Label x:Name="label6" Content="lblEstadoRegistro" Margin="621,481,79,0" FontWeight="Bold" FontSize="36" Foreground="Green"/>
         </Grid>
 
     </Grid>

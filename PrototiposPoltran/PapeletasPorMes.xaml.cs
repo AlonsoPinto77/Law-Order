@@ -26,11 +26,6 @@ namespace PrototiposPoltran
             InitializeComponent();
             this.scrollContenedor = scroll;
         }
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
             resultadosBúsqueda resultado = new resultadosBúsqueda();
@@ -41,6 +36,11 @@ namespace PrototiposPoltran
         private void btnSalir_Click(object sender, RoutedEventArgs e)
         {
             scrollContenedor.Content = null;
+
+        }
+
+        private void btnImprimir_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }

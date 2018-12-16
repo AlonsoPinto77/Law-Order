@@ -26,5 +26,15 @@ namespace PrototiposPoltran
             this.scrollContenedor = scroll;
             InitializeComponent();
         }
+
+        private void btnSalir_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnBuscar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

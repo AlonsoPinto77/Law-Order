@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="PrototiposPoltran.MantenimientoTablas"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PrototiposPoltran"
+             mc:Ignorable="d" 
+             Background="#2E2E2E" Width="1006.5" Height="636.5">
+    <Grid>
+        <Border BorderBrush="White" BorderThickness="4" Margin="0,10,0,494" RenderTransformOrigin="0.498,0.363">
+            <Grid Margin="0,0,0,0">
+                <Label x:Name="label1" Content="Mantenimiento de tablas" FontSize="18" FontWeight="Bold" Foreground="White" Margin="379,19,381,59"/>
+                <Button x:Name="btnSalir"  HorizontalAlignment="Left" Margin="899,10,0,10" Width="63" Background="Transparent" Click="btnSalir_Click">
+                    <Grid>
+                        <Image Source="salirLogo.png" Margin="0,0,0,24"></Image>
+                        <Label x:Name="label2" Content="SALIR" Margin="8,59,8,0" FontWeight="Bold" Foreground="White"/>
+                    </Grid>
+                </Button>
+                <Button x:Name="btnEfectivos" Content="Efectivos" Margin="33,67,866,10" FontSize="14" Background="Black" Foreground="White" BorderBrush="White" />
+                <Button x:Name="btnDelegaciones" Content="Delegaciones" Margin="261,67,618,10" FontSize="14" Background="Black" Foreground="White" BorderBrush="White" />
+                <Button x:Name="Infracciones" Content="Infracciones" Margin="142,67,750,10" FontSize="14" Background="Black" Foreground="White" BorderBrush="White" />
+                <Button x:Name="btnDistritos" Content="Distritos" Margin="399,67,502,10" FontSize="14" Background="Black" Foreground="White" BorderBrush="White" />
+                <Button x:Name="Parametros" Content="Parametros" Margin="636,67,257,10" FontSize="14" Background="Black" Foreground="White" BorderBrush="White" />
+                <Button x:Name="btnUsuarios" Content="Usuarios" Margin="521,67,389,10" FontSize="14" Background="Black" Foreground="White" BorderBrush="White" />
+                <Button x:Name="btnControles" Content="Controles" Margin="768,67,137,10" FontSize="14" Background="Black" Foreground="White" BorderBrush="White" />
+            </Grid>
+        </Border>
+
+        <ContentControl x:Name="contenedor" Content="ContentControl" Margin="0,142,0,0"/>
+    </Grid>
+</UserControl>

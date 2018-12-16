@@ -8,21 +8,29 @@
              d:DesignHeight="300" d:DesignWidth="300"
               Background="#2E2E2E" Width="1006.5" Height="636.5">
     <Grid>
-        <Grid HorizontalAlignment="Left" Height="256" VerticalAlignment="Top" Width="1006">
-            <Label x:Name="label" Content="Elegir Mes:" HorizontalAlignment="Left" Margin="30,28,0,0" VerticalAlignment="Top" Width="132" FontSize="18" Foreground="White"/>
-            <Label x:Name="label_Copy" Content="Ingrese el Año:" HorizontalAlignment="Left" Margin="30,116,0,0" VerticalAlignment="Top" Width="132" FontSize="18" Foreground="White"/>
-            <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="194,40,0,0" VerticalAlignment="Top" Width="120"/>
-            <ComboBox x:Name="comboBox_Copy" HorizontalAlignment="Left" Margin="194,116,0,0" VerticalAlignment="Top" Width="120"/>
-            <Button x:Name="button" HorizontalAlignment="Left" Margin="456,51,0,0" VerticalAlignment="Top" Width="88" Height="72" Background="Transparent">
-                <Image Source="C:\Users\Peter\Source\Repos\AlonsoPinto77\Law-Order\PrototiposPoltran\minibusquedaLogo.png"/>
+        <Border BorderBrush="White" BorderThickness="4" Margin="10,10,10,450">
+            <Grid Margin="0,0,-4,0">
+                <Label x:Name="label" Content="Elegir Mes:" HorizontalAlignment="Left" Margin="30,39,0,0" VerticalAlignment="Top" Width="132" FontSize="18" Foreground="White"/>
+                <Label x:Name="label_Copy" Content="Ingrese el Año:" HorizontalAlignment="Left" Margin="30,101,0,0" VerticalAlignment="Top" Width="132" FontSize="18" Foreground="White"/>
+                <ComboBox x:Name="cmbMes" Margin="194,39,579,99"/>
+                <ComboBox x:Name="cmbAnio" Margin="194,101,579,37"/>
+                <Button x:Name="btnBuscar" Margin="579,39,320,28" Background="Transparent" Click="btnBuscar_Click">
+                    <Grid>
+                        <Image Source="minibusquedaLogo.png" Margin="0,0,0,30"/>
+                        <Label x:Name="label2" Content="BUSCAR" Margin="10,70,10,0" FontWeight="Bold" Foreground="White" RenderTransformOrigin="0.659,1.679"/>
+                    </Grid>
+                </Button>
 
-            </Button>
-            <Button x:Name="button_Copy"  HorizontalAlignment="Left" Margin="799,51,0,0" VerticalAlignment="Top"  Width="88" Height="72" Background="Transparent">
-                <Image Source="C:\Users\Peter\Source\Repos\AlonsoPinto77\Law-Order\PrototiposPoltran\salirLogo.png"></Image>
+                <Button x:Name="btnSalir" Margin="788,39,117,28" Background="Transparent" Click="btnSalir_Click">
+                    <Grid>
+                        <Image Source="salirLogo.png" Margin="0,0,0,30"/>
+                        <Label x:Name="label1" Content="SALIR" Margin="10,65,10,4" FontWeight="Bold" Foreground="White" RenderTransformOrigin="0.659,1.679"/>
+                    </Grid>
 
-            </Button>
+                </Button>
 
-        </Grid>
-
+            </Grid>
+        </Border>
+        <ContentControl x:Name="contenedor" Content="ContentControl" Margin="0,198,0,0"/>
     </Grid>
 </UserControl>

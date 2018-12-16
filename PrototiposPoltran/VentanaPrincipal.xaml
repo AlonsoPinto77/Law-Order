@@ -8,72 +8,80 @@
         Title="VentanaPrincipal" Height="968.247" Width="1338.866" Background="#1C1C1C" WindowState="Maximized">
     <Grid>
         <DockPanel LastChildFill="False" Margin="0,0,1054,10">
-            <ScrollViewer IsTabStop="True"  ScrollViewer.HorizontalScrollBarVisibility="Disabled" Width="263">
-                <Grid Height="1101" Width="322">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="457*"/>
-                        <RowDefinition Height="644*"/>
-                    </Grid.RowDefinitions>
-                    <GroupBox x:Name="groupBox" Header="Mesa de Partes" FontWeight="Bold" FontSize="18" Foreground="White" Margin="10,10,93,265">
-                        <Grid HorizontalAlignment="Left" Height="151" VerticalAlignment="Top" Width="357" Margin="0,0,-2,0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="247*"/>
-                                <ColumnDefinition Width="110*"/>
-                            </Grid.ColumnDefinitions>
-                            <Button x:Name="btnEntregaCom" Content="Entrega de Papeletas a Comisarías" FontSize="12" FontWeight="Bold" Height="28"  Margin="0,10,40,113"/>
-                            <Button x:Name="btnEntregaEfec" Content="Entrega de Papeletas a Efectivos" VerticalAlignment="Top" FontSize="12" FontWeight="Bold" Margin="0,58,0,0" Click="btnEntregaEfec_Click" Height="26" HorizontalAlignment="Left" Width="208"/>
-                            <Button x:Name="btnIngresoDev" Content="Ingreso Devolución de Papeletas" VerticalAlignment="Top" Height="28" FontWeight="Bold" FontSize="12" Margin="1,102,39,0"/>
-                            <Button x:Name="btnMesaPart1" HorizontalAlignment="Left" Margin="40,10,0,0" VerticalAlignment="Top" Width="132" Height="120" Click="btnMesaPart1_Click">
+            <ScrollViewer IsTabStop="True"  ScrollViewer.HorizontalScrollBarVisibility="Disabled" Width="274">
+                <Grid Height="1200" Width="240">
+
+                    <GroupBox x:Name="groupBox" Header="Mesa de Partes" FontWeight="Bold" FontSize="18" Foreground="White" Margin="0,10,0,0" Height="179" VerticalAlignment="Top">
+                        <Grid>
+                            <Button x:Name="btnEntregaCom" Content="Entrega de Papeletas a Comisarías" FontSize="12" FontWeight="Bold" Height="28"  Margin="0,10,0,111" Visibility="Hidden" Click="btnEntregaCom_Click"/>
+                            <Button x:Name="btnEntregaEfec" Content="Entrega de Papeletas a Efectivos" FontSize="12" FontWeight="Bold" Margin="0,48,0,75" Click="btnEntregaEfec_Click" Visibility="Hidden" />
+                            <Button x:Name="btnIngresoDev" Content="Ingreso Devolución de Papeletas" FontWeight="Bold" FontSize="12" Margin="0,82,1,42" Visibility="Hidden" Click="btnIngresoDev_Click"/>
+                            <Button x:Name="btnGestion" Content="Gestion de Papeletas" FontWeight="Bold" FontSize="12" Margin="1,114,0,10" Visibility="Hidden" Click="btnGestion_Click"/>
+                            <Button x:Name="btnMesaPart1" Margin="40,10,0,21" Click="btnMesaPart1_Click" HorizontalAlignment="Left" Width="132">
                                 <StackPanel x:Name="btnMesaPart">
-                                    <Image x:Name="imgMesaPart" Source="C:\Users\Alonso\Documents\Visual Studio 2015\Projects\PrototiposPoltran\PrototiposPoltran\documentoLogo.jpg"/>
+                                    <Image x:Name="imgMesaPart" Source="documentoLogo.jpg"/>
                                 </StackPanel>
                             </Button>
                         </Grid>
                     </GroupBox>
-                    <GroupBox x:Name="groupBox_Copy" Header="Búsquedas" FontWeight="Bold" FontSize="18" Foreground="White" Margin="10,207,93,68">
+                    <GroupBox x:Name="groupBox_Copy" Header="Búsquedas" FontWeight="Bold" FontSize="18" Foreground="White" Margin="0,207,0,0" Height="179" VerticalAlignment="Top">
                         <Grid Margin="0,0,-2,0">
-                            <Button x:Name="btnBusquedaPapeleta" Content="Por Papeleta" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="189" Click="btnBusquedaPapeleta_Click"/>
-                            <Button x:Name="btnBusquedaPlaca" Content="Por Placa" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" Width="189"/>
-                            <Button x:Name="btnBusquedaOtros" Content="Otros" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top" Width="189"/>
-                            <Button x:Name="btnBusqueda" HorizontalAlignment="Left"  Margin="38,10,0,0" VerticalAlignment="Top" Width="132" Height="122" Background="Transparent" Click="btnBusqueda_Click">
-                                <Image x:Name="imgBusqueda" Source="C:\Users\Alonso\Documents\Visual Studio 2015\Projects\PrototiposPoltran\PrototiposPoltran\busquedaLogo.png">
-
-                                </Image>
+                            <Button x:Name="btnBusquedaPapeleta" Content="Por Papeleta" Margin="0,10,0,111" Visibility="Hidden" Click="btnBusquedaPapeleta_Click"/>
+                            <Button x:Name="btnBusquedaPlaca" Content="Por Placa" Margin="0,62,0,59" Visibility="Hidden" Click="btnBusquedaPlaca_Click"/>
+                            <Button x:Name="btnBusquedaOtros" Content="Otros" Margin="0,114,0,7" Visibility="Hidden" Click="btnBusquedaOtros_Click"/>
+                            <Button x:Name="btnBusqueda"  Margin="0,10,10,0" Background="Transparent" Click="btnBusqueda_Click" Height="129" VerticalAlignment="Top">
+                                <Image x:Name="imgBusqueda" Source="busquedaLogo.png"/>
                             </Button>
                         </Grid>
                     </GroupBox>
-                    <GroupBox x:Name="groupBox_Copy1" Header="Reportes" Height="182" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White" Margin="10,404,93,0" Grid.RowSpan="2">
-                        <Grid HorizontalAlignment="Left" Height="151" VerticalAlignment="Top" Width="357" Margin="0,0,-2,0">
-                            <Button x:Name="btnPapeletasIngresadas" Content="Papeletas Ingresadas" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="194" FontSize="12" Height="28" Click="btnPapeletasIngresadas_Click"/>
-                            <Button x:Name="btnExportarInfo" Content="Exportar Informacion de Papeletas" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top" Width="194" FontSize="12" Height="28" Click="btnExportarInfo_Click"/>
-                            <Button x:Name="btnCuadroMensual" Content="Cuadro Mensual de Conductores" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" Width="194" FontSize="12" Height="28" Click="btnCuadroMensual_Click"/>
-                            <Button x:Name="btnReportes"  HorizontalAlignment="Left" Margin="36,10,0,0" VerticalAlignment="Top" Width="132" Click="buttonReportes_Click" Background="Transparent" Height="122">
-                                <Image x:Name="image_Reportes"  Source="C:\Users\Alonso\Documents\Visual Studio 2015\Projects\PrototiposPoltran\PrototiposPoltran\reporteLogo.png"/>
-                            </Button>
-
-
-                        </Grid>
-                    </GroupBox>
-                    <Grid HorizontalAlignment="Left" Height="151" VerticalAlignment="Top" Width="357" Margin="16,164,0,0" Grid.Row="1"/>
-                    <GroupBox x:Name="groupBox_Copy2" Header="Estadísticas" Height="182" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White" Margin="9,144,93,0" Grid.Row="1">
-                        <Grid HorizontalAlignment="Left" Height="154" Margin="0,0,-2,-2" VerticalAlignment="Top" Width="210">
-                            <Button x:Name="btn_PapeletasPorMes" Content="Papeletas por mes" Margin="10,10,10,0" FontSize="12" VerticalAlignment="Top" Height="28" Click="btn_PapeletasPorMes_Click"/>
-                            <Button x:Name="btn_PapeletasComisaria" Content="Papeletas por comisaria" HorizontalAlignment="Left" Margin="10,62,0,0" FontSize="12" VerticalAlignment="Top" Width="190" Height="28" Click="btn_PapeletasComisaria_Click"/>
-                            <Button x:Name="btn_PapeletasOficial" Content="Papeletas por Oficial" HorizontalAlignment="Left" Margin="10,116,0,0" FontSize="12" VerticalAlignment="Top" Width="190" Height="28"/>
-                            <Button x:Name="button" HorizontalAlignment="Left" Margin="34,10,0,0" VerticalAlignment="Top" Width="132" Click="buttonEstadisticas_Click" Background="Transparent" Height="122">
-                                <Image x:Name="image" Source="C:\Users\Alonso\Documents\Visual Studio 2015\Projects\PrototiposPoltran\PrototiposPoltran\estadisticas.png" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
+                    <GroupBox x:Name="groupBox_Copy1" Header="Reportes" Height="174" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White" Margin="0,404,0,0" >
+                        <Grid Height="151" VerticalAlignment="Top" Margin="0,0,-2,-7">
+                            <Button x:Name="btnPapeletasIngresadas" Content="Papeletas Ingresadas" FontSize="12" Margin="0,12,0,111" Visibility="Hidden" Click="btnPapeletasIngresadas_Click"/>
+                            <Button x:Name="btnExportarInfo" Content="Exportar Informacion de Papeletas" Margin="0,58,0,65" FontSize="12" Visibility="Hidden"  Click="btnExportarInfo_Click"/>
+                            <Button x:Name="btnCuadroMensual" Content="Cuadro Mensual de Conductores" Margin="0,106,0,17" FontSize="12" Visibility="Hidden" Click="btnCuadroMensual_Click"/>
+                            <Button x:Name="btnReportes" Click="btnReportes_Click" Background="Transparent" Margin="0,0,0,10">
+                                <Image x:Name="image_Reportes"  Source="reporteLogo.png"/>
                             </Button>
                         </Grid>
                     </GroupBox>
-                    <GroupBox x:Name="groupBox_Copy3" Header="Utilidades" Height="182" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White" Margin="10,343,93,0" Grid.Row="1">
-                        <Grid HorizontalAlignment="Left" Height="151" VerticalAlignment="Top" Width="357" Margin="0,0,-2,0"/>
+                    <GroupBox x:Name="groupBox_Copy2" Header="Estadísticas" Height="182" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White" Margin="0,601,0,0">
+                        <Grid Margin="0,0,0,0">
+                            <Button x:Name="btn_PapeletasPorMes" Content="Papeletas por mes" Margin="10,10,0,116" FontSize="12" Visibility="Hidden"  Click="btn_PapeletasPorMes_Click"/>
+                            <Button x:Name="btn_PapeletasComisaria" Content="Papeletas por comisaria" Margin="10,62,0,64" FontSize="12" Visibility="Hidden" Click="btn_PapeletasComisaria_Click"/>
+                            <Button x:Name="btn_PapeletasOficial" Content="Papeletas por Oficial" Margin="10,116,0,10" FontSize="12" Visibility="Hidden" Click="btn_PapeletasOficial_Click"/>
+                            <Button x:Name="btnEstadisticas" Background="Transparent" Margin="0,0,0,10" Click="btnEstadisticas_Click">
+                                <Image x:Name="image" Source="estadisticas.png" HorizontalAlignment="Left" Height="134" VerticalAlignment="Top" Width="128"/>
+                            </Button>
+                        </Grid>
                     </GroupBox>
+                    <GroupBox x:Name="groupBox_Copy3" Header="Utilidades" Height="178" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White" Margin="0,803,0,0">
+                        <Grid Margin="0,0,0,0">
+                            <Button x:Name="btn_MantenimientoTablas" Content="Mantenimiento de Tablas" Margin="0,10,0,114" FontSize="12" Visibility="Hidden" Click="btn_MantenimientoTablas_Click"/>
+                            <Button x:Name="btn_ActIndices" Content="Actualizacion de Indices" Margin="0,76,0,48" FontSize="12" Visibility="Hidden" Click="btn_ActIndices_Click"/>
+                            <Button x:Name="btn_ActTablasEstadisticas" Content="Actualizacion de Tablas Estadisticas" Margin="0,43,0,81" FontSize="12" Visibility="Hidden" Click="btn_ActTablasEstadisticas_Click"/>
+                            <Button x:Name="btn_Backup" Content="BACKUP" Margin="0,109,0,15" FontSize="12" Visibility="Hidden" Click="btnBackup_Click"/>
+                            <Button x:Name="btnUtilidades" Background="Transparent"  Click="btnUtilidades_Click" >
+                                <Grid Width="218">
+                                    <Image x:Name="imgBD" Source="confg1.png" HorizontalAlignment="Left" Width="109" Margin="109,0,0,29"/>
+                                    <Image x:Name="imgconf" Source="confg.png" HorizontalAlignment="Left" Width="104" Margin="0,0,0,29"/>
+                                </Grid>
+                            </Button>
+                        </Grid>
+                    </GroupBox>
+                    <Border BorderBrush="White" BorderThickness="4" Margin="10,1002,10,46">
+                        <Button x:Name="btnSalir" Margin="0,0,0,-4" Background="Transparent" Click="btnSalir_Click">
+                            <Grid>
+                                <Image Source="salirLogo.png" Margin="0,0,0,28"></Image>
+                                <Label x:Name="label2" Content="SALIR" Margin="25,102,25,10" FontWeight="Bold" FontSize="20" Foreground="White"/>
+                            </Grid>
+                        </Button>
+                    </Border>
                 </Grid>
             </ScrollViewer>
         </DockPanel>
         <Grid Margin="277,10,10,0">
             <ContentControl x:Name="contentContenedor">
-                <ScrollViewer x:Name="scrollContenedor" IsTabStop="True"  ScrollViewer.HorizontalScrollBarVisibility="Visible" Margin="-5,0,5,0"/>
+                <ScrollViewer x:Name="scrollContenedor" IsTabStop="True"  ScrollViewer.HorizontalScrollBarVisibility="Visible" Margin="0,0,5,0"/>
             </ContentControl>
         </Grid>
     </Grid>
