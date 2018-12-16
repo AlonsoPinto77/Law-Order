@@ -10,21 +10,25 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace PrototiposPoltran
 {
     /// <summary>
-    /// Lógica de interacción para CuadroConductores.xaml
+    /// Lógica de interacción para ActulizacionIndices.xaml
     /// </summary>
-    public partial class CuadroConductores : UserControl
+    public partial class ActulizacionIndices : Window
     {
-        ScrollViewer scrollContenedor;
-        public CuadroConductores(ScrollViewer scroll)
+        private ScrollViewer scrollContenedor;
+
+        public ActulizacionIndices()
         {
             InitializeComponent();
-            this.scrollContenedor = scroll;
+        }
+
+        public ActulizacionIndices(ScrollViewer scrollContenedor)
+        {
+            this.scrollContenedor = scrollContenedor;
         }
     }
 }

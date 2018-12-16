@@ -6,28 +6,17 @@
         xmlns:local="clr-namespace:PrototiposPoltran"
         mc:Ignorable="d"
          Background="#2E2E2E" Width="1006.5" Height="636.5">
-    <Grid >
-        <Border BorderBrush="White" BorderThickness="4" Margin="0,0,0,497">
-            <Grid Margin="0,0,0,0">
-                <Label x:Name="label" Content="Nº de Oficio:" Margin="10,15,876,85" FontSize="18" Foreground="White" FontWeight="Bold" RenderTransformOrigin="0.501,0.411"/>
-                <TextBox x:Name="textBox" Margin="177,15,653,85" TextWrapping="Wrap"/>
-                <Label x:Name="label_Copy" Content="Año:" Margin="19,83,876,17" FontSize="18" Foreground="White" FontWeight="Bold"/>
-                <TextBox x:Name="textBox_Copy" Margin="177,83,653,22" TextWrapping="Wrap"/>
-                <Button x:Name="btnBuscar" Margin="424,15,506,25" Background="Transparent" Click="btnBuscar_Click">
-                    <Grid Width="57">
-                        <Image Source="minibusquedaLogo.png" Margin="0,0,0,24"/>
-                        <Label x:Name="label1_Copy" Content="BUSCAR" Margin="0,59,0,0" FontWeight="Bold" Foreground="White"/>
-                    </Grid>
-                </Button>
-
-                <Button x:Name="btnSalir" Margin="853,15,81,25" Background="Transparent" Click="btnSalir_Click">
-                    <Grid>
-                        <Image Source="salirLogo.png" Margin="0,0,0,24"></Image>
-                        <Label x:Name="label2" Content="SALIR" Margin="7,58,7,5" FontWeight="Bold" Foreground="White"/>
-                    </Grid>
-                </Button>
-            </Grid>
-        </Border>
-        <Grid Margin="0,150,0,0"/>
+    <Grid Margin="0,0,0,411">
+        <Grid HorizontalAlignment="Left" Height="402" Margin="6,196,0,-404" VerticalAlignment="Top" Width="990"/>
+        <Label x:Name="label" Content="Nº de Oficio:" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Height="39" Width="120" FontSize="18" Foreground="White" FontWeight="Bold"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="25" Margin="135,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
+        <Label x:Name="label_Copy" Content="Año:" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top" Height="39" Width="111" FontSize="18" Foreground="White" FontWeight="Bold"/>
+        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="25" Margin="135,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="167"/>
+        <Button x:Name="btnBuscar" HorizontalAlignment="Left" Margin="502,41,0,0" VerticalAlignment="Top" Width="88" Height="72" Background="Transparent">
+            <Image Source="C:\Users\Peter\Source\Repos\AlonsoPinto77\Law-Order\PrototiposPoltran\minibusquedaLogo.png"/>
+        </Button>
+        <Button x:Name="btnSalir"  HorizontalAlignment="Left" Margin="750,41,0,0" VerticalAlignment="Top" Width="88" Height="72" Background="Transparent">
+            <Image Source="C:\Users\Peter\Source\Repos\AlonsoPinto77\Law-Order\PrototiposPoltran\salirLogo.png"></Image>
+        </Button>
     </Grid>
 </UserControl>

@@ -39,14 +39,14 @@
                 <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="23" Margin="67,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
             </Grid>
         </GroupBox>
-        <Button x:Name="btnGuardar" HorizontalAlignment="Left" Margin="625,528,0,0" VerticalAlignment="Top" Width="76" Background="Transparent" Click="btnGuardar_Click">
-            <Image Source="guardarLogo.jpg"></Image>
+        <Button x:Name="btnGuardar" HorizontalAlignment="Left" Margin="625,528,0,0" VerticalAlignment="Top" Width="76" Background="Transparent">
+            <Image Source="C:\Users\Alonso\Documents\Visual Studio 2015\Projects\PrototiposPoltran\PrototiposPoltran\guardarLogo.jpg"></Image>
         </Button>
-        <Button x:Name="btnImprimir" HorizontalAlignment="Left" Margin="763,528,0,0" VerticalAlignment="Top" Width="74" Background="Transparent" Click="btnImprimir_Click">
-            <Image Source="imprimirLogo.png"></Image>
+        <Button x:Name="btnImprimir" HorizontalAlignment="Left" Margin="763,528,0,0" VerticalAlignment="Top" Width="74" Background="Transparent">
+            <Image Source="C:\Users\Alonso\Documents\Visual Studio 2015\Projects\PrototiposPoltran\PrototiposPoltran\imprimirLogo.png"></Image>
         </Button>
         <Button x:Name="btnSalir" HorizontalAlignment="Left" Margin="889,528,0,0" VerticalAlignment="Top" Width="76" Background="Transparent" Click="btnSalir_Click">
-            <Image Source="salirLogo.png"></Image>
+            <Image Source="C:\Users\Alonso\Documents\Visual Studio 2015\Projects\PrototiposPoltran\PrototiposPoltran\salirLogo.png"></Image>
         </Button>
         <Label x:Name="label4" Content="Guardar" HorizontalAlignment="Left" Margin="633,607,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Foreground="White"/>
         <Label x:Name="label5" Content="Imprimir Faltantes" HorizontalAlignment="Left" Margin="732,607,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Foreground="White"/>

@@ -16,23 +16,13 @@ using System.Windows.Shapes;
 namespace PrototiposPoltran
 {
     /// <summary>
-    /// Lógica de interacción para Utilidades.xaml
+    /// Lógica de interacción para IngresarPapeleta.xaml
     /// </summary>
-    public partial class MantenimientoTablas : UserControl
+    public partial class IngresarPapeleta : UserControl
     {
-        public MantenimientoTablas()
+        public IngresarPapeleta()
         {
             InitializeComponent();
-        }
-        ScrollViewer scrollContenedor;
-        public MantenimientoTablas(ScrollViewer scroll)
-        {
-            InitializeComponent();
-            this.scrollContenedor = scroll;
-        }
-        private void btnSalir_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

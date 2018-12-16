@@ -10,7 +10,6 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace PrototiposPoltran
@@ -18,26 +17,18 @@ namespace PrototiposPoltran
     /// <summary>
     /// Lógica de interacción para ActualizacionTabEstadisticas.xaml
     /// </summary>
-    public partial class ActualizacionTabEstadisticas : UserControl
+    public partial class ActualizacionTabEstadisticas : Window
     {
+        private ScrollViewer scrollContenedor;
 
-        ScrollViewer scrollContenedor;
         public ActualizacionTabEstadisticas()
         {
             InitializeComponent();
         }
-        public ActualizacionTabEstadisticas(ScrollViewer scroll)
+
+        public ActualizacionTabEstadisticas(ScrollViewer scrollContenedor)
         {
-            InitializeComponent();
-            this.scrollContenedor = scroll;
-        }
-        private void btnProcesar_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-        private void btnSalir_Click(object sender, RoutedEventArgs e)
-        {
-            
+            this.scrollContenedor = scrollContenedor;
         }
     }
 }

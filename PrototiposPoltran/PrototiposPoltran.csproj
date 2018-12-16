@@ -72,12 +72,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ActualizacionIndices.xaml.cs">
-      <DependentUpon>ActualizacionIndices.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ActualizacionTabEstadisticas.xaml.cs">
-      <DependentUpon>ActualizacionTabEstadisticas.xaml</DependentUpon>
-    </Compile>
     <Compile Include="busquedaPapeletas.xaml.cs">
       <DependentUpon>busquedaPapeletas.xaml</DependentUpon>
     </Compile>
@@ -91,12 +85,6 @@
     <Compile Include="ExportarInfo.xaml.cs">
       <DependentUpon>ExportarInfo.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GestionPapeletas.xaml.cs">
-      <DependentUpon>GestionPapeletas.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MantenimientoComisaria.xaml.cs">
-      <DependentUpon>MantenimientoComisaria.xaml</DependentUpon>
-    </Compile>
     <Compile Include="PapeletasComisaria.xaml.cs">
       <DependentUpon>PapeletasComisaria.xaml</DependentUpon>
     </Compile>
@@ -109,21 +97,10 @@
     <Compile Include="resultadosBúsqueda.xaml.cs">
       <DependentUpon>resultadosBúsqueda.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MantenimientoTablas.xaml.cs">
-      <DependentUpon>MantenimientoTablas.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Validacion.cs" />
     <Compile Include="VentanaPrincipal.xaml.cs">
       <DependentUpon>VentanaPrincipal.xaml</DependentUpon>
     </Compile>
-    <Page Include="ActualizacionIndices.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ActualizacionTabEstadisticas.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="busquedaPapeletas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -140,10 +117,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="GestionPapeletas.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -156,10 +129,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="MantenimientoComisaria.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="PapeletasComisaria.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -173,10 +142,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="resultadosBúsqueda.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MantenimientoTablas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -236,20 +201,6 @@
     <Resource Include="pnpok.png" />
     <Resource Include="reporteLogo.png" />
     <Resource Include="salirLogo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="anadir.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="edit.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="confg.png" />
-    <Resource Include="delete2.png" />
-    <Resource Include="estadisticas.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="confg1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -47,15 +47,5 @@ namespace PrototiposPoltran
         {
             scrollContenedor.Content = null;
         }
-
-        private void btnGuardar_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnImprimir_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

@@ -10,21 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace PrototiposPoltran
 {
     /// <summary>
-    /// Lógica de interacción para CuadroConductores.xaml
+    /// Lógica de interacción para Utilidades.xaml
     /// </summary>
-    public partial class CuadroConductores : UserControl
+    public partial class Utilidades : Window
     {
-        ScrollViewer scrollContenedor;
-        public CuadroConductores(ScrollViewer scroll)
+        public Utilidades()
         {
             InitializeComponent();
-            this.scrollContenedor = scroll;
         }
     }
 }
