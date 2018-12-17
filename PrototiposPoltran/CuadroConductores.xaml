@@ -8,29 +8,31 @@
              d:DesignHeight="300" d:DesignWidth="300"
               Background="#2E2E2E" Width="1006.5" Height="636.5">
     <Grid>
-        <Border BorderBrush="White" BorderThickness="4" Margin="10,10,10,450">
+
+        <GroupBox x:Name="groupBox" Header="Cuadro Mensual de conductores" Foreground="White" Cursor="" 
+                      FontWeight="Bold" FontSize="18" Height="156" VerticalAlignment="Top" Margin="10,10,10,0">
             <Grid Margin="0,0,-4,0">
-                <Label x:Name="label" Content="Elegir Mes:" HorizontalAlignment="Left" Margin="30,39,0,0" VerticalAlignment="Top" Width="132" FontSize="18" Foreground="White"/>
-                <Label x:Name="label_Copy" Content="Ingrese el Año:" HorizontalAlignment="Left" Margin="30,101,0,0" VerticalAlignment="Top" Width="132" FontSize="18" Foreground="White"/>
-                <ComboBox x:Name="cmbMes" Margin="194,39,579,99"/>
-                <ComboBox x:Name="cmbAnio" Margin="194,101,579,37"/>
-                <Button x:Name="btnBuscar" Margin="579,39,320,28" Background="Transparent" Click="btnBuscar_Click">
+                <Label x:Name="label" Content="Elegir Mes:" HorizontalAlignment="Left" Margin="55,10,0,87" Width="132" FontSize="14" Foreground="White"/>
+                <Label x:Name="label_Copy" Content="Ingrese el Año:" HorizontalAlignment="Left" Margin="55,72,0,25" FontSize="14" Width="132" Foreground="White"/>
+                <ComboBox x:Name="cmbMes" Margin="219,10,554,84"  FontSize="14"/>
+                <ComboBox x:Name="cmbAnio" Margin="219,72,554,22" FontSize="14"/>
+                <Button x:Name="btnBuscar" Margin="604,10,286,13" Background="Transparent" Click="btnBuscar_Click">
                     <Grid>
-                        <Image Source="minibusquedaLogo.png" Margin="0,0,0,30"/>
-                        <Label x:Name="label2" Content="BUSCAR" Margin="10,70,10,0" FontWeight="Bold" Foreground="White" RenderTransformOrigin="0.659,1.679"/>
+                        <Image Source="Image/minibusquedaLogo.png" Margin="0,0,0,30"/>
+                        <Label x:Name="label2" Content="BUSCAR" Margin="10,70,10,0" FontWeight="Bold" Foreground="White" RenderTransformOrigin="0.659,1.679" FontSize="14"/>
                     </Grid>
                 </Button>
 
-                <Button x:Name="btnSalir" Margin="788,39,117,28" Background="Transparent" Click="btnSalir_Click">
+                <Button x:Name="btnSalir" Margin="813,10,89,13" Background="Transparent" Click="btnSalir_Click">
                     <Grid>
-                        <Image Source="salirLogo.png" Margin="0,0,0,30"/>
-                        <Label x:Name="label1" Content="SALIR" Margin="10,65,10,4" FontWeight="Bold" Foreground="White" RenderTransformOrigin="0.659,1.679"/>
+                        <Image Source="Image/salirLogo.png" Margin="0,0,0,30"/>
+                        <Label x:Name="label1" Content="SALIR" Margin="10,65,10,4" FontWeight="Bold" Foreground="White" RenderTransformOrigin="0.659,1.679" FontSize="14"/>
                     </Grid>
 
                 </Button>
 
             </Grid>
-        </Border>
-        <ContentControl x:Name="contenedor" Content="ContentControl" Margin="0,198,0,0"/>
+        </GroupBox>
+        <ContentControl x:Name="contenedor" Content="ContentControl" Margin="0,171,0,0"/>
     </Grid>
 </UserControl>

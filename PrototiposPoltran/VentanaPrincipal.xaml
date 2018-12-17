@@ -19,7 +19,7 @@
                             <Button x:Name="btnGestion" Content="Gestion de Papeletas" FontWeight="Bold" FontSize="12" Margin="1,114,0,10" Visibility="Hidden" Click="btnGestion_Click"/>
                             <Button x:Name="btnMesaPart1" Margin="40,10,0,21" Click="btnMesaPart1_Click" HorizontalAlignment="Left" Width="132">
                                 <StackPanel x:Name="btnMesaPart">
-                                    <Image x:Name="imgMesaPart" Source="documentoLogo.jpg"/>
+                                    <Image x:Name="imgMesaPart" Source="Image/documentoLogo.jpg"/>
                                 </StackPanel>
                             </Button>
                         </Grid>
@@ -30,7 +30,7 @@
                             <Button x:Name="btnBusquedaPlaca" Content="Por Placa" Margin="0,62,0,59" Visibility="Hidden" Click="btnBusquedaPlaca_Click"/>
                             <Button x:Name="btnBusquedaOtros" Content="Otros" Margin="0,114,0,7" Visibility="Hidden" Click="btnBusquedaOtros_Click"/>
                             <Button x:Name="btnBusqueda"  Margin="0,10,10,0" Background="Transparent" Click="btnBusqueda_Click" Height="129" VerticalAlignment="Top">
-                                <Image x:Name="imgBusqueda" Source="busquedaLogo.png"/>
+                                <Image x:Name="imgBusqueda" Source="Image/busquedaLogo.png"/>
                             </Button>
                         </Grid>
                     </GroupBox>
@@ -40,7 +40,7 @@
                             <Button x:Name="btnExportarInfo" Content="Exportar Informacion de Papeletas" Margin="0,58,0,65" FontSize="12" Visibility="Hidden"  Click="btnExportarInfo_Click"/>
                             <Button x:Name="btnCuadroMensual" Content="Cuadro Mensual de Conductores" Margin="0,106,0,17" FontSize="12" Visibility="Hidden" Click="btnCuadroMensual_Click"/>
                             <Button x:Name="btnReportes" Click="btnReportes_Click" Background="Transparent" Margin="0,0,0,10">
-                                <Image x:Name="image_Reportes"  Source="reporteLogo.png"/>
+                                <Image x:Name="image_Reportes"  Source="Image/reporteLogo.png"/>
                             </Button>
                         </Grid>
                     </GroupBox>
@@ -50,7 +50,7 @@
                             <Button x:Name="btn_PapeletasComisaria" Content="Papeletas por comisaria" Margin="10,62,0,64" FontSize="12" Visibility="Hidden" Click="btn_PapeletasComisaria_Click"/>
                             <Button x:Name="btn_PapeletasOficial" Content="Papeletas por Oficial" Margin="10,116,0,10" FontSize="12" Visibility="Hidden" Click="btn_PapeletasOficial_Click"/>
                             <Button x:Name="btnEstadisticas" Background="Transparent" Margin="0,0,0,10" Click="btnEstadisticas_Click">
-                                <Image x:Name="image" Source="estadisticas.png" HorizontalAlignment="Left" Height="134" VerticalAlignment="Top" Width="128"/>
+                                <Image x:Name="image" Source="Image/estadisticas.png" HorizontalAlignment="Left" Height="134" VerticalAlignment="Top" Width="128"/>
                             </Button>
                         </Grid>
                     </GroupBox>
@@ -62,8 +62,8 @@
                             <Button x:Name="btn_Backup" Content="BACKUP" Margin="0,109,0,15" FontSize="12" Visibility="Hidden" Click="btnBackup_Click"/>
                             <Button x:Name="btnUtilidades" Background="Transparent"  Click="btnUtilidades_Click" >
                                 <Grid Width="218">
-                                    <Image x:Name="imgBD" Source="confg1.png" HorizontalAlignment="Left" Width="109" Margin="109,0,0,29"/>
-                                    <Image x:Name="imgconf" Source="confg.png" HorizontalAlignment="Left" Width="104" Margin="0,0,0,29"/>
+                                    <Image x:Name="imgBD" Source="Image/confg1.png" HorizontalAlignment="Left" Width="109" Margin="109,0,0,29"/>
+                                    <Image x:Name="imgconf" Source="Image/confg.png" HorizontalAlignment="Left" Width="104" Margin="0,0,0,29"/>
                                 </Grid>
                             </Button>
                         </Grid>
@@ -71,7 +71,7 @@
                     <Border BorderBrush="White" BorderThickness="4" Margin="10,1002,10,46">
                         <Button x:Name="btnSalir" Margin="0,0,0,-4" Background="Transparent" Click="btnSalir_Click">
                             <Grid>
-                                <Image Source="salirLogo.png" Margin="0,0,0,28"></Image>
+                                <Image Source="Image/salirLogo.png" Margin="0,0,0,28"></Image>
                                 <Label x:Name="label2" Content="SALIR" Margin="25,102,25,10" FontWeight="Bold" FontSize="20" Foreground="White"/>
                             </Grid>
                         </Button>

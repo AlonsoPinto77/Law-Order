@@ -9,12 +9,12 @@
     <Grid>
         <Border BorderBrush="White" BorderThickness="4" Margin="29,10,38,490" RenderTransformOrigin="0.498,0.363">
             <Grid Margin="0,6,-8,-4" HorizontalAlignment="Right" Width="933">
-                <Image x:Name="logPoltran" HorizontalAlignment="Left" Height="100" Margin="13,11,0,0" VerticalAlignment="Top" Width="100" Source="pnpok.png"/>
+                <Image x:Name="logPoltran" HorizontalAlignment="Left" Height="100" Margin="13,11,0,0" VerticalAlignment="Top" Width="100" Source="Image/pnpok.png"/>
                 <Label x:Name="label" Content="Actualizacón de Tablas Estadisticas " HorizontalAlignment="Left" Margin="118,36,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Foreground="White"/>
                 <TextBox x:Name="textBox" Margin="160,31,634,331" TextWrapping="Wrap" FontSize="18"/>
                 <Button x:Name="btnProcesar" Content="Procesar" HorizontalAlignment="Left" Margin="608,31,0,0" VerticalAlignment="Top" Width="162" Height="48" Click="btnProcesar_Click"/>
                 <Button x:Name="btnSalir"  HorizontalAlignment="Left" Margin="824,15,0,0" VerticalAlignment="Top" Width="74" Height="72" Background="Transparent" Click="btnSalir_Click">
-                    <Image Source="salirLogo.png"></Image>
+                    <Image Source="Image/salirLogo.png"></Image>
                 </Button>
                 <Label x:Name="label2" Content="SALIR" HorizontalAlignment="Left" Margin="835,87,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
             </Grid>

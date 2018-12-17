@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="PrototiposPoltran.ParametrosSistema"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PrototiposPoltran"
+             mc:Ignorable="d" 
+             Background="#2E2E2E" Width="1006.5" Height="636.5">
+    <Grid>
+        <Border BorderBrush="White" BorderThickness="4" Margin="10,10,10,523" RenderTransformOrigin="0.498,0.363">
+            <Grid Margin="0,0,0,0">
+                <Button x:Name="btnSalir" Margin="856,0,52,2" Background="Transparent" Click="btnSalir_Click" RenderTransformOrigin="0.5,0.5">
+                    <Grid Width="66">
+                        <Image Source="Image/salirLogo.png" Margin="0,0,0,24"></Image>
+                        <Label x:Name="label2" Content="SALIR" Margin="10,58,7,5" FontWeight="Bold" Foreground="White"/>
+                    </Grid>
+                </Button>
+                <Label x:Name="label1_Copy" Content="Mantenimiento de Parametros del Sistema" HorizontalAlignment="Left" Margin="232,32,0,26" FontWeight="Bold" Foreground="White" FontSize="24" Width="497"/>
+            </Grid>
+
+        </Border>
+        <Grid Margin="0,118,0,0">
+            <GroupBox x:Name="groupBox" Header="" Foreground="White" FontSize="20" FontWeight="Bold" Margin="10,-8,10,10">
+                <Grid Margin="0,0,0,0">
+                    <Label x:Name="label" Content="Nro de Oficio Papeletas" FontWeight="Bold" Foreground="White" FontSize="18" Margin="28,1,724,448"/>
+                    <TextBox x:Name="txtNroOfiPape" Margin="28,34,724,423" TextWrapping="Wrap" Text="" FontWeight="Normal" FontSize="16" />
+                    <Label x:Name="label1" Content="Nro Oficio Comisaria"  FontWeight="Bold" Foreground="White" FontSize="18" Margin="293,1,484,448"/>
+                    <TextBox x:Name="txtNroOfiComi" Margin="293,34,484,423" TextWrapping="Wrap" Text="" FontWeight="Normal" FontSize="16"/>
+                    <Label x:Name="label3" Content="Ubicacion del Sistema" FontWeight="Bold" Foreground="White" FontSize="18" Margin="635,1,126,448"/>
+                    <TextBox x:Name="txtUbicaSiste" Margin="538,34,38,423" TextWrapping="Wrap" Text="" FontWeight="Normal" FontSize="16"/>
+                    <Button x:Name="btnModificar"  HorizontalAlignment="Left" Margin="644,371,0,10" Width="94" Background="Transparent" Click="btnModificar_Click">
+                        <Grid>
+                            <Image Source="Image/edit.png" Margin="0,0,0,28"/>
+                            <Label x:Name="label14" Content="MODIFICAR" Margin="0,66,0,0" FontWeight="Bold" Foreground="White" FontSize="14"/>
+                        </Grid>
+                    </Button>
+                    <Button x:Name="btnCancelar"  HorizontalAlignment="Left" Margin="812,371,0,10" Width="88" Background="Transparent" Click="btnCancelar_Click">
+                        <Grid>
+                            <Image Source="Image/delete.png" Margin="0,0,0,28"/>
+                            <Label x:Name="label16" Content="CANCELAR" Margin="0,66,0,0" FontWeight="Bold" Foreground="White" FontSize="14"/>
+                        </Grid>
+                    </Button>
+                    <Label x:Name="label5" Content="Año de:" FontWeight="Bold" Foreground="White" FontSize="18" Margin="28,70,748,378"/>
+                    <TextBox x:Name="txtAnioDel" Margin="28,104,38,353" TextWrapping="Wrap" Text="" FontWeight="Normal" FontSize="16"/>
+                    <Label x:Name="label6" Content="Siglas del Oficio" FontWeight="Bold" Foreground="White" FontSize="18" Margin="28,148,792,300"/>
+                    <TextBox x:Name="txtOfiSiglas" Margin="28,182,514,276" TextWrapping="Wrap" Text="" FontWeight="Normal" FontSize="16"/>
+                    <Label x:Name="label7" Content="Siglas del Pie del Oficio" FontWeight="Bold" Foreground="White" FontSize="18" Margin="504,148,249,287"/>
+                    <TextBox x:Name="txtOfiSiglasPie" Margin="504,182,38,276" TextWrapping="Wrap" Text="" FontWeight="Normal" FontSize="16"/>
+                    <Label x:Name="label8" Content="Jefe al Mando" FontWeight="Bold" Foreground="White" FontSize="18" Margin="28,222,748,228"/>
+                    <TextBox x:Name="txtJefeMando" Margin="28,254,38,204" TextWrapping="Wrap" Text="" FontWeight="Normal" FontSize="16"/>
+                    <Label x:Name="label9" Content="Titulo Principal" FontWeight="Bold" Foreground="White" FontSize="18" Margin="28,294,792,154"/>
+                    <TextBox x:Name="txtTituloPrincipal" Margin="28,328,514,130" TextWrapping="Wrap" Text="" FontWeight="Normal" FontSize="16"/>
+                    <Label x:Name="labe20" Content="Titulo Secundario" FontWeight="Bold" Foreground="White" FontSize="18" Margin="504,294,249,154"/>
+                    <TextBox x:Name="txtTituloSecudario" Margin="504,328,38,130" TextWrapping="Wrap" Text="" FontWeight="Normal" FontSize="16"/>
+
+                </Grid>
+            </GroupBox>
+        </Grid>
+    </Grid>
+</UserControl>

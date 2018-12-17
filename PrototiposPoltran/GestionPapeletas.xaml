@@ -13,32 +13,32 @@
                 <TextBox x:Name="txtNroPapeleta" HorizontalAlignment="Left" Margin="169,17,0,32" TextWrapping="Wrap" Width="183" FontSize="16"/>
                 <Button x:Name="btnBuscar" Margin="453,0,459,0" Background="Transparent" Click="btnBuscar_Click">
                     <Grid Width="60">
-                        <Image Source="minibusquedaLogo.png" Height="47" VerticalAlignment="Top"/>
+                        <Image Source="Image/minibusquedaLogo.png" Height="47" VerticalAlignment="Top"/>
                         <Label x:Name="label101" Content="BUSCAR" Margin="0,47,0,0" FontWeight="Bold" Foreground="White" FontSize="12"/>
                     </Grid>
                 </Button>
                 <Button x:Name="btnAnadir" Margin="554,0,363,0" Background="Transparent" Click="btnAnadir_Click">
                     <Grid Width="58">
-                        <Image Source="anadir.png" Margin="0,0,0,27"/>
+                        <Image Source="Image/anadir.png" Margin="0,0,0,27"/>
                         <Label x:Name="label102" Content="AÑADIR" Margin="0,47,0,0" FontWeight="Bold" Foreground="White" FontSize="12"/>
                     </Grid>
                 </Button>
 
                 <Button x:Name="btnModificar"  HorizontalAlignment="Left" Margin="645,0,0,0" Width="85" Background="Transparent" Click="btnModificar_Click">
                     <Grid>
-                        <Image Source="edit.png" Margin="0,0,0,28"/>
+                        <Image Source="Image/edit.png" Margin="0,0,0,28"/>
                         <Label x:Name="label104" Content="MODIFICAR" Margin="0,47,0,0" FontWeight="Bold" Foreground="White" FontSize="12"/>
                     </Grid>
                 </Button>
                 <Button x:Name="btnEliminar"  HorizontalAlignment="Left" Margin="758,0,0,0" Width="73" Background="Transparent" Click="btnEliminar_Click">
                     <Grid>
-                        <Image Source="delete2.png" Margin="0,0,0,28"/>
+                        <Image Source="Image/delete2.png" Margin="0,0,0,28"/>
                         <Label x:Name="label106" Content="ELIMINAR" Margin="0,47,0,0" FontWeight="Bold" Foreground="White" FontSize="12"/>
                     </Grid>
                 </Button>
                 <Button x:Name="btnSalir"  HorizontalAlignment="Left" Margin="870,0,0,0" Width="63" Background="Transparent" Click="btnSalir_Click">
                     <Grid>
-                        <Image Source="salirLogo.png" Margin="0,0,0,20"></Image>
+                        <Image Source="Image/salirLogo.png" Margin="0,0,0,20"></Image>
                         <Label x:Name="label112" Content="SALIR" Margin="8,47,8,0" FontWeight="Bold" Foreground="White" />
                     </Grid>
                 </Button>

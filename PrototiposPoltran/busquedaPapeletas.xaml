@@ -8,31 +8,32 @@
              Background="#2E2E2E" Width="1006.5" Height="636.5">
     <Grid>
         <Grid>
-            <Border BorderBrush="White" BorderThickness="4" Margin="10,10,10,506">
-                <Grid Margin="0,0,6,0">
+            <GroupBox x:Name="groupBox" Header="Busqueda de Papeletas" Foreground="White" Cursor="" 
+                      FontWeight="Bold" FontSize="18" Height="148" VerticalAlignment="Top" Margin="10,10,10,0">
+                <Grid Margin="0,0,6,0" RenderTransformOrigin="0.469,0.508">
                     <Label x:Name="label" Content="N° de Papeleta: " HorizontalAlignment="Left" Margin="9,31,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Foreground="White"/>
-                    <TextBox x:Name="textBox" Margin="158,33,636,47" TextWrapping="Wrap" FontSize="18" RenderTransformOrigin="0.507,0.802"/>
-                    <Button x:Name="btnBuscar" Margin="424,15,486,10" Background="Transparent" Click="btnBuscar_Click">
-                        <Grid Width="57">
-                            <Image Source="minibusquedaLogo.png" Margin="0,0,0,24"/>
-                            <Label x:Name="label1_Copy" Content="BUSCAR" Margin="0,59,0,0" FontWeight="Bold" Foreground="White"/>
+                    <TextBox x:Name="textBox" Margin="158,33,636,58" TextWrapping="Wrap" FontSize="18" RenderTransformOrigin="0.507,0.802"/>
+                    <Button x:Name="btnBuscar" Margin="424,15,472,10" Background="Transparent" Click="btnBuscar_Click">
+                        <Grid Width="65">
+                            <Image Source="Image/minibusquedaLogo.png" Margin="0,0,0,24"/>
+                            <Label x:Name="label1_Copy" Content="BUSCAR" Margin="0,59,0,0" FontSize="14" FontWeight="Bold" Foreground="White"/>
                         </Grid>
                     </Button>
-                    <Button x:Name="btnImprimir"  HorizontalAlignment="Left" Margin="736,15,0,10" Width="75" Background="Transparent" Click="btnImprimir_Click">
+                    <Button x:Name="btnImprimir"  HorizontalAlignment="Left" Margin="704,10,0,15" Width="85" Background="Transparent" Click="btnImprimir_Click">
                         <Grid>
-                            <Image Source="imprimirLogo.png" Margin="0,0,0,24"></Image>
-                            <Label x:Name="label1" Content="IMPRIMIR" Margin="0,60,0,0" FontWeight="Bold" Foreground="White"/>
+                            <Image Source="Image/imprimirLogo.png" Margin="0,0,0,24"></Image>
+                            <Label x:Name="label1" Content="IMPRIMIR" Margin="0,60,0,0" FontSize="14" FontWeight="Bold" Foreground="White"/>
                         </Grid>
                     </Button>
-                    <Button x:Name="btnSalir"  HorizontalAlignment="Left" Margin="900,15,0,0" VerticalAlignment="Top" Width="63" Height="87" Background="Transparent" Click="btnSalir_Click">
+                    <Button x:Name="btnSalir"  HorizontalAlignment="Left" Margin="857,10,0,15" Width="77" Background="Transparent" Click="btnSalir_Click">
                         <Grid>
-                            <Image Source="salirLogo.png" Margin="0,0,0,24"></Image>
-                            <Label x:Name="label2" Content="SALIR" Margin="8,59,8,0" FontWeight="Bold" Foreground="White"/>
+                            <Image Source="Image/salirLogo.png" Margin="0,0,0,24"></Image>
+                            <Label x:Name="label2" Content="SALIR" Margin="8,59,8,0" FontWeight="Bold" FontSize="14" Foreground="White"/>
                         </Grid>
                     </Button>
                 </Grid>
-            </Border>
-            <ContentControl x:Name="contenedor" Content="ContentControl" Margin="0,145,0,0"/>
+            </GroupBox>
+            <ContentControl x:Name="contenedor" Content="ContentControl" Margin="0,163,0,0"/>
         </Grid>
     </Grid>
 </UserControl>

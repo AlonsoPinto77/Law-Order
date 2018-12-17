@@ -11,7 +11,7 @@
             <Grid Margin="0,0,0,0">
                 <Button x:Name="btnSalir" Margin="856,0,52,2" Background="Transparent" Click="btnSalir_Click" RenderTransformOrigin="0.5,0.5">
                     <Grid Width="66">
-                        <Image Source="salirLogo.png" Margin="0,0,0,24"></Image>
+                        <Image Source="Image/salirLogo.png" Margin="0,0,0,24"></Image>
                         <Label x:Name="label2" Content="SALIR" Margin="10,58,7,5" FontWeight="Bold" Foreground="White"/>
                     </Grid>
                 </Button>
@@ -30,32 +30,32 @@
                     <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="32" Margin="561,49,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="527" FontWeight="Normal"/>
                     <Button x:Name="btnBuscar" Margin="146,108,0,0" Background="Transparent" Click="btnBuscar_Click" HorizontalAlignment="Left" Width="74">
                         <Grid Width="67">
-                            <Image Source="minibusquedaLogo.png" Margin="0,0,0,24"/>
+                            <Image Source="Image/minibusquedaLogo.png" Margin="0,0,0,24"/>
                             <Label x:Name="label11" Content="BUSCAR" Margin="0,60,0,0" FontWeight="Bold" Foreground="White" FontSize="14"/>
                         </Grid>
                     </Button>
                     <Button x:Name="btnAñadir" Margin="306,108,0,0" Background="Transparent" Click="btnAñadir_Click" HorizontalAlignment="Left" Width="75">
                         <Grid Width="67">
-                            <Image Source="anadir.png" Margin="0,0,0,27"/>
+                            <Image Source="Image/anadir.png" Margin="0,0,0,27"/>
                             <Label x:Name="label12" Content="AÑADIR" Margin="0,67,0,0" FontWeight="Bold" Foreground="White" FontSize="14"/>
                         </Grid>
                     </Button>
 
                     <Button x:Name="btnModificar"  HorizontalAlignment="Left" Margin="464,109,0,-1" Width="94" Background="Transparent" Click="btnModificar_Click">
                         <Grid>
-                            <Image Source="edit.png" Margin="0,0,0,28"/>
+                            <Image Source="Image/edit.png" Margin="0,0,0,28"/>
                             <Label x:Name="label14" Content="MODIFICAR" Margin="0,66,0,0" FontWeight="Bold" Foreground="White" FontSize="14"/>
                         </Grid>
                     </Button>
                     <Button x:Name="btnEliminar"  HorizontalAlignment="Left" Margin="656,109,0,-1" Width="88" Background="Transparent" Click="btnEliminar_Click">
                         <Grid>
-                            <Image Source="delete2.png" Margin="0,0,0,28"/>
+                            <Image Source="Image/delete2.png" Margin="0,0,0,28"/>
                             <Label x:Name="label16" Content="ELIMINAR" Margin="0,66,0,0" FontWeight="Bold" Foreground="White" FontSize="14"/>
                         </Grid>
                     </Button>
                     <Button x:Name="btnImprimir"  HorizontalAlignment="Left" Margin="845,108,0,0" Width="82" Background="Transparent" Click="btnImprimir_Click_1">
                         <Grid>
-                            <Image Source="imprimirLogo.png" Margin="0,0,0,28"/>
+                            <Image Source="Image/imprimirLogo.png" Margin="0,0,0,28"/>
                             <Label x:Name="label13" Content="IMPRIMIR" Margin="0,66,0,0" FontWeight="Bold" Foreground="White" FontSize="14"/>
                         </Grid>
                     </Button>

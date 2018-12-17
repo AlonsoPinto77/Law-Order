@@ -7,29 +7,31 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" Background="#2E2E2E" Width="1006.5" Height="636.5">
     <Grid>
-        <Border BorderBrush="White" BorderThickness="4" Margin="10,10,10,450">
-            <Grid Margin="10,0,0,0">
-                <Label x:Name="label" Content="NRO. DE OFICIO&#xD;&#xA;" HorizontalAlignment="Left" Margin="30,32,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="14" Height="32"/>
-                <Label x:Name="label_Copy" Content="AÑO DEL OFICIO&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Margin="30,95,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="14" Height="32"/>
-                <TextBox x:Name="txtNroOficio" HorizontalAlignment="Left" Height="28" Margin="179,32,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="181" FontSize="14"/>
-                <TextBox x:Name="txtAnioOficio" HorizontalAlignment="Left" Height="28" Margin="179,95,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="181" FontSize="14"/>
-                <Button x:Name="btnBuscar" Margin="422,36,475,41" Background="Transparent" Click="btnBuscar_Click">
-                    <Grid Width="57">
-                        <Image Source="minibusquedaLogo.png" Margin="0,0,0,24"/>
-                        <Label x:Name="label1_Copy" Content="BUSCAR" Margin="0,59,0,0" FontWeight="Bold" Foreground="White"/>
+
+        <GroupBox x:Name="groupBox" Header="Exportar Informacion de Papeletas" Foreground="White" Cursor="" 
+                      FontWeight="Bold" FontSize="18" Height="139" VerticalAlignment="Top" Margin="10,10,10,0">
+            <Grid>
+                <Label x:Name="label" Content="NRO. DE OFICIO&#xD;&#xA;" HorizontalAlignment="Left" Margin="37,18,0,59" Foreground="White" FontWeight="Bold" FontSize="14"/>
+                <Label x:Name="label_Copy" Content="AÑO DEL OFICIO&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Margin="33,62,0,15" Foreground="White" FontWeight="Bold" FontSize="14"/>
+                <TextBox x:Name="txtNroOficio" HorizontalAlignment="Left" Margin="182,22,0,65" TextWrapping="Wrap" Text="TextBox" Width="181" FontSize="14" FontWeight="Normal"/>
+                <TextBox x:Name="txtAnioOficio" HorizontalAlignment="Left" Margin="182,66,0,19" TextWrapping="Wrap" Text="TextBox" Width="181" FontSize="14" FontWeight="Normal"/>
+                <Button x:Name="btnBuscar" Margin="429,9,466,9" Background="Transparent" Click="btnBuscar_Click">
+                    <Grid Width="65">
+                        <Image Source="Image/minibusquedaLogo.png" Margin="0,0,0,24"/>
+                        <Label x:Name="label1_Copy" Content="BUSCAR" Margin="0,59,0,0" FontWeight="Bold" Foreground="White" FontSize="14"/>
                     </Grid>
                 </Button>
 
-                <Button x:Name="btnSalir" Margin="804,36,94,41" Background="Transparent" Click="btnSalir_Click">
+                <Button x:Name="btnSalir" Margin="837,9,64,9" Background="Transparent" Click="btnSalir_Click">
                     <Grid Height="87" Width="63">
-                        <Image Source="salirLogo.png" Margin="0,0,0,24"></Image>
-                        <Label x:Name="label2" Content="SALIR" Margin="8,59,8,0" FontWeight="Bold" Foreground="White"/>
+                        <Image Source="Image/salirLogo.png" Margin="0,0,0,24"></Image>
+                        <Label x:Name="label2" Content="SALIR" Margin="8,59,5,0" FontWeight="Bold" Foreground="White" FontSize="14"/>
                     </Grid>
 
                 </Button>
             </Grid>
-        </Border>
+        </GroupBox>
 
-        <ContentControl x:Name="contenedor" Content="ContentControl" Margin="0,192,0,0"/>
+        <ContentControl x:Name="contenedor" Content="ContentControl" Margin="0,154,0,0"/>
     </Grid>
 </UserControl>

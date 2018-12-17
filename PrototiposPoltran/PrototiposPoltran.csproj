@@ -103,6 +103,9 @@
     <Compile Include="PapeletasPorMes.xaml.cs">
       <DependentUpon>PapeletasPorMes.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ParametrosSistema.xaml.cs">
+      <DependentUpon>ParametrosSistema.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Reporte_PapeletaIngresadas.xaml.cs">
       <DependentUpon>Reporte_PapeletaIngresadas.xaml</DependentUpon>
     </Compile>
@@ -168,6 +171,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ParametrosSistema.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Reporte_PapeletaIngresadas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -213,7 +220,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="minibusquedaLogo.png" />
+    <Resource Include="Image\minibusquedaLogo.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
@@ -228,28 +235,31 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="busquedaLogo.png" />
-    <Resource Include="documentoLogo.jpg" />
-    <Resource Include="documentoLogo.png" />
-    <Resource Include="guardarLogo.jpg" />
-    <Resource Include="imprimirLogo.png" />
-    <Resource Include="pnpok.png" />
-    <Resource Include="reporteLogo.png" />
-    <Resource Include="salirLogo.png" />
+    <Resource Include="Image\busquedaLogo.png" />
+    <Resource Include="Image\documentoLogo.jpg" />
+    <Resource Include="Image\documentoLogo.png" />
+    <Resource Include="Image\guardarLogo.jpg" />
+    <Resource Include="Image\imprimirLogo.png" />
+    <Resource Include="Image\pnpok.png" />
+    <Resource Include="Image\reporteLogo.png" />
+    <Resource Include="Image\salirLogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="anadir.png" />
+    <Resource Include="Image\anadir.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="edit.png" />
+    <Resource Include="Image\edit.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="confg.png" />
-    <Resource Include="delete2.png" />
-    <Resource Include="estadisticas.png" />
+    <Resource Include="Image\confg.png" />
+    <Resource Include="Image\delete2.png" />
+    <Resource Include="Image\estadisticas.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="confg1.png" />
+    <Resource Include="Image\confg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\delete.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
