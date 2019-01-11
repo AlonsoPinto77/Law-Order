@@ -58,7 +58,7 @@ namespace PrototiposPoltran
             try
             {
                 pap = new BDPapeleta();
-                if (lblErrNroPap.Content.ToString() == "" && cmbInfraccion.SelectedIndex >= 0)
+                if (lblErrNroPap.Content.ToString() == "")
                 {
                     if (pap.isEstado(txtNroPapeleta.Text))
                     {
@@ -66,87 +66,96 @@ namespace PrototiposPoltran
                         {
                             case "C":
                                 int cont = 0;
-                                if (cont == 0)
+                                if (cmbInfraccion.SelectedIndex >= 0)
                                 {
-                                    if (lblErrDNI.Content.ToString() == str && lblErrBrevete.Content.ToString() == str)
+                                    if (cont == 0)
                                     {
-                                        con = new BDCon();
-                                        if (con.ingresarCon(txtIdConductor.Text, txtBrevete.Text, txtNombres.Text, txtApePat.Text, txtApeMat.Text))
+
+                                        if (lblErrDNI.Content.ToString() == str && lblErrBrevete.Content.ToString() == str)
                                         {
-                                            cont++;
-                                            lblErrDNI.Foreground = Brushes.Red;
-                                            lblErrDNI.Content = "";
-                                            lblErrBrevete.Foreground = Brushes.Red;
-                                            lblErrBrevete.Content = "";
+                                            con = new BDCon();
+                                            if (con.ingresarCon(txtIdConductor.Text, txtBrevete.Text, txtNombres.Text, txtApePat.Text, txtApeMat.Text))
+                                            {
+                                                cont++;
+                                                lblErrDNI.Foreground = Brushes.Red;
+                                                lblErrDNI.Content = "";
+                                                lblErrBrevete.Foreground = Brushes.Red;
+                                                lblErrBrevete.Content = "";
+                                            }
+                                            else
+                                            {
+                                                MessageBox.Show("Error: No guardaron los datos del conductor");
+                                            }
                                         }
                                         else
                                         {
-                                            MessageBox.Show("Error: No guardaron los datos del conductor");
+                                            if (lblErrDNI.Content.ToString() == "" && lblErrBrevete.Content.ToString() == "" && cont == 0)
+                                            {
+                                                cont++;
+                                            }
+                                            else
+                                            {
+                                                MessageBox.Show("Ingrese datos del conductor");
+                                            }
+                                        }
+
+                                    }
+                                    if (cont == 1)
+                                    {
+                                        if (lblErrPlaca.Content.ToString() == str)
+                                        {
+                                            veh = new BDVeh();
+                                            if (veh.ingresarVeh(txtPlaca.Text, txtClase.Text, txtSerie.Text))
+                                            {
+                                                lblErrPlaca.Foreground = Brushes.Red;
+                                                lblErrPlaca.Content = "";
+                                                cont++;
+                                            }
+                                            else
+                                            {
+                                                MessageBox.Show("Error No se guadaron los datos del vehiculo");
+                                            }
+                                        }
+                                        else
+                                        {
+                                            if (lblErrPlaca.Content.ToString() == "" && cont == 1)
+                                            {
+                                                cont++;
+                                            }
+                                            else
+                                            {
+                                                MessageBox.Show("Ingrese datos del placa");
+                                            }
                                         }
                                     }
-                                    else
+                                    if (cont == 2)
                                     {
-                                        if (lblErrDNI.Content.ToString() == "" && lblErrBrevete.Content.ToString() == "" && cont == 0)
+                                        pap = new BDPapeleta();
+                                        DateTime dt = dpFechaImposicion.SelectedDate.Value;
+                                        String fecha = dt.Year + "/" + dt.Month + "/" + dt.Day;
+                                        dt = DateTime.Today;
+                                        String tod = dt.Year + "/" + dt.Month + "/" + dt.Day;
+                                        if (pap.DevolucionPapeleta(txtNroPapeleta.Text, cmbFisico.SelectedValue.ToString(), cmbInfraccion.SelectedValue.ToString(), fecha, tod, txtIdConductor.Text, txtPlaca.Text))
                                         {
-                                            cont++;
+                                            MessageBox.Show("Se guardaron los datos exitosamente!");
+                                            txtNroPapeleta.Clear();
+                                            txtIdConductor.Clear();
+                                            txtNombres.Clear();
+                                            txtApePat.Clear();
+                                            txtApeMat.Clear();
+                                            txtPlaca.Clear();
+                                            txtClase.Clear();
+                                            txtSerie.Clear();
                                         }
                                         else
                                         {
-                                            MessageBox.Show("Ingrese datos del conductor");
+                                            MessageBox.Show("Error: No se guadaron los datos de papeleta intente de nuevo");
                                         }
                                     }
                                 }
-                                if (cont == 1)
+                                else
                                 {
-                                    if (lblErrPlaca.Content.ToString() == str)
-                                    {
-                                        veh = new BDVeh();
-                                        if (veh.ingresarVeh(txtPlaca.Text, txtClase.Text, txtSerie.Text))
-                                        {
-                                            lblErrPlaca.Foreground = Brushes.Red;
-                                            lblErrPlaca.Content = "";
-                                            cont++;
-                                        }
-                                        else
-                                        {
-                                            MessageBox.Show("Error No se guadaron los datos del vehiculo");
-                                        }
-                                    }
-                                    else
-                                    {
-                                        if (lblErrPlaca.Content.ToString() == "" && cont == 1)
-                                        {
-                                            cont++;
-                                        }
-                                        else
-                                        {
-                                            MessageBox.Show("Ingrese datos del placa");
-                                        }
-                                    }
-                                }
-                                if (cont == 2)
-                                {
-                                    pap = new BDPapeleta();
-                                    DateTime dt = dpFechaImposicion.SelectedDate.Value;
-                                    String fecha = dt.Year + "/" + dt.Month + "/" + dt.Day;
-                                    dt = DateTime.Today;
-                                    String tod = dt.Year + "/" + dt.Month + "/" + dt.Day;
-                                    if (pap.DevolucionPapeleta(txtNroPapeleta.Text, cmbFisico.SelectedValue.ToString(), cmbInfraccion.SelectedValue.ToString(), fecha, tod, txtIdConductor.Text, txtPlaca.Text))
-                                    {
-                                        MessageBox.Show("Se guardaron los datos exitosamente!");
-                                        txtNroPapeleta.Clear();
-                                        txtIdConductor.Clear();
-                                        txtNombres.Clear();
-                                        txtApePat.Clear();
-                                        txtApeMat.Clear();
-                                        txtPlaca.Clear();
-                                        txtClase.Clear();
-                                        txtSerie.Clear();
-                                    }
-                                    else
-                                    {
-                                        MessageBox.Show("Error: No se guadaron los datos de papeleta intente de nuevo");
-                                    }
+                                    MessageBox.Show("No se ingreso infraccion");
                                 }
                                 break;
                             case "R":
@@ -177,7 +186,7 @@ namespace PrototiposPoltran
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Error: "+ex.ToString());
+                MessageBox.Show("Error: "+ex.Message);
             }
 
         }
