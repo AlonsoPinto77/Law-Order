@@ -14,23 +14,25 @@ namespace PrototiposPoltran
         SqlConnection conn;
         public DBAccess()
         {
-            conn = Conexion.sqlConexion;
-
+            Conexion.Open();
         }
         public DataTable GetPapeletasIngresadasw(string oficio, string year)
         {
+            
             DataTable dt = new DataTable();
             try
             {
+                conn = Conexion.sqlConexion;
                 if (conn.State.ToString() == "Closed")
                 {
                     conn.Open();
                 }
                 string codString = string.Empty;
-                codString = " Select * from papeleta where numero_oficio='" + oficio + "'";
+                codString = " Select * from papeleta where numero_oficio='" + oficio + "' AND estado!='A' AND estado!='E'";
                 SqlCommand cmd = new SqlCommand(codString, conn);
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 sda.Fill(dt);
+                Conexion.Close();
                 return dt;
 
             }
@@ -45,6 +47,7 @@ namespace PrototiposPoltran
             DataTable dt = new DataTable();
             try
             {
+                conn = Conexion.sqlConexion;
                 if (conn.State.ToString() == "Closed")
                 {
                     conn.Open();
@@ -54,6 +57,7 @@ namespace PrototiposPoltran
                 SqlCommand cmd = new SqlCommand(codString, conn);
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 sda.Fill(dt);
+                Conexion.Close();
                 return dt;
 
             }
@@ -69,6 +73,7 @@ namespace PrototiposPoltran
             DataTable dt = new DataTable();
             try
             {
+                conn = Conexion.sqlConexion;
                 if (conn.State.ToString() == "Closed")
                 {
                     conn.Open();
@@ -78,6 +83,7 @@ namespace PrototiposPoltran
                 SqlCommand cmd = new SqlCommand(codString, conn);
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 sda.Fill(dt);
+                Conexion.Close();
                 return dt;
 
             }
