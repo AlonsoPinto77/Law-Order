@@ -19,9 +19,21 @@ namespace PrototiposPoltran
     /// </summary>
     public partial class VentanaPrincipal : Window
     {
-        public VentanaPrincipal()
+        String codUsuario = "";
+        public VentanaPrincipal(string cod)
         {
             InitializeComponent();
+            if(cod != "")
+            {
+                codUsuario = cod;
+            }
+            else
+            {
+                MainWindow m = new MainWindow();
+                m.Show();
+                this.Close();
+            }
+            
         }
 
         private void ocultarMostrarBotones(int id)
@@ -38,7 +50,9 @@ namespace PrototiposPoltran
                     btnEntregaCom.Visibility = Visibility.Visible;
                     btnEntregaEfec.Visibility = Visibility.Visible;
                     btnIngresoDev.Visibility = Visibility.Visible;
-                    btnGestion.Visibility = Visibility.Visible;
+                    btnAsigPape.Visibility = Visibility.Visible;
+                    btnIngTalMun.Visibility = Visibility.Visible;
+
                     btnBusquedaPapeleta.Visibility = Visibility.Hidden;
                     btnBusqueda.Visibility = Visibility.Visible;
                     imgBusqueda.Visibility = Visibility.Visible;
@@ -66,7 +80,9 @@ namespace PrototiposPoltran
                     btnEntregaCom.Visibility = Visibility.Hidden;
                     btnEntregaEfec.Visibility = Visibility.Hidden;
                     btnIngresoDev.Visibility = Visibility.Hidden;
-                    btnGestion.Visibility = Visibility.Hidden;
+                    btnAsigPape.Visibility = Visibility.Hidden;
+                    btnIngTalMun.Visibility = Visibility.Hidden;
+
                     btnBusquedaPapeleta.Visibility = Visibility.Visible;
                     btnBusquedaPlaca.Visibility = Visibility.Visible;
                     btnBusquedaOtros.Visibility = Visibility.Visible;
@@ -95,12 +111,12 @@ namespace PrototiposPoltran
                     btnMesaPart.Visibility = Visibility.Visible;
                     btnMesaPart1.Visibility = Visibility.Visible;
                     imgMesaPart.Visibility = Visibility.Visible;
-
-
-                    btnGestion.Visibility = Visibility.Hidden;
+                    
                     btnEntregaCom.Visibility = Visibility.Hidden;
                     btnEntregaEfec.Visibility = Visibility.Hidden;
                     btnIngresoDev.Visibility = Visibility.Hidden;
+                    btnAsigPape.Visibility = Visibility.Hidden;
+                    btnIngTalMun.Visibility = Visibility.Hidden;
 
                     btnBusqueda.Visibility = Visibility.Visible;
                     imgBusqueda.Visibility = Visibility.Visible;
@@ -137,11 +153,12 @@ namespace PrototiposPoltran
                     btnMesaPart1.Visibility = Visibility.Visible;
                     imgMesaPart.Visibility = Visibility.Visible;
 
-                    btnGestion.Visibility = Visibility.Hidden;
+                    
                     btnEntregaCom.Visibility = Visibility.Hidden;
                     btnEntregaEfec.Visibility = Visibility.Hidden;
                     btnIngresoDev.Visibility = Visibility.Hidden;
-
+                    btnAsigPape.Visibility = Visibility.Hidden;
+                    btnIngTalMun.Visibility = Visibility.Hidden;
                     btnBusqueda.Visibility = Visibility.Visible;
                     imgBusqueda.Visibility = Visibility.Visible;
 
@@ -177,10 +194,12 @@ namespace PrototiposPoltran
                     btnMesaPart1.Visibility = Visibility.Visible;
                     imgMesaPart.Visibility = Visibility.Visible;
 
-                    btnGestion.Visibility = Visibility.Hidden;
+                    
                     btnEntregaCom.Visibility = Visibility.Hidden;
                     btnEntregaEfec.Visibility = Visibility.Hidden;
                     btnIngresoDev.Visibility = Visibility.Hidden;
+                    btnAsigPape.Visibility = Visibility.Hidden;
+                    btnIngTalMun.Visibility = Visibility.Hidden;
 
                     btnBusqueda.Visibility = Visibility.Visible;
                     imgBusqueda.Visibility = Visibility.Visible;
@@ -239,7 +258,7 @@ namespace PrototiposPoltran
         //------------------------------MESA DE PARTES--------------------------------
         private void btnEntregaEfec_Click(object sender, RoutedEventArgs e)
         {
-            entregaPapeletas entrega = new entregaPapeletas(this.scrollContenedor);
+            entregaPapeletasEfectivo entrega = new entregaPapeletasEfectivo(this.scrollContenedor, codUsuario);
             //this.contentContenedor.Content = entrega;
             this.scrollContenedor.Content = entrega;
             entrega.HorizontalAlignment = HorizontalAlignment.Stretch;
@@ -247,19 +266,31 @@ namespace PrototiposPoltran
         }
         private void btnEntregaCom_Click(object sender, RoutedEventArgs e)
         {
-
+            entregaPapeletasComisaria entrega = new entregaPapeletasComisaria(this.scrollContenedor, codUsuario);
+            //this.contentContenedor.Content = entrega;
+            this.scrollContenedor.Content = entrega;
+            entrega.HorizontalAlignment = HorizontalAlignment.Stretch;
+            entrega.VerticalAlignment = VerticalAlignment.Stretch;
         }
 
         private void btnIngresoDev_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void btnGestion_Click(object sender, RoutedEventArgs e)
         {
             GestionPapeletas gesPap = new GestionPapeletas(this.scrollContenedor);
             this.scrollContenedor.Content = gesPap;
             gesPap.HorizontalAlignment = HorizontalAlignment.Stretch;
             gesPap.VerticalAlignment = VerticalAlignment.Stretch;
+        }
+        private void btnIngTalMun_Click(object sender, RoutedEventArgs e)
+        {
+            IngresoTalonario ingTalonario = new IngresoTalonario(this.scrollContenedor,codUsuario);
+            this.scrollContenedor.Content = ingTalonario;
+            ingTalonario.HorizontalAlignment = HorizontalAlignment.Stretch;
+            ingTalonario.VerticalAlignment = VerticalAlignment.Stretch;
+        }
+
+        private void btnAsigPape_Click(object sender, RoutedEventArgs e)
+        {
+
         }
         //------------------------------BUSQUEDA--------------------------------------
         private void btnBusquedaPapeleta_Click(object sender, RoutedEventArgs e)
@@ -358,5 +389,7 @@ namespace PrototiposPoltran
         {
             this.Close();
         }
+
+        
     }
 }

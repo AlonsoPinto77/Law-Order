@@ -12,10 +12,14 @@
                       FontWeight="Bold" FontSize="18" Height="139" VerticalAlignment="Top" Margin="10,10,10,0">
             <Grid>
                 <Label x:Name="label" Content="NRO. DE OFICIO&#xD;&#xA;" HorizontalAlignment="Left" Margin="37,18,0,59" Foreground="White" FontWeight="Bold" FontSize="14"/>
-                <Label x:Name="label_Copy" Content="AÑO DEL OFICIO&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Margin="33,62,0,15" Foreground="White" FontWeight="Bold" FontSize="14"/>
                 <TextBox x:Name="txtNroOficio" HorizontalAlignment="Left" Margin="182,22,0,65" TextWrapping="Wrap" Text="TextBox" Width="181" FontSize="14" FontWeight="Normal"/>
+                <Label x:Name="lblErrNro" Content="" Margin="182,40,611,43" Foreground="Red" FontSize="12" FontWeight="Bold"/>
+                <Label x:Name="label_Copy" Content="AÑO DEL OFICIO&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Margin="33,62,0,15" Foreground="White" FontWeight="Bold" FontSize="14"/>
                 <TextBox x:Name="txtAnioOficio" HorizontalAlignment="Left" Margin="182,66,0,19" TextWrapping="Wrap" Text="TextBox" Width="181" FontSize="14" FontWeight="Normal"/>
-                <Button x:Name="btnBuscar" Margin="429,9,466,9" Background="Transparent" Click="btnBuscar_Click">
+                <Label x:Name="lblErrAnio" Content="" Margin="182,87,611,-4" Foreground="Red" FontSize="12" FontWeight="Bold"/>
+                
+                
+                <Button x:Name="btnBuscar" Margin="498,8,398,10" Background="Transparent" Click="btnBuscar_Click">
                     <Grid Width="65">
                         <Image Source="Image/minibusquedaLogo.png" Margin="0,0,0,24"/>
                         <Label x:Name="label1_Copy" Content="BUSCAR" Margin="0,59,0,0" FontWeight="Bold" Foreground="White" FontSize="14"/>

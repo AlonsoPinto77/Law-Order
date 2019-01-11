@@ -25,6 +25,7 @@ namespace PrototiposPoltran
         {
             InitializeComponent();
             this.scrollContenedor = scroll;
+            
         }
         private void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
@@ -42,6 +43,14 @@ namespace PrototiposPoltran
         private void btnImprimir_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void txtBusqueda_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (Validacion.IsValidCodPapeleta(txtBusqueda.Text))
+            {
+
+            }
         }
     }
 }

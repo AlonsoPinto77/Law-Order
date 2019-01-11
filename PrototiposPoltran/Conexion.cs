@@ -9,16 +9,11 @@ using System.Windows.Forms;
 
 namespace PrototiposPoltran
 {
-    class Conexion
+    static class Conexion
     {
-        String conexionString = "Data Source=localhost;Initial Catalog=SoftPape;Integrated Security=True";
-        DataTable tabla;
-        SqlConnection sqlConexion;
-        SqlDataAdapter sqlDataAdapter;
-        SqlCommand cmd;
-        SqlDataReader sqlDataReader;
-
-        public Conexion()
+        static String conexionString = "Data Source=localhost;Initial Catalog=BD_GestionPapeletas;Integrated Security=True";
+        public static SqlConnection sqlConexion;
+        public static void Open()
         {
             try {
                 sqlConexion = new SqlConnection(conexionString);
@@ -30,7 +25,7 @@ namespace PrototiposPoltran
             }            
         }
 
-        public void Close()
+        public static void Close()
         {
             try
             {

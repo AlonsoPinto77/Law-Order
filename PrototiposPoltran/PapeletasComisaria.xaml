@@ -13,7 +13,7 @@
                 <Grid Margin="0,0,0,-4">
                     <Label x:Name="label" Content="Comisaria: " HorizontalAlignment="Left" Margin="38,25,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="White"/>
                     <TextBox x:Name="textBox" Margin="160,31,634,74" TextWrapping="Wrap" FontSize="14" Text="333" FontWeight="Normal"/>
-                    <Button x:Name="btnBuscar" Margin="371,10,524,15" Background="Transparent" Click="btnBuscar_Click">
+                    <Button x:Name="btnBuscar" Margin="492,10,403,15" Background="Transparent" Click="btnBuscar_Click">
                         <Grid Width="65">
                             <Image Source="Image/minibusquedaLogo.png" Margin="0,0,0,24"/>
                             <Label x:Name="label1_Copy" Content="BUSCAR" Margin="0,66,0,-7" FontWeight="Bold" Foreground="White" FontSize="14"/>

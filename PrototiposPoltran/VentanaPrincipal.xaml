@@ -11,12 +11,14 @@
             <ScrollViewer IsTabStop="True"  ScrollViewer.HorizontalScrollBarVisibility="Disabled" Width="274">
                 <Grid Height="1200" Width="240">
 
-                    <GroupBox x:Name="groupBox" Header="Mesa de Partes" FontWeight="Bold" FontSize="18" Foreground="White" Margin="0,10,0,0" Height="179" VerticalAlignment="Top">
+                    <GroupBox x:Name="groupBox" Header="Mesa de Partes" FontWeight="Bold" FontSize="18" Foreground="White" Margin="0,10,0,0" Height="192" VerticalAlignment="Top">
                         <Grid>
-                            <Button x:Name="btnEntregaCom" Content="Entrega de Papeletas a Comisarías" FontSize="12" FontWeight="Bold" Height="28"  Margin="0,10,0,111" Visibility="Hidden" Click="btnEntregaCom_Click"/>
-                            <Button x:Name="btnEntregaEfec" Content="Entrega de Papeletas a Efectivos" FontSize="12" FontWeight="Bold" Margin="0,48,0,75" Click="btnEntregaEfec_Click" Visibility="Hidden" />
-                            <Button x:Name="btnIngresoDev" Content="Ingreso Devolución de Papeletas" FontWeight="Bold" FontSize="12" Margin="0,82,1,42" Visibility="Hidden" Click="btnIngresoDev_Click"/>
-                            <Button x:Name="btnGestion" Content="Gestion de Papeletas" FontWeight="Bold" FontSize="12" Margin="1,114,0,10" Visibility="Hidden" Click="btnGestion_Click"/>
+                            <Button x:Name="btnIngTalMun" Content="Ingresar Talonario de Municipalidad" FontWeight="Bold" FontSize="12" Margin="0,7,1,130" Click="btnIngTalMun_Click" Visibility="Hidden"/>
+                            <Button x:Name="btnEntregaCom" Content="Entrega de Papeletas a Comisarías" FontSize="12" FontWeight="Bold"  Margin="0,37,0,97"  Click="btnEntregaCom_Click" Visibility="Hidden"/>
+                            <Button x:Name="btnEntregaEfec" Content="Entrega de Papeletas a Efectivos" FontSize="12" FontWeight="Bold" Margin="0,70,0,66" Click="btnEntregaEfec_Click" Visibility="Hidden"/>
+                            <Button x:Name="btnIngresoDev" Content="Ingreso Devolución de Papeletas" FontWeight="Bold" FontSize="12" Margin="0,101,1,36" Click="btnIngresoDev_Click" Visibility="Hidden"/>
+                            <Button x:Name="btnAsigPape" Content="Re-Asignacion de Papeletas" FontWeight="Bold" FontSize="12" Margin="1,131,0,6" Click="btnAsigPape_Click" Visibility="Hidden"/>
+
                             <Button x:Name="btnMesaPart1" Margin="40,10,0,21" Click="btnMesaPart1_Click" HorizontalAlignment="Left" Width="132">
                                 <StackPanel x:Name="btnMesaPart">
                                     <Image x:Name="imgMesaPart" Source="Image/documentoLogo.jpg"/>

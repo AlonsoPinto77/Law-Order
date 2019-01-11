@@ -9,12 +9,16 @@
     <Grid>
         <Label x:Name="label1" Content="Usuario: " HorizontalAlignment="Left" Margin="79,149,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
         <Label x:Name="label2" Content="Contraseña: " HorizontalAlignment="Left" Margin="79,197,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
-        <TextBox x:Name="txtCip" HorizontalAlignment="Left" Height="23" Margin="211,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" CharacterCasing="Upper" />
-        <PasswordBox x:Name="txtContraseña" HorizontalAlignment="Left" Height="23" Margin="211,205,0,0"  VerticalAlignment="Top" Width="169"/>
+        <TextBox x:Name="txtUsuario" HorizontalAlignment="Left" Height="23" Margin="211,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" CharacterCasing="Upper" TextChanged="txtUsuario_TextChanged" />
+        <PasswordBox x:Name="txtContraseña" HorizontalAlignment="Left" Height="23" Margin="211,205,0,0"  VerticalAlignment="Top" Width="169" PasswordChanged="txtContraseña_PasswordChanged"/>
+        <Image x:Name="CorrectUser" HorizontalAlignment="Left" Height="17" Margin="385,154,0,0" VerticalAlignment="Top" Width="20" Source="Image/check.png" Stretch="Fill" Visibility="Hidden"/>
+        <Image x:Name="CorrectPass" HorizontalAlignment="Left" Height="17" Margin="385,211,0,0" VerticalAlignment="Top" Width="20" Source="Image/check.png" Stretch="Fill" Visibility="Hidden"/>
+        
         <Label x:Name="label1_Copy" Content="Ingrese sus Credenciales" HorizontalAlignment="Left" Margin="134,47,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18"/>
         <Image x:Name="image" HorizontalAlignment="Left" Height="100" Margin="24,17,0,0" VerticalAlignment="Top" Width="79" Source="Image/pnpok.png" Stretch="Fill"/>
         <Button x:Name="btnIngresar" Content="Ingresar" HorizontalAlignment="Left" Margin="198,279,0,0" VerticalAlignment="Top" Width="92" Click="btnIngresar_Click" Height="42" FontSize="18"/>
-        <Label x:Name="txtmensajeError" Content="" HorizontalAlignment="Left" Margin="103,248,0,0" VerticalAlignment="Top" Foreground="Red" Width="277"/>
+        <Label x:Name="lblErrLogin" Content="" HorizontalAlignment="Left" Margin="103,248,0,0" VerticalAlignment="Top" Foreground="Red" Width="277"/>
+        
 
     </Grid>
 </Window>

@@ -50,6 +50,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Forms" />
@@ -78,6 +82,7 @@
     <Compile Include="ActualizacionTabEstadisticas.xaml.cs">
       <DependentUpon>ActualizacionTabEstadisticas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BDQuery.cs" />
     <Compile Include="busquedaPapeletas.xaml.cs">
       <DependentUpon>busquedaPapeletas.xaml</DependentUpon>
     </Compile>
@@ -85,14 +90,20 @@
     <Compile Include="CuadroConductores.xaml.cs">
       <DependentUpon>CuadroConductores.xaml</DependentUpon>
     </Compile>
-    <Compile Include="entregaPapeletas.xaml.cs">
-      <DependentUpon>entregaPapeletas.xaml</DependentUpon>
+    <Compile Include="entregaPapeletasComisaria.xaml.cs">
+      <DependentUpon>entregaPapeletasComisaria.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="entregaPapeletasEfectivo.xaml.cs">
+      <DependentUpon>entregaPapeletasEfectivo.xaml</DependentUpon>
     </Compile>
     <Compile Include="ExportarInfo.xaml.cs">
       <DependentUpon>ExportarInfo.xaml</DependentUpon>
     </Compile>
     <Compile Include="GestionPapeletas.xaml.cs">
       <DependentUpon>GestionPapeletas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IngresoTalonario.xaml.cs">
+      <DependentUpon>IngresoTalonario.xaml</DependentUpon>
     </Compile>
     <Compile Include="MantenimientoComisaria.xaml.cs">
       <DependentUpon>MantenimientoComisaria.xaml</DependentUpon>
@@ -106,6 +117,10 @@
     <Compile Include="ParametrosSistema.xaml.cs">
       <DependentUpon>ParametrosSistema.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ReAsignacionPapeleta.xaml.cs">
+      <DependentUpon>ReAsignacionPapeleta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes.cs" />
     <Compile Include="Reporte_PapeletaIngresadas.xaml.cs">
       <DependentUpon>Reporte_PapeletaIngresadas.xaml</DependentUpon>
     </Compile>
@@ -135,7 +150,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="entregaPapeletas.xaml">
+    <Page Include="entregaPapeletasComisaria.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="entregaPapeletasEfectivo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -144,6 +163,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GestionPapeletas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IngresoTalonario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -172,6 +195,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ParametrosSistema.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReAsignacionPapeleta.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -210,6 +237,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -260,6 +288,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\check.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

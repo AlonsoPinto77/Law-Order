@@ -12,7 +12,7 @@
                       FontWeight="Bold" FontSize="18" Height="148" VerticalAlignment="Top" Margin="10,10,10,0">
                 <Grid Margin="0,0,6,0" RenderTransformOrigin="0.469,0.508">
                     <Label x:Name="label" Content="N° de Papeleta: " HorizontalAlignment="Left" Margin="9,31,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Foreground="White"/>
-                    <TextBox x:Name="textBox" Margin="158,33,636,58" TextWrapping="Wrap" FontSize="18" RenderTransformOrigin="0.507,0.802"/>
+                    <TextBox x:Name="txtBusqueda" Margin="158,33,636,58" TextWrapping="Wrap" FontSize="18" RenderTransformOrigin="0.507,0.802" TextChanged="txtBusqueda_TextChanged" />
                     <Button x:Name="btnBuscar" Margin="424,15,472,10" Background="Transparent" Click="btnBuscar_Click">
                         <Grid Width="65">
                             <Image Source="Image/minibusquedaLogo.png" Margin="0,0,0,24"/>
