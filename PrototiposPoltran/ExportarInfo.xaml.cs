@@ -29,7 +29,7 @@ namespace PrototiposPoltran
 
         private void btnSalir_Click(object sender, RoutedEventArgs e)
         {
-
+            this.scrollContenedor = null;
         }
 
         private void btnBuscar_Click(object sender, RoutedEventArgs e)

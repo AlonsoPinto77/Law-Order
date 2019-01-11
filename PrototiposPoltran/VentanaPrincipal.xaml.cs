@@ -340,7 +340,6 @@ namespace PrototiposPoltran
             objeto3.HorizontalAlignment = HorizontalAlignment.Stretch;
             objeto3.VerticalAlignment = VerticalAlignment.Stretch;
         }
-
         //---------------------------ESTADISTICAS--------------------------------------
         private void btn_PapeletasPorMes_Click(object sender, RoutedEventArgs e)
         {

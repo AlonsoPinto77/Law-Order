@@ -54,8 +54,10 @@
       <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -83,6 +85,11 @@
       <DependentUpon>ActualizacionTabEstadisticas.xaml</DependentUpon>
     </Compile>
     <Compile Include="BDQuery.cs" />
+    <Compile Include="BD_GestionPapeletasDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD_GestionPapeletasDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BusquedaOtros.xaml.cs">
       <DependentUpon>BusquedaOtros.xaml</DependentUpon>
     </Compile>
@@ -93,6 +100,7 @@
     <Compile Include="CuadroConductores.xaml.cs">
       <DependentUpon>CuadroConductores.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DBAccess.cs" />
     <Compile Include="entregaPapeletasComisaria.xaml.cs">
       <DependentUpon>entregaPapeletasComisaria.xaml</DependentUpon>
     </Compile>
@@ -258,6 +266,20 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ExportarInfo.rdlc" />
+    <EmbeddedResource Include="Reportes\PapeletasIngresadas.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteConductores.rdlc" />
+    <None Include="BD_GestionPapeletasDataSet.xsc">
+      <DependentUpon>BD_GestionPapeletasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD_GestionPapeletasDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD_GestionPapeletasDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD_GestionPapeletasDataSet.xss">
+      <DependentUpon>BD_GestionPapeletasDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -319,6 +341,7 @@
   <ItemGroup>
     <Resource Include="Image\atrasLogo.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

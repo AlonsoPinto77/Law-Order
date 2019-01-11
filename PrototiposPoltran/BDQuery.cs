@@ -129,7 +129,7 @@ namespace PrototiposPoltran
                     BDPapeleta pap = new BDPapeleta();
                     String num = (int.Parse(ini) + i).ToString();
                     
-                    if (pap.ingresarPapeletas("("+num+","+0+","+1 + ",'A')"))
+                    if (pap.ingresarPapeletas("("+num+","+0+","+1 +",'"+ nofi + "','A')"))
                         cont++;
                 }
             }
@@ -195,7 +195,7 @@ namespace PrototiposPoltran
         public bool ingresarPapeletas(String cad)
         {
             Conexion.Open();
-            cmd = new SqlCommand("INSERT INTO Papeleta(numero_papeleta,falta,fisico,estado) VALUES"+cad, Conexion.sqlConexion);
+            cmd = new SqlCommand("INSERT INTO Papeleta(numero_papeleta,falta,fisico,numero_oficio,estado) VALUES"+cad, Conexion.sqlConexion);
             bool fl = (cmd.ExecuteNonQuery() > 0) ? true : false;
             Conexion.Close();
             return fl;
@@ -209,14 +209,23 @@ namespace PrototiposPoltran
             Conexion.Close();
             return fl;
         }
-        public int isAsignado(String ini,String fin)
+        public int isAsignado(String ini, String fin)
         {
             Conexion.Open();
-            cmd = new SqlCommand("SELECT COUNT(*) FROM papeleta WHERE falta=1 AND numero_papeleta BETWEEN '"+ini+"' AND '"+fin+"'", Conexion.sqlConexion);
+            cmd = new SqlCommand("SELECT COUNT(*) FROM papeleta WHERE falta=1 AND numero_papeleta BETWEEN '" + ini + "' AND '" + fin + "'", Conexion.sqlConexion);
             Int32 count = (Int32)cmd.ExecuteScalar();
             Conexion.Close();
             return count;
         }
+        public int isIngresado(String ini, String fin)
+        {
+            Conexion.Open();
+            cmd = new SqlCommand("SELECT COUNT(*) FROM papeleta WHERE numero_papeleta BETWEEN '" + ini + "' AND '" + fin + "'", Conexion.sqlConexion);
+            Int32 count = (Int32)cmd.ExecuteScalar();
+            Conexion.Close();
+            return count;
+        }
+
         public bool isExistPap(String num)
         {
             bool flag = false;

@@ -32,8 +32,8 @@ namespace PrototiposPoltran
 
         private void btnGrabar_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 int cant = Convert.ToInt32(lblCantidad.Content);
 
                 if (cant > 0)
@@ -41,8 +41,8 @@ namespace PrototiposPoltran
                     int lgNroOfi = ((lblErrNroOfi.Content) as String).Length;
                     int lgTitOfi = ((lblErrTitOfi.Content) as String).Length;
                     BDPapeleta pap = new BDPapeleta();
-                    int numPapAsig = pap.isAsignado(txtRangoDel.Text, txtRangoAl.Text);
-                    if (numPapAsig == 0)
+                    int numPapIng = pap.isIngresado(txtRangoDel.Text, txtRangoAl.Text);
+                    if (numPapIng == 0)
                     {
                         if (lgNroOfi == 0 && lgTitOfi == 0)
                         {
@@ -66,18 +66,18 @@ namespace PrototiposPoltran
                     }
                     else
                     {
-                        MessageBox.Show(numPapAsig + " papeletas dentro del rango ya han sido ingresadas en otro talonario");
+                        MessageBox.Show(numPapIng + " papeletas dentro del rango ya han sido ingresadas en otro talonario");
                     }
                 }
                 else
                 {
                     MessageBox.Show("Error: La cantidad negativa");
                 }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Error: "+ex.ToString());
-            }
+            //}
+            //catch(Exception ex)
+            //{
+            //    MessageBox.Show("Error: "+ex.Message);
+            //}
         }
 
         private void btnSalir_Click(object sender, RoutedEventArgs e)

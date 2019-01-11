@@ -4,6 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PrototiposPoltran"
+             xmlns:rv="clr-namespace:Microsoft.Reporting.WinForms;assembly=Microsoft.ReportViewer.WinForms"
+
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300"
               Background="#2E2E2E" Width="1006.5" Height="636.5">
@@ -33,6 +35,8 @@
 
             </Grid>
         </GroupBox>
-        <ContentControl x:Name="contenedor" Content="ContentControl" Margin="0,171,0,0"/>
+        <ContentControl x:Name="contenedor" Margin="0,171,0,0">
+            <WindowsFormsHost HorizontalAlignment="Left" Height="445" Margin="22,10,0,0" VerticalAlignment="Top" Width="974"/>
+        </ContentControl>
     </Grid>
 </UserControl>

@@ -3,32 +3,36 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:rv="clr-namespace:Microsoft.Reporting.WinForms;assembly=Microsoft.ReportViewer.WinForms"
         xmlns:local="clr-namespace:PrototiposPoltran"
         mc:Ignorable="d"
          Background="#2E2E2E" Width="1006.5" Height="636.5">
     <Grid >
-        <GroupBox x:Name="groupBox" Header="Reporte de Papeletas Ingresadas" Foreground="White" Cursor="" 
-                      FontWeight="Bold" FontSize="18" Height="153" VerticalAlignment="Top" Margin="10,10,10,0">
+        <Border BorderBrush="White" BorderThickness="4" Margin="0,0,0,497">
             <Grid Margin="0,0,0,0">
-                <Label x:Name="label" Content="Nº de Oficio:" Margin="48,20,829,69" FontSize="14" Foreground="White" FontWeight="Bold" RenderTransformOrigin="0.501,0.411"/>
-                <TextBox x:Name="textBox" Margin="215,20,615,80" TextWrapping="Wrap" FontSize="14" FontWeight="Normal"/>
-                <Label x:Name="label_Copy" Content="Año:" Margin="48,59,847,31" FontSize="14" Foreground="White" FontWeight="Bold"/>
-                <TextBox x:Name="textBox_Copy" Margin="215,63,615,36" TextWrapping="Wrap" FontSize="14" FontWeight="Normal"/>
-                <Button x:Name="btnBuscar" Margin="424,15,479,19" Background="Transparent" Click="btnBuscar_Click">
-                    <Grid Width="65">
-                        <Image Source="Image/minibusquedaLogo.png" Margin="0,0,0,24"/>
-                        <Label x:Name="label1_Copy" Content="BUSCAR" Margin="0,59,0,0" FontWeight="Bold" Foreground="White" FontSize="14"/>
+                <Label x:Name="label" Content="Nº de Oficio:" Margin="10,15,876,85" FontSize="18" Foreground="White" FontWeight="Bold" RenderTransformOrigin="0.501,0.411"/>
+                <TextBox x:Name="textBoxOficio" Margin="177,15,653,85" TextWrapping="Wrap"/>
+                <Label x:Name="label_Copy" Content="Año:" Margin="19,83,876,17" FontSize="18" Foreground="White" FontWeight="Bold"/>
+                <TextBox x:Name="textBox_Copy" Margin="177,83,653,22" TextWrapping="Wrap"/>
+                <Button x:Name="btnBuscar" Margin="424,15,506,25" Background="Transparent" Click="btnBuscar_Click">
+                    <Grid Width="57">
+                        <Image Source="Image/minibusquedaLogo.png" Margin="0,0,0,24" RenderTransformOrigin="1,1" Height="Auto" VerticalAlignment="Stretch"/>
+                        <Label x:Name="label1_Copy" Content="BUSCAR" Margin="0,59,0,0" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" Width="57"/>
                     </Grid>
                 </Button>
 
-                <Button x:Name="btnSalir" Margin="845,15,58,19" Background="Transparent" Click="btnSalir_Click">
+                <Button x:Name="btnSalir" Margin="853,15,81,25" Background="Transparent" Click="btnSalir_Click">
                     <Grid>
-                        <Image Source="Image/salirLogo.png" Margin="0,0,0,22"></Image>
-                        <Label x:Name="label2" Content="SALIR" Margin="7,58,7,0" FontWeight="Bold" Foreground="White" FontSize="14"/>
+                        <Image Source="Image/salirLogo.png" Margin="0,0,0,24"></Image>
+                        <Label x:Name="label2" Content="SALIR" Margin="7,58,7,5" FontWeight="Bold" Foreground="White"/>
                     </Grid>
                 </Button>
             </Grid>
-        </GroupBox>
-        <Grid Margin="0,150,0,0"/>
+        </Border>
+        <Grid Margin="0,150,0,0">
+            <WindowsFormsHost HorizontalAlignment="Left" Height="466" Margin="10,10,0,0" VerticalAlignment="Top" Width="986" RenderTransformOrigin="0.44,0.48">
+                <rv:ReportViewer x:Name="DemorReport"></rv:ReportViewer>
+            </WindowsFormsHost>
+        </Grid>
     </Grid>
 </UserControl>
