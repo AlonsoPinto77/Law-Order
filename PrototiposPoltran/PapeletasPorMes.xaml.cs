@@ -28,8 +28,8 @@ namespace PrototiposPoltran
         }
         private void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
-            resultadosBúsqueda resultado = new resultadosBúsqueda();
-            this.contenedor.Content = resultado;
+            //resultadosBúsqueda resultado = new resultadosBúsqueda();
+            //this.contenedor.Content = resultado;
 
         }
 

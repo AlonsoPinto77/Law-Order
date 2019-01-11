@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="PrototiposPoltran.busquedaPapeletas"
+﻿<UserControl x:Class="PrototiposPoltran.BusquedaOtros"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -10,9 +10,8 @@
         <Grid>
             <Border BorderBrush="White" BorderThickness="4" Margin="0,10,0,800">
                 <Grid Margin="0,0,-4,-3">
-                    <Label x:Name="lblPapeletaPlac" Content="N° de Papeleta: " Margin="9,31,911,52" FontSize="14" FontWeight="Bold" Foreground="White"/>
-                    <TextBox x:Name="txtBusqueda" Margin="158,33,699,47" TextWrapping="Wrap" FontSize="18" RenderTransformOrigin="0.507,0.802" KeyDown="txtBusqueda_KeyDown" CharacterCasing="Upper"/>
-                    <Button x:Name="btnBuscar" Margin="424,15,549,0" Background="Transparent" Click="btnBuscar_Click" Height="87" VerticalAlignment="Top">
+                    <TextBox x:Name="txtBusqueda" Margin="350,53,404,27" TextWrapping="Wrap" FontSize="18" RenderTransformOrigin="0.507,0.802" KeyDown="txtBusqueda_KeyDown" TextChanged="txtBusqueda_TextChanged" CharacterCasing="Upper"/>
+                    <Button x:Name="btnBuscar" Margin="653,15,320,0" Background="Transparent" Click="btnBuscar_Click" Height="87" VerticalAlignment="Top">
                         <Grid Width="57">
                             <Image Source="Image/minibusquedaLogo.png" Margin="0,0,0,24"/>
                             <Label x:Name="label1_Copy" Content="BUSCAR" Margin="0,59,0,0" FontWeight="Bold" Foreground="White"/>
@@ -38,9 +37,19 @@
                         </Grid>
 
                     </Button>
+                    <GroupBox x:Name="groupBox" Header="Opciones de Búsqueda" HorizontalAlignment="Left" VerticalAlignment="Top" Height="102" Width="314" Foreground="White" FontSize="16" FontWeight="Bold" Margin="11,0,0,0">
+                        <Grid HorizontalAlignment="Left" Height="86" Margin="0,-10,-2,-2" VerticalAlignment="Top" Width="304">
+                            <RadioButton x:Name="rbtnDelegacion" Content="Delegación" HorizontalAlignment="Left" Margin="68,10,0,0" VerticalAlignment="Top" Foreground="Aqua" Click="rbtnDelegacion_Click"/>
+                            <RadioButton x:Name="rbtnConductor" Content="Conductor" HorizontalAlignment="Left" Margin="68,38,0,0" VerticalAlignment="Top" Foreground="Aqua" Click="rbtnConductor_Click"/>
+                            <RadioButton x:Name="rbtnEfectivo" Content="Efectivo CIP" HorizontalAlignment="Left" Margin="68,66,0,0" VerticalAlignment="Top" Foreground="Aqua" Click="rbtnEfectivo_Click"/>
+                        </Grid>
+                    </GroupBox>
+                    <Label x:Name="lblBusqueda" Content="Label" HorizontalAlignment="Left" Margin="350,15,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16" Foreground="White" Width="281" Visibility="Hidden"/>
+                    <ListBox x:Name="lblSugerencias" HorizontalAlignment="Left" Height="85" Margin="350,90,0,-63" VerticalAlignment="Top" Width="281" Visibility="Visible" SelectionChanged="lblSugerencias_SelectionChanged"/>
                 </Grid>
             </Border>
             <ContentControl x:Name="contenedor" Content="ContentControl" Margin="0,132,0,0"/>
         </Grid>
     </Grid>
 </UserControl>
+

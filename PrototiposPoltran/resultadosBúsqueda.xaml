@@ -1,88 +1,90 @@
-﻿<UserControl x:Class="PrototiposPoltran.resultadosBúsqueda"
+﻿<UserControl x:Class="PrototiposPoltran.resultadosBusqueda"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PrototiposPoltran"
              mc:Ignorable="d" 
-            Background="#2E2E2E" Width="1006.5" Height="540">
+            Background="#2E2E2E" Width="1039" Height="795">
     <Grid>
-        <Grid HorizontalAlignment="Left" Width="1006">
-            <GroupBox x:Name="groupBox" Header="Datos de Búsqueda " FontSize="16" FontWeight="Bold" Foreground="White" Margin="0,0,0,470">
+        <Grid HorizontalAlignment="Left" Width="1039">
+            <GroupBox x:Name="groupBox" Header="Datos de Búsqueda " FontSize="16" FontWeight="Bold" Foreground="White" Margin="0,0,0,685">
                 <Grid Margin="0,0,0,-5">
-                    <Label x:Name="label" Content="Nro. de Papeleta:" Margin="35,6,822,10" Foreground="White"/>
-                    <Label x:Name="lblNumPapeleta" Content="lblNumPapeleta" Margin="179,6,686,10" Foreground="White"/>
-                    <Label x:Name="label1" Content="Nro. de Placa:" Margin="403,6,479,10" Foreground="White"/>
-                    <Label x:Name="lblNumPlaca" Content="lblNumPlaca" Margin="517,6,374,10" Foreground="White"/>
-                    <Label x:Name="label3" Content="Fecha: " Margin="738,6,196,10" Foreground="White"/>
-                    <Label x:Name="lblFecha" Content="lblFecha" Margin="826,6,98,10" Foreground="White"/>
+                    <Label x:Name="label" Content="Nro. de Papeleta:" Margin="53,20,799,32" FontSize="20" Foreground="Aqua"/>
+                    <Label x:Name="lblNumPapeleta" Content="lblNumPapeleta" Margin="233,20,624,23" Foreground="White" FontSize="20"/>
+                    <Label x:Name="label1" Content="Nro. de Placa:" Margin="433,20,445,32" Foreground="Aqua" FontSize="20"/>
+                    <Label x:Name="lblNumPlaca" Content="lblNumPlaca" Margin="587,20,297,32" Foreground="White" FontSize="20"/>
+                    <Label x:Name="label3" Content="Fecha: " Margin="767,20,176,32" Foreground="Aqua" FontSize="20"/>
+                    <Label x:Name="lblFecha" Content="lblFecha" Margin="856,20,50,32" Foreground="White" RenderTransformOrigin="0.511,0.407" FontSize="20"/>
                 </Grid>
             </GroupBox>
-            <GroupBox x:Name="groupBox1" Header="Datos Generales del Conductor" Margin="0,75,511,252" FontWeight="Bold" FontSize="16" Foreground="White">
+            <GroupBox x:Name="groupBox1" Header="Datos Generales del Conductor" Margin="0,115,544,302" FontWeight="Bold" FontSize="16" Foreground="White">
                 <Grid Margin="-6,-12,-1,1">
-                    <Label x:Name="label2" Content="Nro. Licencia:" Margin="10,10,343,147" FontSize="20" Foreground="Aqua"/>
-                    <Label x:Name="label2_Copy" Content="Hora:" Margin="333,10,95,0" VerticalAlignment="Top" FontSize="20" Foreground="Aqua"/>
-                    <Label x:Name="labellblNumLicencia" Content="lblNumLicencia" Margin="152,10,184,147" FontSize="20" Foreground="White"/>
-                    <Label x:Name="lblHora" Content="lblHora" Margin="395,10,15,0" VerticalAlignment="Top" FontSize="20" Foreground="White" RenderTransformOrigin="0.475,0.378"/>
-                    <Label x:Name="label2_Copy1" Content="Apellidos y Nombres:" Margin="10,52,269,105" FontSize="20" Foreground="Aqua"/>
-                    <Label x:Name="lblNombreCdt" Content="lblNombreCdt" Margin="10,89,336,68" FontSize="20" Foreground="White"/>
-                    <Label x:Name="label2_Copy2" Content="Nro. DNI:" Margin="333,52,58,105" FontSize="20" Foreground="Aqua"/>
-                    <Label x:Name="lblDNICdt" Content="lblDNICdt" Margin="333,89,54,68" FontSize="20" Foreground="White"/>
-                    <Label x:Name="label2_Copy3" Content="Dirección:" Margin="10,126,376,31" FontSize="20" Foreground="Aqua"/>
-                    <Label x:Name="lblDirCdt" Content="lblDirCdt" Margin="10,157,385,0" FontSize="20" Foreground="White"/>
-                    <Label x:Name="label2_Copy4" Content="Distrito:" Margin="333,126,71,31" FontSize="20" Foreground="Aqua" RenderTransformOrigin="3.115,0.757"/>
-                    <Label x:Name="lblDistCdt" Content="lblDistCdt" Margin="333,157,54,0" RenderTransformOrigin="-0.06,0.387" FontSize="20" Foreground="White"/>
-                    <Separator Margin="0,39,-3,137"/>
-                    <Separator HorizontalAlignment="Left" Height="18" Margin="0,118,-3,0" VerticalAlignment="Top" Width="493"/>
+                    <Label x:Name="label2" Content="Nro. Licencia:" Margin="10,10,343,245" FontSize="20" Foreground="Aqua"/>
+                    <Label x:Name="label2_Copy" Content="Hora:" Margin="329,20,99,256" FontSize="20" Foreground="Aqua"/>
+                    <Label x:Name="lblNumLicencia" Content="lblNumLicencia" Margin="10,47,326,208" FontSize="20" Foreground="White"/>
+                    <Label x:Name="lblHora" Content="lblHora" Margin="329,47,81,229" FontSize="20" Foreground="White" RenderTransformOrigin="0.475,0.378"/>
+                    <Label x:Name="label2_Copy1" Content="Apellidos y Nombres:" Margin="10,118,269,208" FontSize="20" Foreground="Aqua"/>
+                    <Label x:Name="lblNombreCdt" Content="lblNombreCdt" Margin="15,153,5,176" FontSize="20" Foreground="White"/>
+                    <Label x:Name="label2_Copy2" Content="Nro. DNI:" Margin="15,194,376,132" FontSize="20" Foreground="Aqua"/>
+                    <Label x:Name="lblDNICdt" Content="lblDNICdt" Margin="15,229,269,100" FontSize="20" Foreground="White"/>
+                    <Label x:Name="label2_Copy3" Content="Dirección:" Margin="15,276,371,45" FontSize="20" Foreground="Aqua"/>
+                    <Label x:Name="lblDirCdt" Content="lblDirCdt" Margin="15,303,175,10" FontSize="20" Foreground="White"/>
+                    <Label x:Name="label2_Copy4" Content="Distrito:" Margin="333,276,71,49" FontSize="20" Foreground="Aqua" RenderTransformOrigin="3.115,0.757"/>
+                    <Label x:Name="lblDistCdt" Content="lblDistCdt" Margin="333,303,10,18" RenderTransformOrigin="-0.06,0.387" FontSize="20" Foreground="White"/>
                 </Grid>
             </GroupBox>
-            <GroupBox x:Name="groupBox1_Copy" Header="Características y Propietario del Vehículo" Margin="516,75,10,173" FontWeight="Bold" FontSize="16" Foreground="White">
+            <GroupBox x:Name="groupBox1_Copy" Header="Características y Propietario del Vehículo" Margin="516,115,10,350" FontWeight="Bold" FontSize="16" Foreground="White">
                 <Grid Margin="-6,-12,-3,-2">
-                    <Label x:Name="label2_Copy10" Content="Apellidos y Nombres:" Margin="10,10,256,230" FontSize="20" Foreground="Aqua"/>
-                    <Label x:Name="lblNombreProp" Content="lblNombreProp" Margin="10,40,311,200" FontSize="20" FontWeight="Bold" Foreground="White"/>
-                    <Label x:Name="label2_Copy11" Content="Dirección:" Margin="10,82,363,158" FontSize="20" Foreground="Aqua"/>
-                    <Label x:Name="lblDirProp" Content="lblDirProp" Margin="10,108,360,132" FontSize="20" FontWeight="Bold" Foreground="White"/>
-                    <Label x:Name="label2_Copy12" Content="Color: " Margin="10,150,395,90" FontSize="20" Foreground="Aqua"/>
-                    <Label x:Name="lblColorV" Content="lblColorV" Margin="10,177,369,63" FontSize="20" FontWeight="Bold" Foreground="White"/>
-                    <Label x:Name="label2_Copy13" Content="Clase:" Margin="10,214,403,26" FontSize="20" Foreground="Aqua"/>
-                    <Label x:Name="lblDirProp_Copy1" Content="lblClaseV" Margin="10,238,371,2" FontSize="20" FontWeight="Bold" Foreground="White"/>
-                    <Label x:Name="label2_Copy14" Content="Marca:" Margin="333,150,70,90" FontSize="20" Foreground="Aqua"/>
-                    <Label x:Name="lblMarcaV" Content="lblMarcaV" Margin="333,177,39,63" FontSize="20" FontWeight="Bold" Foreground="White"/>
-                    <Label x:Name="label2_Copy15" Content="Año:" Margin="333,219,90,21" FontSize="20" Foreground="Aqua"/>
-                    <Label x:Name="lblAnioV" Content="lblAnioV" Margin="333,238,53,2" FontSize="20" FontWeight="Bold" Foreground="White"/>
-                    <Separator HorizontalAlignment="Left" Height="18" Margin="0,71,0,0" VerticalAlignment="Top" Width="477"/>
-                    <Separator Margin="0,215,0,44"/>
-                    <Separator Margin="0,146,0,113"/>
+                    <Label x:Name="label2_Copy10" Content="Apellidos y Nombres:" Margin="10,10,256,178" FontSize="20" Foreground="Aqua"/>
+                    <Label x:Name="lblNombreProp" Content="lblNombreProp" Margin="10,40,311,148" FontSize="20" FontWeight="Bold" Foreground="White"/>
+                    <Label x:Name="label2_Copy11" Content="Dirección:" Margin="10,85,363,103" FontSize="20" Foreground="Aqua"/>
+                    <Label x:Name="lblDirProp" Content="lblDirProp" Margin="10,111,360,77" FontSize="20" FontWeight="Bold" Foreground="White"/>
+                    <Label x:Name="label2_Copy12" Content="Color: " Margin="10,167,395,81" FontSize="20" Foreground="Aqua"/>
+                    <Label x:Name="lblColorV" Content="lblColorV" Margin="10,193,369,81" FontSize="20" FontWeight="Bold" Foreground="White"/>
+                    <Label x:Name="label2_Copy13" Content="Clase:" Margin="10,247,403,10" FontSize="20" Foreground="Aqua"/>
+                    <Label x:Name="lblClaseV" Content="lblClaseV" Margin="10,274,371,-14" FontSize="20" FontWeight="Bold" Foreground="White"/>
+                    <Label x:Name="label2_Copy14" Content="Marca:" Margin="333,167,70,81" FontSize="20" Foreground="Aqua"/>
+                    <Label x:Name="lblMarcaV" Content="lblMarcaV" Margin="333,193,39,0" FontSize="20" FontWeight="Bold" Foreground="White" Height="42" VerticalAlignment="Top"/>
+                    <Label x:Name="label2_Copy15" Content="Año:" Margin="333,247,90,5" FontSize="20" Foreground="Aqua"/>
+                    <Label x:Name="lblAnioV" Content="lblAnioV" Margin="333,274,53,-14" FontSize="20" FontWeight="Bold" Foreground="White"/>
                 </Grid>
             </GroupBox>
-            <GroupBox x:Name="groupBox1_Copy1" Header="Lugar y Comisaría que Interviene" Margin="0,303,511,20" FontWeight="Bold" FontSize="16" Foreground="White">
-                <Grid Margin="-6,-12,-2,0">
+            <GroupBox x:Name="groupBox1_Copy1" Header="Lugar y Comisaría que Interviene" Margin="0,498,544,32" FontWeight="Bold" FontSize="16" Foreground="White">
+                <Grid Margin="-6,-12,-2,-8">
                     <Label x:Name="label2_Copy5" Content="Lugar: " Margin="10,10,406,157" FontSize="20" Foreground="Aqua" RenderTransformOrigin="3.115,0.757"/>
                     <Label x:Name="label2_Copy6" Content="Distrito:" Margin="330,10,75,157" FontSize="20" Foreground="Aqua" RenderTransformOrigin="3.115,0.757"/>
                     <Label x:Name="lblLugarCom" Content="lblLugarCom" Margin="10,35,351,132" FontSize="20" FontWeight="Bold" Foreground="White"/>
                     <Label x:Name="lblDistrito" Content="lblDistrito" Margin="330,35,57,132" FontSize="20" FontWeight="Bold" Foreground="White"/>
-                    <Label x:Name="label2_Copy7" Content="Comisaría: " Margin="10,72,367,95" FontSize="20" Foreground="Aqua" RenderTransformOrigin="3.115,0.757"/>
-                    <Label x:Name="lblCom" Content="lblCom" Margin="10,97,404,70" FontSize="20" FontWeight="Bold" Foreground="White"/>
-                    <Label x:Name="label2_Copy8" Content="Efectivo PNP:" Margin="10,134,345,33" FontSize="20" Foreground="Aqua" RenderTransformOrigin="3.115,0.757"/>
-                    <Label x:Name="lblNomEfec" Content="lblNomEfec" Margin="10,157,362,10" FontSize="20" FontWeight="Bold" Foreground="White"/>
-                    <Label x:Name="label2_Copy9" Content="Código CIP" Margin="330,134,47,33" FontSize="20" Foreground="Aqua" RenderTransformOrigin="3.115,0.757"/>
-                    <Label x:Name="lblCodEfec" Content="lblCodEfec" Margin="330,157,51,10" FontSize="20" FontWeight="Bold" Foreground="White"/>
-                    <Separator Margin="0,72,-2,114"/>
-                    <Separator Margin="0,128,-2,58"/>
+                    <Label x:Name="label2_Copy7" Content="Comisaría: " Margin="10,95,367,117" FontSize="20" Foreground="Aqua" RenderTransformOrigin="3.115,0.757"/>
+                    <Label x:Name="lblCom" Content="lblCom" Margin="10,122,161,95" FontSize="20" FontWeight="Bold" Foreground="White"/>
+                    <Label x:Name="label2_Copy8" Content="Efectivo PNP:" Margin="10,167,345,52" FontSize="20" Foreground="Aqua" RenderTransformOrigin="3.115,0.757"/>
+                    <Label x:Name="lblNomEfec" Content="lblNomEfec" Margin="10,197,173,16" FontSize="20" FontWeight="Bold" Foreground="White"/>
+                    <Label x:Name="label2_Copy9" Content="Código CIP:" Margin="334,170,32,44" FontSize="20" Foreground="Aqua" RenderTransformOrigin="3.115,0.757"/>
+                    <Label x:Name="lblCodEfec" Content="lblCodEfec" Margin="334,197,47,12" FontSize="20" FontWeight="Bold" Foreground="White"/>
                 </Grid>
             </GroupBox>
-            <GroupBox x:Name="groupBox1_Copy2" Header="Tipo de Infracción" Margin="516,382,10,59" FontWeight="Bold" FontSize="16" Foreground="White">
+            <GroupBox x:Name="groupBox1_Copy2" Header="Tipo de Infracción" Margin="516,445,10,151" FontWeight="Bold" FontSize="16" Foreground="White">
                 <Grid Margin="-6,-22,-6,-1">
-                    <Label x:Name="label4" Content="Infracción:" Margin="134,10,237,47" FontSize="20" Foreground="Aqua"/>
-                    <Label x:Name="lblInfrac" Content="lblInfrac" Margin="243,10,149,47" FontSize="20" Foreground="White"/>
-                    <Label x:Name="label5" Content="Oficio:" Margin="12,52,397,10" FontSize="20" Foreground="Aqua"/>
-                    <Label x:Name="lblInfrac_Copy" Content="lblNumOfic" Margin="88,52,274,10" FontSize="20" Foreground="White"/>
-                    <Label x:Name="label5_Copy" Content="Fecha de Envío:" Margin="211,52,114,0" FontSize="20" Foreground="Aqua"/>
-                    <Label x:Name="lblFecEnv" Content="lblFecEnv" Margin="358,52,24,0" FontSize="20" Foreground="White" RenderTransformOrigin="0.342,0.505"/>
-                    <Separator Margin="0,41,2,29"/>
+                    <Label x:Name="label4" Content="Infracción:" Margin="314,30,57,128" FontSize="20" Foreground="Aqua"/>
+                    <Label x:Name="lblInfrac" Content="lblInfrac" Margin="314,56,78,102" FontSize="20" Foreground="White"/>
+                    <Label x:Name="label5" Content="Oficio:" Margin="10,29,399,128" FontSize="20" Foreground="Aqua"/>
+                    <Label x:Name="lblNumOfic" Content="lblNumOfic" Margin="10,56,352,78" FontSize="20" Foreground="White"/>
+                    <Label x:Name="label5_Copy" Content="Fecha de Envío:" Margin="10,121,315,29" FontSize="20" Foreground="Aqua"/>
+                    <Label x:Name="lblFecEnv" Content="lblFecEnv" Margin="10,149,383,5" FontSize="20" Foreground="White" RenderTransformOrigin="0.342,0.505"/>
                 </Grid>
             </GroupBox>
-            <Label x:Name="label6" Content="lblEstadoRegistro" Margin="621,481,79,0" FontWeight="Bold" FontSize="36" Foreground="Green"/>
+            <Label Margin="516,666,301,15" FontWeight="Bold" FontSize="24" Foreground="Green">
+                <TextBlock x:Name="lblEstadoRegistro" Text="" TextWrapping="Wrap" />
+            </Label>
+            <Button x:Name="btnAtras" Margin="915,666,3,32" Background="Transparent" Click="btnAtras_Click">
+                <Image Name="ImgAtras" Source="Image/atrasLogo.png"></Image>
+            </Button>
+            <Label x:Name="lblAtras" Content="Atrás" HorizontalAlignment="Left" Margin="947,759,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Foreground="White"/>
+            <Button x:Name="btnImprimir"  HorizontalAlignment="Left" Margin="767,670,0,0" VerticalAlignment="Top" Width="96" Background="Transparent" Height="93" Click="btnImprimir_Click">
+                <Image Source="Image/ImprimirLogo.png"/>
+            </Button>
+            <Label x:Name="lblImprimir" Content="Imprimir" HorizontalAlignment="Left" Margin="770,759,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" Foreground="White" Height="36"/>
         </Grid>
 
     </Grid>

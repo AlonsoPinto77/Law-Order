@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="PrototiposPoltran.resultadosBusquedaOtros"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PrototiposPoltran"
+             mc:Ignorable="d" 
+            Background="#2E2E2E" Width="1039" Height="795">
+    <Grid HorizontalAlignment="Left" Height="795" VerticalAlignment="Top" Width="1039">
+        <ScrollViewer HorizontalAlignment="Left" Height="795" VerticalAlignment="Top" Width="1039" HorizontalScrollBarVisibility="Visible">
+            <DataGrid x:Name="dtGrdListaInfrac" MouseDoubleClick="dtGrdListaInfrac_MouseDoubleClick" KeyDown="dtGrdListaInfrac_KeyDown"/>
+        </ScrollViewer>
+
+    </Grid>
+</UserControl>

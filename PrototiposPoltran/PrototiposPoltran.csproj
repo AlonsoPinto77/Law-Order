@@ -83,6 +83,9 @@
       <DependentUpon>ActualizacionTabEstadisticas.xaml</DependentUpon>
     </Compile>
     <Compile Include="BDQuery.cs" />
+    <Compile Include="BusquedaOtros.xaml.cs">
+      <DependentUpon>BusquedaOtros.xaml</DependentUpon>
+    </Compile>
     <Compile Include="busquedaPapeletas.xaml.cs">
       <DependentUpon>busquedaPapeletas.xaml</DependentUpon>
     </Compile>
@@ -124,6 +127,12 @@
     <Compile Include="Reporte_PapeletaIngresadas.xaml.cs">
       <DependentUpon>Reporte_PapeletaIngresadas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="resultadosBusquedaOtros.xaml.cs">
+      <DependentUpon>resultadosBusquedaOtros.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="resultadosBusquedaPlaca.xaml.cs">
+      <DependentUpon>resultadosBusquedaPlaca.xaml</DependentUpon>
+    </Compile>
     <Compile Include="resultadosBúsqueda.xaml.cs">
       <DependentUpon>resultadosBúsqueda.xaml</DependentUpon>
     </Compile>
@@ -139,6 +148,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ActualizacionTabEstadisticas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BusquedaOtros.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -203,6 +216,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Reporte_PapeletaIngresadas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="resultadosBusquedaOtros.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="resultadosBusquedaPlaca.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -291,6 +312,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\verDocLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\atrasLogo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

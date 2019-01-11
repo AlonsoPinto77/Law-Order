@@ -303,12 +303,18 @@ namespace PrototiposPoltran
 
         private void btnBusquedaPlaca_Click(object sender, RoutedEventArgs e)
         {
-
+            busquedaPapeletas busquedaplaca = new busquedaPapeletas(this.scrollContenedor, true);
+            this.scrollContenedor.Content = busquedaplaca;
+            busquedaplaca.HorizontalAlignment = HorizontalAlignment.Stretch;
+            busquedaplaca.VerticalAlignment = VerticalAlignment.Stretch;
         }
 
         private void btnBusquedaOtros_Click(object sender, RoutedEventArgs e)
         {
-
+            BusquedaOtros busquedaOtros = new BusquedaOtros(this.scrollContenedor);
+            this.scrollContenedor.Content = busquedaOtros;
+            busquedaOtros.HorizontalAlignment = HorizontalAlignment.Stretch;
+            busquedaOtros.VerticalAlignment = VerticalAlignment.Stretch;
         }
         //-----------------------------REPORTES---------------------------------------
         private void btnPapeletasIngresadas_Click(object sender, RoutedEventArgs e)

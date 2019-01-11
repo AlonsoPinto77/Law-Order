@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,49 +17,112 @@ using iTextSharp.text;
 using System.Data.SqlClient;
 using iTextSharp.text.pdf;
 using System.IO;
-
+using System.Data;
 
 namespace PrototiposPoltran
 {
     /// <summary>
-    /// Lógica de interacción para busquedaPapeletas.xaml
+    /// Lógica de interacción para BusquedaOtros.xaml
     /// </summary>
-    public partial class busquedaPapeletas : UserControl
+    public partial class BusquedaOtros : UserControl
     {
-        resultadosBusquedaPlaca resultadoPl;
+        resultadosBusquedaOtros resultadoOtros;
         ScrollViewer scrollContenedor;
-        bool bsqPlaca;
+        List<string> nombres = new List<string>();
+        int opc = 0;
         bool flag = false;
         string tituloRep;
-        public busquedaPapeletas(ScrollViewer scroll)
+        string encabezadoRep;
+        string nombreRep;
+        public BusquedaOtros(ScrollViewer scrollContenedor)
         {
             InitializeComponent();
-            this.bsqPlaca = false;
-            this.scrollContenedor = scroll;
-        }
-        public busquedaPapeletas(ScrollViewer scroll, bool bsqPlaca)
-        {
-            InitializeComponent();
-            this.bsqPlaca = bsqPlaca;
-            lblPapeletaPlac.Content = "N° de Placa:";
-            this.scrollContenedor = scroll;
+            this.lblSugerencias.Visibility = Visibility.Hidden;
+            this.txtBusqueda.Visibility = Visibility.Hidden;
+            this.scrollContenedor = scrollContenedor;
         }
 
-        public busquedaPapeletas(ScrollViewer scroll, bool bsqPlaca, string placa)
+        public BusquedaOtros(ScrollViewer scrollContenedor, int opc, string cont)
         {
             InitializeComponent();
-            lblPapeletaPlac.Content = "N° de Placa:";
-            this.scrollContenedor = scroll;
-            this.bsqPlaca = bsqPlaca;
-            txtBusqueda.Text = placa;
+            this.scrollContenedor = scrollContenedor;
+            txtBusqueda.Text = cont;
+            this.opc = opc;
+            this.lblSugerencias.Visibility = Visibility.Hidden;
             ejecutarBusqueda();
         }
 
-        private void btnBuscar_Click(object sender, RoutedEventArgs e)
+        private List<string> llenarListaNombres()
         {
-            ejecutarBusqueda();
+            List<string> nombres = new List<string>();
+            
+            Conexion.Open();
+            string consulta = "SELECT DISTINCT nombre_efectivo from efectivo";
+            SqlCommand cmd = new SqlCommand(consulta, Conexion.sqlConexion);
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows == true)
+            {
+                while (dr.Read())
+                    nombres.Add(dr["nombre_efectivo"].ToString());
+            }
+
+            dr.Close();
+            Conexion.Close();
+            txtBusqueda.TextChanged += new TextChangedEventHandler(txtBusqueda_TextChanged);
+            if (nombres != null)
+                return nombres;
+            else
+                return null;
+        }
+
+        private void txtBusqueda_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (opc == 5 || opc == 4)
+            {
+                string cadenaEscrita = txtBusqueda.Text;
+                List<string> autoList = new List<string>();
+                autoList.Clear();
+
+                foreach (string item in nombres)
+                {
+                    if (!string.IsNullOrEmpty(txtBusqueda.Text))
+                        if (item.StartsWith(cadenaEscrita))
+                            autoList.Add(item);
+                }
+                if (autoList.Count > 0)
+                {
+                    lblSugerencias.ItemsSource = autoList;
+                    lblSugerencias.Visibility = Visibility.Visible;
+                }
+                else if (txtBusqueda.Text.Equals(""))
+                {
+                    lblSugerencias.Visibility = Visibility.Hidden;
+                    lblSugerencias.ItemsSource = null;
+                }
+                else
+                {
+                    lblSugerencias.Visibility = Visibility.Hidden;
+                    lblSugerencias.ItemsSource = null;
+                }
+            }
+
 
         }
+
+        private void lblSugerencias_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (lblSugerencias.ItemsSource != null)
+            {
+                lblSugerencias.Visibility = Visibility.Collapsed;
+                txtBusqueda.TextChanged -= new TextChangedEventHandler(txtBusqueda_TextChanged);
+                if (lblSugerencias.SelectedIndex != -1)
+                {
+                    txtBusqueda.Text = lblSugerencias.SelectedItem.ToString();
+                }
+                txtBusqueda.TextChanged += new TextChangedEventHandler(txtBusqueda_TextChanged);
+            }
+        }
+
 
         private void btnSalir_Click(object sender, RoutedEventArgs e)
         {
@@ -75,21 +137,40 @@ namespace PrototiposPoltran
             {
                 if (flag)
                 {
-                    DataSet ds = resultadoPl.devolverDatos();
+                    switch (opc)
+                    {
+                        case 1:
+                            break;
+                        case 2://------------->Titulo en caso sea busqueda por conductor
+                            tituloRep = "Reporte de papeletas por conductor";
+                            encabezadoRep = "Reporte de papeletas del conductor con DNI N° ";
+                            nombreRep = "reportePapeletasDNICdt_";
+                            break;
+                        case 3:
+                            tituloRep = "Reporte de papeletas por efectivo";
+                            encabezadoRep = "Reporte de papeletas de efectivo con CIP N° ";
+                            nombreRep = "reportePapeletasEfectivoCIP_";
+                            break;
+                        case 4:
+                            tituloRep = "Reporte de papeletas por efectivo";
+                            encabezadoRep = "Reporte de papeletas de efectivo ";
+                            nombreRep = "reportePapeletasEfectivo_";
+                            break;
+                    }
+                    DataSet ds = resultadoOtros.devolverDatos();
                     if (ds != null)
                     {
                         BDSistema sis = new BDSistema();
                         String dir = sis.Directorio();
                         if (dir != null)
                         {
-                            //Ubicación del reporte
-                            string ubicacionReporte = @dir + "\\reportePapeletasPlaca_" + txtBusqueda.Text + ".pdf";
+                            string ubicacionReporte = @dir + "\\" + nombreRep + txtBusqueda.Text + ".pdf";
                             //Creacion de reporte con iTextSharp
-                            Document reporte = new Document(PageSize.LETTER);
+                            Document reporte = new Document(PageSize.A4);
                             PdfWriter writer = PdfWriter.GetInstance(reporte, new FileStream(ubicacionReporte, FileMode.Create));
 
                             //Añadiendo titulo 
-                            reporte.AddTitle("Reporte de papeletas por placa " + txtBusqueda.Text);
+                            reporte.AddTitle(tituloRep);
                             reporte.AddAuthor("Sistema de Gestión de papeletas Poltran v1.1");
 
                             //Abriendo Archivo
@@ -98,7 +179,7 @@ namespace PrototiposPoltran
                             Font _standardFont = new Font(Font.FontFamily.HELVETICA, 8, Font.NORMAL, BaseColor.BLACK);
 
                             //Encabezado de reporte
-                            reporte.Add(new iTextSharp.text.Paragraph("Reporte de papeletas por placa"));
+                            reporte.Add(new iTextSharp.text.Paragraph(encabezadoRep + " " + txtBusqueda.Text));
                             reporte.Add(Chunk.NEWLINE);
 
                             PdfPTable tablaDatosPrincipales = new PdfPTable(11);
@@ -117,7 +198,7 @@ namespace PrototiposPoltran
                             clFisico.BorderWidth = 0;
                             clFisico.BorderWidthBottom = 0.75f;
 
-                            PdfPCell clEstado = new PdfPCell(new Phrase("Fisico", _standardFont));
+                            PdfPCell clEstado = new PdfPCell(new Phrase("Estado", _standardFont));
                             clEstado.BorderWidth = 0;
                             clEstado.BorderWidthBottom = 0.75f;
 
@@ -145,7 +226,7 @@ namespace PrototiposPoltran
                             clOficio.BorderWidth = 0;
                             clOficio.BorderWidthBottom = 0.75f;
 
-                            PdfPCell clIdRelTal = new PdfPCell(new Phrase("ID Rel. Talonario", _standardFont));
+                            PdfPCell clIdRelTal = new PdfPCell(new Phrase("ID Talonario", _standardFont));
                             clIdRelTal.BorderWidth = 0;
                             clIdRelTal.BorderWidthBottom = 0.75f;
 
@@ -201,7 +282,7 @@ namespace PrototiposPoltran
                                 tablaDatosConsulta.AddCell(clIdRelTal);
                             }
 
-                            reporte.Add(new iTextSharp.text.Paragraph("Lista de Papeletas para placa " + txtBusqueda.Text));
+                            //reporte.Add(new iTextSharp.text.Paragraph(tituloRep + txtBusqueda.Text));
                             reporte.Add(tablaDatosPrincipales);
                             reporte.Add(tablaDatosConsulta);
                             reporte.Close();
@@ -213,14 +294,16 @@ namespace PrototiposPoltran
                         }
                     }
                     else
-                        MessageBox.Show("Realice una búsqueda...");
+                        MessageBox.Show("Realice una búsqueda");
                 }
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
         private void txtBusqueda_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
@@ -229,35 +312,68 @@ namespace PrototiposPoltran
 
         private void ejecutarBusqueda()
         {
-            if (bsqPlaca == false)
+            try
             {
-                if (txtBusqueda.Text != "")
-                {
-                    resultadosBusqueda resultado = new resultadosBusqueda(txtBusqueda.Text);
-                    this.contenedor.Content = resultado;
-                    btnImprimir.Visibility = Visibility.Hidden;
-                }
-                else
-                    MessageBox.Show("Introduzca el numero de papeleta para ejecutar la búsqueda");
+                int temp;
+                if ((opc == 5 || opc == 4 || opc == 3) && txtBusqueda.Text != "") // se verifica que la opcion de ejectivo o cip esta marcada y que el texto de busqueda no sea vacio
+                    if (int.TryParse(txtBusqueda.Text, out temp))
+                    {
+                        opc = 3; //-----------------> opc es 3 porque se eligió usar el codigo cip
+                    }
+                    else
+                    {
+                        opc = 4; //-----------------> opc es 4 porque se eligió usar el nombre del efectivo     
+                    }
+                if (opc >= 1 && opc <= 4)
+                    if (txtBusqueda.Text != "")
+                    {
+                        resultadoOtros = new resultadosBusquedaOtros(this.scrollContenedor, opc, txtBusqueda.Text);
+                        flag = true;
+                        this.contenedor.Content = resultadoOtros;
+                    }
             }
-            else
+            catch (Exception ex)
             {
-                if (txtBusqueda.Text != "")
-                {
-                    flag = true;
-                    resultadoPl = new resultadosBusquedaPlaca(txtBusqueda.Text, this.scrollContenedor);
-                    this.contenedor.Content = resultadoPl;
-                    //this.btnVer.Visibility = Visibility.Visible;
-                }
+                MessageBox.Show("Error al ejecutar busqueda: " + ex.Message);
+            }
 
-            }
         }
-        private void txtBusqueda_TextChanged(object sender, TextChangedEventArgs e)
+
+        private void btnBuscar_Click(object sender, RoutedEventArgs e)
         {
-            if (Validacion.IsValidCodPapeleta(txtBusqueda.Text))
-            {
+            lblSugerencias.Visibility = Visibility.Hidden;
+            ejecutarBusqueda();
 
-            }
         }
+
+        private void rbtnDelegacion_Click(object sender, RoutedEventArgs e)
+        {
+            opc = 1; //se eligió busqueda por delegación
+            lblBusqueda.Content = "Delegación:";
+            lblBusqueda.Visibility = Visibility.Visible;
+            txtBusqueda.Visibility = Visibility.Visible;
+            txtBusqueda.Text = "";
+        }
+
+        private void rbtnConductor_Click(object sender, RoutedEventArgs e)
+        {
+            opc = 2; //se eligió busqueda por conductor
+            lblBusqueda.Content = "DNI de Conductor:";
+            lblBusqueda.Visibility = Visibility.Visible;
+            txtBusqueda.Visibility = Visibility.Visible;
+            txtBusqueda.Text = "";
+        }
+
+        private void rbtnEfectivo_Click(object sender, RoutedEventArgs e)
+        {
+            opc = 5; //se eligió búsqueda por efectivo o CIP
+            lblBusqueda.Content = "Nombre o CIP de Efectivo:";
+            nombres = llenarListaNombres();
+            lblBusqueda.Visibility = Visibility.Visible;
+            txtBusqueda.Visibility = Visibility.Visible;
+            txtBusqueda.Text = "";
+        }
+
+
     }
 }

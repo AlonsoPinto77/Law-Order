@@ -36,8 +36,23 @@ namespace PrototiposPoltran
                 MessageBox.Show("No se cerro la conexion a la base de datos " + e.ToString());
             }
         }
+        public static SqlDataAdapter ejecutarConsulta(string consulta)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand(consulta, sqlConexion);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                Close();
+                return da;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar consulta: " + ex.Message);
+                return null;
+            }
 
-        
+        }
+
 
     }
 }
