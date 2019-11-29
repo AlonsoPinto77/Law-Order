@@ -11,7 +11,9 @@ namespace PrototiposPoltran
 {
     static class Conexion
     {
-        static String conexionString = "Data Source=localhost;Initial Catalog=BD_GestionPapeletas;Integrated Security=True";
+        //static String conexionString = "Data Source=PAPELETAS04;Initial Catalog=BD_GestionPapeletas;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        //static String conexionString = "Data Source=localhost;Initial Catalog=BD_GestionPapeletas;Integrated Security=True";
+        static String conexionString = "Data Source=DESKTOP-PCEUCOL\\SQLEXPRESS;Initial Catalog=BD_GestionPapeletas;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         public static SqlConnection sqlConexion;
         public static void Open()
         {

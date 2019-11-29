@@ -28,10 +28,7 @@ namespace PrototiposPoltran
 
         private void btnIngresar_Click(object sender, RoutedEventArgs e)
         {
-            VentanaPrincipal ventana = new VentanaPrincipal("1");
-            ventana.Show();
-            this.Close();
-            /*if(CorrectUser.IsVisible && CorrectPass.IsVisible)
+            if(CorrectUser.IsVisible && CorrectPass.IsVisible)
             {
                 BDUsu us = new BDUsu();
                 String cod = us.Login(txtUsuario.Text, txtContraseña.Password);
@@ -54,7 +51,7 @@ namespace PrototiposPoltran
             else
             {
                 lblErrLogin.Content = "No se Ingreso usuario o Contraseña";
-            }*/
+            }
         }
 
 

@@ -5,91 +5,91 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PrototiposPoltran"
              mc:Ignorable="d" 
-             Background="#2E2E2E" Width="1006.5" Height="636.5">
+             Background="#2E2E2E" Width="1297" Height="920">
     <Grid>
-        <Border BorderBrush="White" BorderThickness="4" Margin="10,4,10,0" Height="86" VerticalAlignment="Top">
+        <Border BorderBrush="White" BorderThickness="4" Margin="10,4,10,0" Height="106" VerticalAlignment="Top">
             <Grid Margin="0,0,0,0">
-                <Label x:Name="label3" Content="DEVOLUCION DE PAPELETA" Margin="352,24,352,10" Foreground="White" RenderTransformOrigin="0.522,-0.708" FontSize="20" FontWeight="Bold"/>
-                <Button x:Name="btnGrabar"  HorizontalAlignment="Left" Margin="776,0,0,0" Width="66" Background="Transparent" Click="btnGrabar_Click">
+                <Label x:Name="label3" Content="DEVOLUCION DE PAPELETA" Margin="480,0,492,26" Foreground="White" RenderTransformOrigin="0.522,-0.708" FontSize="22" FontWeight="Bold" Height="44" VerticalAlignment="Bottom"/>
+                <Button x:Name="btnGrabar"  HorizontalAlignment="Left" Margin="970,0,0,0" Width="66" Background="Transparent" Click="btnGrabar_Click">
                     <Grid>
                         <Image Source="Image/guardarLogo.jpg" Margin="0,3,0,27"/>
-                        <Label x:Name="label00001" Content="GRABAR" Margin="0,47,0,0" FontWeight="Bold" Foreground="White" />
+                        <Label x:Name="label00001" Content="GRABAR" Margin="0,65,0,0" FontWeight="Bold" Foreground="White" />
                     </Grid>
                 </Button>
 
-                <Button x:Name="btnSalir"  HorizontalAlignment="Left" Margin="870,0,0,0" Width="63" Background="Transparent" Click="btnSalir_Click">
+                <Button x:Name="btnSalir"  HorizontalAlignment="Left" Margin="1110,0,0,0" Width="68" Background="Transparent" Click="btnSalir_Click">
                     <Grid>
                         <Image Source="Image/salirLogo.png" Margin="0,0,0,20"></Image>
-                        <Label x:Name="label112" Content="SALIR" Margin="8,47,8,0" FontWeight="Bold" Foreground="White" />
+                        <Label x:Name="label112" Content="SALIR" Margin="8,59,8,0" FontWeight="Bold" Foreground="White" />
                     </Grid>
                 </Button>
             </Grid>
         </Border>
 
         <GroupBox x:Name="groupBox" Header="Datos de papeleta" Foreground="White" Cursor=""
-                  Margin="10,95,10,0" FontWeight="Bold" FontSize="18" Height="531" VerticalAlignment="Top">
+                  Margin="10,125,10,0" FontWeight="Bold" FontSize="18" Height="767" VerticalAlignment="Top">
             <Grid Margin="0,0,0,0">
-                <Label x:Name="labe001" Content="Papeleta Nro:" Margin="38,25,828,440" Foreground="White" RenderTransformOrigin="0.522,-0.708" FontSize="16" FontWeight="Bold"/>
-                <TextBox x:Name="txtNroPapeleta" Text="" HorizontalAlignment="Left" Margin="216,25,0,450" TextWrapping="Wrap" Width="230" FontSize="16" FontWeight="Normal" CharacterCasing="Upper" TextChanged="txtNroPapeleta_TextChanged"/>
-                <Label x:Name="lbl11" Content="*" Margin="446,24,506,450" Foreground="Red" RenderTransformOrigin="0.522,-0.708" FontSize="16" FontWeight="Bold"/>
-                <Label x:Name="lblErrNroPap" Content="" Margin="212,46,528,419" Foreground="Red" RenderTransformOrigin="0.522,-0.708" FontSize="16" FontWeight="Bold"/>
-                <ComboBox x:Name="cmbFisico" HorizontalAlignment="Left" Margin="216,78,0,0" VerticalAlignment="Top" Width="230" FontWeight="Normal" SelectionChanged="cmbFisico_SelectionChanged"/>
-                <Label x:Name="label11" Content="Estado:" Margin="38,78,854,384" Foreground="White" RenderTransformOrigin="0.522,-0.708" FontSize="16"/>
+                <Label x:Name="labe001" Content="Papeleta Nro:" Margin="38,25,1078,0" Foreground="White" RenderTransformOrigin="0.522,-0.708" FontSize="16" FontWeight="Bold" Height="36" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtNroPapeleta" Text="" HorizontalAlignment="Left" Margin="216,27,0,0" TextWrapping="Wrap" Width="236" FontSize="16" FontWeight="Normal" CharacterCasing="Upper" TextChanged="txtNroPapeleta_TextChanged" Height="27" VerticalAlignment="Top"/>
+                <Label x:Name="lbl11" Content="*" Margin="457,29,783,699" Foreground="Red" RenderTransformOrigin="0.522,-0.708" FontSize="16" FontWeight="Bold"/>
+                <Label x:Name="lblErrNroPap" Content="" Margin="212,59,737,665" Foreground="Red" RenderTransformOrigin="0.522,-0.708" FontSize="16" FontWeight="Bold"/>
+                <ComboBox x:Name="cmbFisico" HorizontalAlignment="Left" Margin="216,110,0,0" VerticalAlignment="Top" Width="312" FontWeight="Normal" SelectionChanged="cmbFisico_SelectionChanged"/>
+                <Label x:Name="label11" Content="Estado:" Margin="38,110,1131,0" Foreground="White" RenderTransformOrigin="0.522,-0.708" FontSize="16" Height="30" VerticalAlignment="Top"/>
 
-                <Label x:Name="label13" Content="Infraccion" Margin="507,16,359,450" Foreground="White" RenderTransformOrigin="0.522,-0.708" FontSize="16"/>
-                <ComboBox x:Name="cmbInfraccion" HorizontalAlignment="Left" Height="24" Margin="722,24,0,0" VerticalAlignment="Top" Width="190" FontSize="16" FontWeight="Normal" SelectionChanged="cmbInfraccion_SelectionChanged"/>
+                <Label x:Name="label13" Content="Infraccion" Margin="610,16,518,0" Foreground="White" RenderTransformOrigin="0.522,-0.708" FontSize="16" Height="35" VerticalAlignment="Top"/>
+                <ComboBox x:Name="cmbInfraccion" HorizontalAlignment="Left" Height="24" Margin="789,25,0,0" VerticalAlignment="Top" Width="218" FontSize="16" FontWeight="Normal" SelectionChanged="cmbInfraccion_SelectionChanged"/>
 
-                <Label  Margin="491,46,62,386" Foreground="White" FontSize="12" RenderTransformOrigin="0.5,0.5" FontWeight="Normal">
+                <Label  Margin="587,56,62,0" Foreground="White" FontSize="12" RenderTransformOrigin="0.5,0.5" FontWeight="Normal" Height="97" VerticalAlignment="Top">
                     <TextBlock x:Name="lblDescrip" Text="" TextWrapping="Wrap" />
                 </Label>
 
-                <Label x:Name="label12" Content="Fecha de Imposicion" Margin="507,124,415,337" Foreground="White" RenderTransformOrigin="0.522,-0.708" FontSize="16"/>
-                <DatePicker x:Name="dpFechaImposicion" Margin="722,123,62,348" FontWeight="Normal"/>
-                <Label x:Name="label15" Content="Comisaria (S/N)" Margin="38,127,802,342" Foreground="White" RenderTransformOrigin="0.522,-0.708" FontSize="16"/>
-                <TextBox x:Name="txtComisaria" Margin="216,127,0,0" TextWrapping="Wrap" FontSize="16" CharacterCasing="Upper" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="275" FontWeight="Normal" IsEnabled="False"/>
+                <Label x:Name="label12" Content="Fecha de Imposicion" Margin="610,192,486,0" Foreground="White" RenderTransformOrigin="0.522,-0.708" FontSize="16" Height="29" VerticalAlignment="Top"/>
+                <DatePicker x:Name="dpFechaImposicion" Margin="789,191,47,0" FontWeight="Normal" Height="30" VerticalAlignment="Top"/>
+                <Label x:Name="label15" Content="Comisaria (S/N)" Margin="38,191,1068,0" Foreground="White" RenderTransformOrigin="0.522,-0.708" FontSize="16" Height="37" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtComisaria" Margin="216,195,0,0" TextWrapping="Wrap" FontSize="16" CharacterCasing="Upper" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="312" FontWeight="Normal" IsEnabled="False"/>
                 <GroupBox x:Name="groupBox1" Header="Datos del Conductor" Foreground="White" Cursor=""
-                  Margin="10,164,10,172" FontWeight="Bold" FontSize="18">
-                    <Grid Margin="0,0,0,-20">
+                  Margin="38,268,38,0" FontWeight="Bold" FontSize="18" Height="204" VerticalAlignment="Top">
+                    <Grid Margin="0,0,0,0">
 
-                        <Label x:Name="label21" Content="DNI" Margin="10,5,846,115" Foreground="White" FontSize="16" RenderTransformOrigin="0.5,0.5"/>
-                        <TextBox x:Name="txtIdConductor" Margin="114,14,727,0" TextWrapping="Wrap" FontSize="16" CharacterCasing="Upper" FontWeight="Normal" Height="26" VerticalAlignment="Top" Text="" TextChanged="txtIdConductor_TextChanged"/>
-                        <Label x:Name="lbl21" Content="*" Margin="215,16,705,112" Foreground="Red" RenderTransformOrigin="0.522,-0.708" FontSize="16" FontWeight="Bold"/>
-                        <Label x:Name="lblErrDNI" Content="" Margin="114,38,459,86" Foreground="Red" RenderTransformOrigin="0.522,-0.708" FontSize="16" FontWeight="Bold"/>
+                        <Label x:Name="label21" Content="DNI" Margin="10,22,1099,0" Foreground="White" FontSize="16" RenderTransformOrigin="0.5,0.5" Height="34" VerticalAlignment="Top"/>
+                        <TextBox x:Name="txtIdConductor" Margin="100,30,936,0" TextWrapping="Wrap" FontSize="16" CharacterCasing="Upper" FontWeight="Normal" Height="26" VerticalAlignment="Top" Text="" TextChanged="txtIdConductor_TextChanged"/>
+                        <Label x:Name="lbl21" Content="*" Margin="246,28,905,139" Foreground="Red" RenderTransformOrigin="0.522,-0.708" FontSize="16" FontWeight="Bold"/>
+                        <Label x:Name="lblErrDNI" Content="" Margin="100,56,779,0" Foreground="Red" RenderTransformOrigin="0.522,-0.708" FontSize="16" FontWeight="Bold" Height="30" VerticalAlignment="Top"/>
 
-                        <Label x:Name="label22" Content="Nombres" Margin="387,-8,417,132" Foreground="White" FontSize="16" RenderTransformOrigin="0.5,0.5"/>
-                        <TextBox x:Name="txtNombres" Margin="387,18,54,0" TextWrapping="Wrap" FontSize="16" CharacterCasing="Upper" FontWeight="Normal" Height="26" VerticalAlignment="Top"/>
-                        <Label x:Name="lblErrNoms" Content="" Margin="385,38,54,86" Foreground="Red" RenderTransformOrigin="0.522,-0.708" FontSize="16" FontWeight="Bold"/>
+                        <Label x:Name="label22" Content="Nombres" Margin="440,0,417,0" Foreground="White" FontSize="16" RenderTransformOrigin="0.5,0.5" Height="27" VerticalAlignment="Top"/>
+                        <TextBox x:Name="txtNombres" Margin="440,30,54,0" TextWrapping="Wrap" FontSize="16" CharacterCasing="Upper" FontWeight="Normal" Height="26" VerticalAlignment="Top"/>
+                        <Label x:Name="lblErrNoms" Content="" Margin="440,56,54,0" Foreground="Red" RenderTransformOrigin="0.522,-0.708" FontSize="16" FontWeight="Bold" Height="26" VerticalAlignment="Top"/>
 
-                        <Label x:Name="label23" Content="Apellido Paterno" Margin="387,60,385,61" Foreground="White" FontSize="16" RenderTransformOrigin="0.5,0.5"/>
-                        <TextBox x:Name="txtApePat" Margin="387,88,322,0" TextWrapping="Wrap" FontSize="16" CharacterCasing="Upper" FontWeight="Normal" Height="26" VerticalAlignment="Top"/>
-                        <Label x:Name="lblErrApePat" Content="" Margin="387,108,322,16" Foreground="Red" RenderTransformOrigin="0.522,-0.708" FontSize="16" FontWeight="Bold"/>
+                        <Label x:Name="label23" Content="Apellido Paterno" Margin="440,89,442,0" Foreground="White" FontSize="16" RenderTransformOrigin="0.5,0.5" Height="28" VerticalAlignment="Top"/>
+                        <TextBox x:Name="txtApePat" Margin="440,117,417,0" TextWrapping="Wrap" FontSize="16" CharacterCasing="Upper" FontWeight="Normal" Height="26" VerticalAlignment="Top"/>
+                        <Label x:Name="lblErrApePat" Content="" Margin="426,143,417,24" Foreground="Red" RenderTransformOrigin="0.522,-0.708" FontSize="16" FontWeight="Bold"/>
 
-                        <Label x:Name="label24" Content="Apellido Paterno" Margin="655,60,117,61" Foreground="White" FontSize="16" RenderTransformOrigin="0.5,0.5"/>
-                        <TextBox x:Name="txtApeMat" Margin="655,88,54,0" TextWrapping="Wrap" FontSize="16" CharacterCasing="Upper" FontWeight="Normal" Height="26" VerticalAlignment="Top"/>
-                        <Label x:Name="lblErrApeMat" Content="" Margin="655,108,54,16" Foreground="Red" RenderTransformOrigin="0.522,-0.708" FontSize="16" FontWeight="Bold"/>
+                        <Label x:Name="label24" Content="Apellido Paterno" Margin="778,89,117,0" Foreground="White" FontSize="16" RenderTransformOrigin="0.5,0.5" Height="28" VerticalAlignment="Top"/>
+                        <TextBox x:Name="txtApeMat" Margin="778,117,54,0" TextWrapping="Wrap" FontSize="16" CharacterCasing="Upper" FontWeight="Normal" Height="26" VerticalAlignment="Top"/>
+                        <Label x:Name="lblErrApeMat" Content="" Margin="778,143,54,24" Foreground="Red" RenderTransformOrigin="0.522,-0.708" FontSize="16" FontWeight="Bold"/>
 
-                        <Label x:Name="label25" Content="Brevete" Margin="10,68,846,52" Foreground="White" FontSize="16" RenderTransformOrigin="0.5,0.5"/>
-                        <TextBox x:Name="txtBrevete" Margin="114,68,656,0" TextWrapping="Wrap" FontSize="16" CharacterCasing="Upper" FontWeight="Normal" Height="26" VerticalAlignment="Top" TextChanged="txtBrevete_TextChanged"/>
-                        <Label x:Name="lblErrBrevete" Content="" Margin="114,89,656,35" Foreground="Red" RenderTransformOrigin="0.522,-0.708" FontSize="16" FontWeight="Bold"/>
-                        <Label x:Name="lbl22" Content="*" Margin="286,67,634,61" Foreground="Red" RenderTransformOrigin="0.522,-0.708" FontSize="16" FontWeight="Bold"/>
+                        <Label x:Name="label25" Content="Brevete" Margin="10,80,1099,0" Foreground="White" FontSize="16" RenderTransformOrigin="0.5,0.5" Height="34" VerticalAlignment="Top"/>
+                        <TextBox x:Name="txtBrevete" Margin="100,86,905,0" TextWrapping="Wrap" FontSize="16" CharacterCasing="Upper" FontWeight="Normal" Height="26" VerticalAlignment="Top" TextChanged="txtBrevete_TextChanged"/>
+                        <Label x:Name="lblErrBrevete" Content="" Margin="100,112,779,0" Foreground="Red" RenderTransformOrigin="0.522,-0.708" FontSize="16" FontWeight="Bold" Height="29" VerticalAlignment="Top"/>
+                        <Label x:Name="lbl22" Content="*" Margin="272,84,879,83" Foreground="Red" RenderTransformOrigin="0.522,-0.708" FontSize="16" FontWeight="Bold"/>
                     </Grid>
                 </GroupBox>
 
                 <GroupBox x:Name="groupBox2" Header="Datos del Vehiculo" Foreground="White" Cursor=""
-                  Margin="10,347,10,10" FontWeight="Bold" FontSize="18">
+                  Margin="38,508,38,0" FontWeight="Bold" FontSize="18" Height="186" VerticalAlignment="Top">
                     <Grid Margin="0,0,0,0">
 
-                        <Label x:Name="label31" Content="Placa" Margin="15,25,789,58" Foreground="White" FontSize="16" RenderTransformOrigin="0.5,0.5"/>
-                        <TextBox x:Name="txtPlaca" Margin="153,26,600,-52" TextWrapping="Wrap" FontSize="16" CharacterCasing="Upper" FontWeight="Normal" Height="26" VerticalAlignment="Top" TextChanged="txtPlaca_TextChanged"/>
-                        <Label x:Name="lbl1" Content="*" Margin="347,25,573,58" Foreground="Red" RenderTransformOrigin="0.522,-0.708" FontSize="16" FontWeight="Bold"/>
-                        <Label x:Name="lblErrPlaca" Content="" Margin="153,47,399,36" Foreground="Red" RenderTransformOrigin="0.522,-0.708" FontSize="16" FontWeight="Bold"/>
+                        <Label x:Name="label31" Content="Placa" Margin="15,25,0,103" Foreground="White" FontSize="16" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="124"/>
+                        <TextBox x:Name="txtPlaca" Margin="102,27,932,0" TextWrapping="Wrap" FontSize="16" CharacterCasing="Upper" FontWeight="Normal" Height="26" VerticalAlignment="Top" TextChanged="txtPlaca_TextChanged"/>
+                        <Label x:Name="lbl1" Content="*" Margin="366,25,840,109" Foreground="Red" RenderTransformOrigin="0.522,-0.708" FontSize="16" FontWeight="Bold"/>
+                        <Label x:Name="lblErrPlaca" Content="" Margin="102,58,767,66" Foreground="Red" RenderTransformOrigin="0.522,-0.708" FontSize="16" FontWeight="Bold"/>
 
-                        <Label x:Name="label2" Content="Clase" Margin="456,10,399,72" Foreground="White" FontSize="16" RenderTransformOrigin="0.5,0.5"/>
-                        <TextBox x:Name="txtClase" Margin="548,10,205,-36" TextWrapping="Wrap" FontSize="16" CharacterCasing="Upper" FontWeight="Normal" Height="26" VerticalAlignment="Top"/>
+                        <Label x:Name="label2" Content="Clase" Margin="479,19,0,95" Foreground="White" FontSize="16" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="65"/>
+                        <TextBox x:Name="txtClase" Margin="571,19,310,0" TextWrapping="Wrap" FontSize="16" CharacterCasing="Upper" FontWeight="Normal" Height="26" VerticalAlignment="Top"/>
 
 
-                        <Label x:Name="label33" Content="Serie" Margin="456,66,399,16" Foreground="White" FontSize="16" RenderTransformOrigin="0.5,0.5"/>
-                        <TextBox x:Name="txtSerie" Margin="548,66,206,-92" TextWrapping="Wrap" FontSize="16" CharacterCasing="Upper" FontWeight="Normal" Height="26" VerticalAlignment="Top"/>
+                        <Label x:Name="label33" Content="Serie" Margin="479,89,0,35" Foreground="White" FontSize="16" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="65"/>
+                        <TextBox x:Name="txtSerie" Margin="571,89,311,0" TextWrapping="Wrap" FontSize="16" CharacterCasing="Upper" FontWeight="Normal" Height="26" VerticalAlignment="Top"/>
                     </Grid>
                 </GroupBox>
 

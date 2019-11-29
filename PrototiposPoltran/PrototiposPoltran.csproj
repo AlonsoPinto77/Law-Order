@@ -59,6 +59,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -119,11 +120,23 @@
     <Compile Include="MantenimientoComisaria.xaml.cs">
       <DependentUpon>MantenimientoComisaria.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PapeletasComisaria.xaml.cs">
-      <DependentUpon>PapeletasComisaria.xaml</DependentUpon>
+    <Compile Include="ContainerPapeletaPor.xaml.cs">
+      <DependentUpon>ContainerPapeletaPor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PapeletasPorComisaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PapeletasPorComisaria.Designer.cs">
+      <DependentUpon>PapeletasPorComisaria.cs</DependentUpon>
     </Compile>
     <Compile Include="PapeletasPorMes.xaml.cs">
       <DependentUpon>PapeletasPorMes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PapeletasPorOficial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PapeletasPorOficial.Designer.cs">
+      <DependentUpon>PapeletasPorOficial.cs</DependentUpon>
     </Compile>
     <Compile Include="ParametrosSistema.xaml.cs">
       <DependentUpon>ParametrosSistema.xaml</DependentUpon>
@@ -207,7 +220,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PapeletasComisaria.xaml">
+    <Page Include="ContainerPapeletaPor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -262,6 +275,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="PapeletasPorComisaria.resx">
+      <DependentUpon>PapeletasPorComisaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PapeletasPorOficial.resx">
+      <DependentUpon>PapeletasPorOficial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

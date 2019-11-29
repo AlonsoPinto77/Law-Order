@@ -28,12 +28,14 @@ namespace PrototiposPoltran
             InitializeComponent();
             this.scrollContenedor = scroll;
             codUsuario = usuario;
+
+            dpFechaIngreso.SelectedDate = DateTime.Today;
         }
 
         private void btnGrabar_Click(object sender, RoutedEventArgs e)
         {
-            //try
-            //{
+            try
+            {
                 int cant = Convert.ToInt32(lblCantidad.Content);
 
                 if (cant > 0)
@@ -73,11 +75,11 @@ namespace PrototiposPoltran
                 {
                     MessageBox.Show("Error: La cantidad negativa");
                 }
-            //}
-            //catch(Exception ex)
-            //{
-            //    MessageBox.Show("Error: "+ex.Message);
-            //}
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error: "+ex.Message);
+            }
         }
 
         private void btnSalir_Click(object sender, RoutedEventArgs e)

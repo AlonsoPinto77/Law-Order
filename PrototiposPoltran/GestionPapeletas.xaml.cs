@@ -46,6 +46,8 @@ namespace PrototiposPoltran
             cmbInfraccion.DisplayMemberPath = "tipo_infraccion";
             cmbInfraccion.SelectedValuePath = "tipo_infraccion";
 
+            dpFechaImposicion.SelectedDate = DateTime.Today;
+
         }
 
         private void btnSalir_Click(object sender, RoutedEventArgs e)

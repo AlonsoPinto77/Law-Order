@@ -231,7 +231,7 @@ namespace PrototiposPoltran
         {
             if (bsqPlaca == false)
             {
-                if (txtBusqueda.Text != "")
+                if (txtBusqueda.Text != ""  || lblErrBus.Content.ToString() == "")
                 {
                     resultadosBusqueda resultado = new resultadosBusqueda(txtBusqueda.Text);
                     this.contenedor.Content = resultado;
@@ -242,7 +242,7 @@ namespace PrototiposPoltran
             }
             else
             {
-                if (txtBusqueda.Text != "")
+                if (txtBusqueda.Text != "" || lblErrBus.Content.ToString() == "")
                 {
                     flag = true;
                     resultadoPl = new resultadosBusquedaPlaca(txtBusqueda.Text, this.scrollContenedor);
@@ -252,12 +252,31 @@ namespace PrototiposPoltran
 
             }
         }
-        private void txtBusqueda_TextChanged(object sender, TextChangedEventArgs e)
+        private void txtBusqueda_TextChanged_1(object sender, TextChangedEventArgs e)
         {
-            if (Validacion.IsValidCodPapeleta(txtBusqueda.Text))
+            if (bsqPlaca == false)
             {
-
+                if (Validacion.IsValidCodPapeleta(txtBusqueda.Text) || (txtBusqueda.Text) == "")
+                {
+                    lblErrBus.Content = "El Codigo de Papeleta no es Valido";
+                }
+                else
+                {
+                    lblErrBus.Content = "";
+                }
+            }
+            else
+            {
+                if (Validacion.IsValidPlaca(txtBusqueda.Text) || (txtBusqueda.Text) == "")
+                {
+                    lblErrBus.Content = "La placa no es Valida";
+                }
+                else
+                {
+                    lblErrBus.Content = "";
+                }
             }
         }
+
     }
 }

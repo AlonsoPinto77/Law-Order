@@ -24,6 +24,12 @@ namespace PrototiposPoltran
         {
             InitializeComponent();
         }
+        ScrollViewer scrollContenedor;
+        public ParametrosSistema(ScrollViewer scroll)
+        {
+            InitializeComponent();
+            this.scrollContenedor = scroll;
+        }
 
         private void btnSalir_Click(object sender, RoutedEventArgs e)
         {

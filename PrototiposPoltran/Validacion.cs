@@ -37,7 +37,7 @@ namespace PrototiposPoltran
         {
             return !(Regex.IsMatch(str, @"^[0-9A-Z]{8}$"));
         }
-
+        
     }
 
 }

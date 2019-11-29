@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
+using System.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -23,7 +24,8 @@ namespace PrototiposPoltran
         bool flagArch;
         BDCom c;
         String usuario;
-        String codComi;
+        DataTable dataCom;
+        String codComi, nomComi;
         ScrollViewer scrollContenedor;
         public entregaPapeletasComisaria(ScrollViewer scroll, String usuario)
         {
@@ -32,7 +34,10 @@ namespace PrototiposPoltran
             this.scrollContenedor = scroll;
 
             c = new BDCom();
-            dataGridComisaria.ItemsSource = c.GetAll().DefaultView;
+            dataCom = c.GetAll();
+            dataGridComisaria.ItemsSource = dataCom.DefaultView;
+
+            dpFechaEnvio.SelectedDate = DateTime.Today;
         }
         public void CargarTablaTal()
         {
@@ -59,7 +64,7 @@ namespace PrototiposPoltran
                 int cant = Convert.ToInt32(lblCantidad.Content);
                 if (cant > 0)
                 {
-                    if (codComi != "")
+                    if (codComi != "" || codComi != null)
                     {
                         BDTal tal = new BDTal();
                         String codTal = tal.obtenerId(txtRangoDel.Text, txtRangoAl.Text);
@@ -78,7 +83,9 @@ namespace PrototiposPoltran
                                     CargarTablaTal();
                                     if (flagArch)
                                     {
-                                        //Reporte
+                                        DataTable dat = tal.obtenerDatos(txtRangoDel.Text, txtRangoAl.Text);
+                                        Reportes rep = new Reportes();
+                                        rep.TalonariosEntregados(dat);
                                         ClearAll();
                                     }
                                     MessageBox.Show("Se Asigno correctamente las papeletas");
@@ -116,7 +123,8 @@ namespace PrototiposPoltran
 
         private void btnImprimir_Click(object sender, RoutedEventArgs e)
         {
-
+            Reportes rep = new Reportes();
+            rep.imprimirPapeletasFaltantes(codComi,nomComi, 2);
         }
 
         private void txtCodCIP_TextChanged(object sender, TextChangedEventArgs e)
@@ -151,6 +159,10 @@ namespace PrototiposPoltran
             else
             {
                 lblErrRango1.Content = "";
+                if (this.txtRangoDel.Text != "" && this.txtRangoAl.Text != "")
+                {
+                    this.lblCantidad.Content = (int.Parse(this.txtRangoAl.Text) - int.Parse(this.txtRangoDel.Text) + 1).ToString();
+                }
             }
         }
 
@@ -177,7 +189,10 @@ namespace PrototiposPoltran
             {
                 DataGridRow row = (DataGridRow)dataGridComisaria.ItemContainerGenerator.ContainerFromIndex(dataGridComisaria.SelectedIndex);
                 DataGridCell RowColumn = dataGridComisaria.Columns[0].GetCellContent(row).Parent as DataGridCell;
-                codComi=((TextBlock)RowColumn.Content).Text;
+                codComi =((TextBlock)RowColumn.Content).Text;
+
+                RowColumn = dataGridComisaria.Columns[1].GetCellContent(row).Parent as DataGridCell;
+                nomComi = ((TextBlock)RowColumn.Content).Text;
 
                 CargarTablaTal();
 
@@ -188,6 +203,56 @@ namespace PrototiposPoltran
         private void rbNegative_Checked(object sender, RoutedEventArgs e)
         {
             flagArch = false;
+        }
+
+        private void txtBusCom_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+            String strbus = txtBusCom.Text;
+            if ((txtBusCom.Text) != "")
+            {
+                DataTable dt = new DataTable();
+                dt = c.obtenerCodorNom(strbus);
+                dataGridComisaria.ItemsSource = dt.DefaultView;
+            }
+            else
+            {
+                dataGridComisaria.ItemsSource = dataCom.DefaultView;
+            }
+        }
+
+        private void dataGridRelTalonario_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
+        {
+            try
+            {
+                if (dataGridRelTalonario.SelectedItem != null)
+                {
+                    string ini = "", fin = "";
+                    int cant = 0;
+                    DataGridRow row = (DataGridRow)dataGridRelTalonario.ItemContainerGenerator.ContainerFromIndex(dataGridRelTalonario.SelectedIndex);
+                    DataGridCell RowColumn1 = dataGridRelTalonario.Columns[1].GetCellContent(row).Parent as DataGridCell;
+                    DataGridCell RowColumn2 = dataGridRelTalonario.Columns[2].GetCellContent(row).Parent as DataGridCell;
+                    DataGridCell RowColumn3 = dataGridRelTalonario.Columns[3].GetCellContent(row).Parent as DataGridCell;
+                    ini = ((TextBlock)RowColumn1.Content).Text;
+                    fin = ((TextBlock)RowColumn2.Content).Text;
+                    cant = Convert.ToInt32(((TextBlock)RowColumn3.Content).Text);
+
+                    BDTal tal = new BDTal();
+                    string str = "Esta Seguro que desea eliminar los datos?. Se pederan los datos de las papeletas asignadas";
+                    MessageBoxResult mes = MessageBox.Show(str, "Mensaje", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                    if (mes == MessageBoxResult.Yes)
+                    {
+                        if (tal.EliminarRelTalonario(cant, ini, fin))
+                            CargarTablaTal();
+                        else
+                            MessageBox.Show("Error: No se guardo el Talonario");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
     }
 }

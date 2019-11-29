@@ -70,6 +70,7 @@ namespace PrototiposPoltran
                     btn_ActIndices.Visibility = Visibility.Hidden;
                     btn_Backup.Visibility = Visibility.Hidden;
                     btn_ActTablasEstadisticas.Visibility = Visibility.Hidden;
+                    btnMantenimientoParametros.Visibility = Visibility.Hidden;
                     btnUtilidades.Visibility = Visibility.Visible;
                     imgBD.Visibility = Visibility.Visible;
                     imgconf.Visibility = Visibility.Visible;
@@ -103,6 +104,7 @@ namespace PrototiposPoltran
                     btn_ActIndices.Visibility = Visibility.Hidden;
                     btn_Backup.Visibility = Visibility.Hidden;
                     btn_ActTablasEstadisticas.Visibility = Visibility.Hidden;
+                    btnMantenimientoParametros.Visibility = Visibility.Hidden;
                     btnUtilidades.Visibility = Visibility.Visible;
                     imgBD.Visibility = Visibility.Visible;
                     imgconf.Visibility = Visibility.Visible;
@@ -143,6 +145,7 @@ namespace PrototiposPoltran
                     btn_ActIndices.Visibility = Visibility.Hidden;
                     btn_Backup.Visibility = Visibility.Hidden;
                     btn_ActTablasEstadisticas.Visibility = Visibility.Hidden;
+                    btnMantenimientoParametros.Visibility = Visibility.Hidden;
 
                     btnUtilidades.Visibility = Visibility.Visible;
                     imgBD.Visibility = Visibility.Visible;
@@ -184,6 +187,7 @@ namespace PrototiposPoltran
                     btn_ActIndices.Visibility = Visibility.Hidden;
                     btn_Backup.Visibility = Visibility.Hidden;
                     btn_ActTablasEstadisticas.Visibility = Visibility.Hidden;
+                    btnMantenimientoParametros.Visibility = Visibility.Hidden;
 
                     btnUtilidades.Visibility = Visibility.Visible;
                     imgBD.Visibility = Visibility.Visible;
@@ -225,6 +229,7 @@ namespace PrototiposPoltran
                     btn_ActIndices.Visibility = Visibility.Visible;
                     btn_Backup.Visibility = Visibility.Visible;
                     btn_ActTablasEstadisticas.Visibility = Visibility.Visible;
+                    btnMantenimientoParametros.Visibility = Visibility.Visible;
 
                     btnUtilidades.Visibility = Visibility.Hidden;
                     imgBD.Visibility = Visibility.Hidden;
@@ -290,7 +295,10 @@ namespace PrototiposPoltran
 
         private void btnAsigPape_Click(object sender, RoutedEventArgs e)
         {
-
+            ReAsignacionPapeleta AsigPape = new ReAsignacionPapeleta(this.scrollContenedor, codUsuario);
+            this.scrollContenedor.Content = AsigPape;
+            AsigPape.HorizontalAlignment = HorizontalAlignment.Stretch;
+            AsigPape.VerticalAlignment = VerticalAlignment.Stretch;
         }
         //------------------------------BUSQUEDA--------------------------------------
         private void btnBusquedaPapeleta_Click(object sender, RoutedEventArgs e)
@@ -351,15 +359,18 @@ namespace PrototiposPoltran
 
         private void btn_PapeletasComisaria_Click(object sender, RoutedEventArgs e)
         {
-            PapeletasComisaria objeto5 = new PapeletasComisaria(this.scrollContenedor);
-            this.scrollContenedor.Content = objeto5;
-            objeto5.HorizontalAlignment = HorizontalAlignment.Stretch;
-            objeto5.VerticalAlignment = VerticalAlignment.Stretch;
+            ContainerPapeletaPor objeto6 = new ContainerPapeletaPor(2);
+            this.scrollContenedor.Content = objeto6;
+            objeto6.HorizontalAlignment = HorizontalAlignment.Stretch;
+            objeto6.VerticalAlignment = VerticalAlignment.Stretch;
         }
 
         private void btn_PapeletasOficial_Click(object sender, RoutedEventArgs e)
         {
-
+            ContainerPapeletaPor objeto6 = new ContainerPapeletaPor(1);
+            this.scrollContenedor.Content = objeto6;
+            objeto6.HorizontalAlignment = HorizontalAlignment.Stretch;
+            objeto6.VerticalAlignment = VerticalAlignment.Stretch;
         }
         //-------------------------------UTILIDADES------------------------------------
         private void btn_MantenimientoTablas_Click(object sender, RoutedEventArgs e)
@@ -386,6 +397,13 @@ namespace PrototiposPoltran
         private void btn_ActTablasEstadisticas_Click(object sender, RoutedEventArgs e)
         {
             ActualizacionTabEstadisticas tab = new ActualizacionTabEstadisticas(this.scrollContenedor);
+            this.scrollContenedor.Content = tab;
+            tab.HorizontalAlignment = HorizontalAlignment.Stretch;
+            tab.VerticalAlignment = VerticalAlignment.Stretch;
+        }
+        private void btnMantenimientoParametros_Click(object sender, RoutedEventArgs e)
+        {
+            ParametrosSistema tab = new ParametrosSistema(this.scrollContenedor);
             this.scrollContenedor.Content = tab;
             tab.HorizontalAlignment = HorizontalAlignment.Stretch;
             tab.VerticalAlignment = VerticalAlignment.Stretch;

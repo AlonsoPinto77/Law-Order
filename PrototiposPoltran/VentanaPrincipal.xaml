@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PrototiposPoltran"
         mc:Ignorable="d"
-        Title="VentanaPrincipal" Height="968.247" Width="1338.866" Background="#1C1C1C" WindowState="Maximized">
+        Title="VentanaPrincipal" Height="968.247" Width="1500" Background="#1C1C1C" WindowState="Maximized">
     <Grid>
         <DockPanel LastChildFill="False" Margin="0,0,1054,10">
-            <ScrollViewer IsTabStop="True"  ScrollViewer.HorizontalScrollBarVisibility="Disabled" Width="274">
-                <Grid Height="1200" Width="240">
+            <ScrollViewer IsTabStop="True"  ScrollViewer.HorizontalScrollBarVisibility="Disabled" Width="274" Margin="0,0,0,-10">
+                <Grid Height="1110" Width="240">
 
-                    <GroupBox x:Name="groupBox" Header="Mesa de Partes" FontWeight="Bold" FontSize="18" Foreground="White" Margin="0,10,0,0" Height="192" VerticalAlignment="Top">
+                    <GroupBox x:Name="groupBox" Header="Mesa de Partes" FontWeight="Bold" FontSize="18" Foreground="White" Height="192" VerticalAlignment="Top">
                         <Grid>
                             <Button x:Name="btnIngTalMun" Content="Ingresar Talonario de Municipalidad" FontWeight="Bold" FontSize="12" Margin="0,7,1,130" Click="btnIngTalMun_Click" Visibility="Hidden"/>
                             <Button x:Name="btnEntregaCom" Content="Entrega de Papeletas a Comisarías" FontSize="12" FontWeight="Bold"  Margin="0,37,0,97"  Click="btnEntregaCom_Click" Visibility="Hidden"/>
@@ -26,7 +26,7 @@
                             </Button>
                         </Grid>
                     </GroupBox>
-                    <GroupBox x:Name="groupBox_Copy" Header="Búsquedas" FontWeight="Bold" FontSize="18" Foreground="White" Margin="0,207,0,0" Height="179" VerticalAlignment="Top">
+                    <GroupBox x:Name="groupBox_Copy" Header="Búsquedas" FontWeight="Bold" FontSize="18" Foreground="White" Margin="0,192,0,0" Height="179" VerticalAlignment="Top">
                         <Grid Margin="0,0,-2,0">
                             <Button x:Name="btnBusquedaPapeleta" Content="Por Papeleta" Margin="0,10,0,111" Visibility="Hidden" Click="btnBusquedaPapeleta_Click"/>
                             <Button x:Name="btnBusquedaPlaca" Content="Por Placa" Margin="0,62,0,59" Visibility="Hidden" Click="btnBusquedaPlaca_Click"/>
@@ -36,7 +36,7 @@
                             </Button>
                         </Grid>
                     </GroupBox>
-                    <GroupBox x:Name="groupBox_Copy1" Header="Reportes" Height="174" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White" Margin="0,404,0,0" >
+                    <GroupBox x:Name="groupBox_Copy1" Header="Reportes" Height="174" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White" Margin="0,376,0,0" >
                         <Grid Height="151" VerticalAlignment="Top" Margin="0,0,-2,-7">
                             <Button x:Name="btnPapeletasIngresadas" Content="Papeletas Ingresadas" FontSize="12" Margin="0,12,0,111" Visibility="Hidden" Click="btnPapeletasIngresadas_Click"/>
                             <Button x:Name="btnExportarInfo" Content="Exportar Informacion de Papeletas" Margin="0,58,0,65" FontSize="12" Visibility="Hidden"  Click="btnExportarInfo_Click"/>
@@ -46,7 +46,7 @@
                             </Button>
                         </Grid>
                     </GroupBox>
-                    <GroupBox x:Name="groupBox_Copy2" Header="Estadísticas" Height="182" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White" Margin="0,601,0,0">
+                    <GroupBox x:Name="groupBox_Copy2" Header="Estadísticas" Height="182" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White" Margin="0,555,0,0">
                         <Grid Margin="0,0,0,0">
                             <Button x:Name="btn_PapeletasPorMes" Content="Papeletas por mes" Margin="10,10,0,116" FontSize="12" Visibility="Hidden"  Click="btn_PapeletasPorMes_Click"/>
                             <Button x:Name="btn_PapeletasComisaria" Content="Papeletas por comisaria" Margin="10,62,0,64" FontSize="12" Visibility="Hidden" Click="btn_PapeletasComisaria_Click"/>
@@ -56,12 +56,13 @@
                             </Button>
                         </Grid>
                     </GroupBox>
-                    <GroupBox x:Name="groupBox_Copy3" Header="Utilidades" Height="178" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White" Margin="0,803,0,0">
+                    <GroupBox x:Name="groupBox_Copy3" Header="Utilidades" Height="178" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="White" Margin="0,742,0,0">
                         <Grid Margin="0,0,0,0">
-                            <Button x:Name="btn_MantenimientoTablas" Content="Mantenimiento de Tablas" Margin="0,10,0,114" FontSize="12" Visibility="Hidden" Click="btn_MantenimientoTablas_Click"/>
-                            <Button x:Name="btn_ActIndices" Content="Actualizacion de Indices" Margin="0,76,0,48" FontSize="12" Visibility="Hidden" Click="btn_ActIndices_Click"/>
-                            <Button x:Name="btn_ActTablasEstadisticas" Content="Actualizacion de Tablas Estadisticas" Margin="0,43,0,81" FontSize="12" Visibility="Hidden" Click="btn_ActTablasEstadisticas_Click"/>
-                            <Button x:Name="btn_Backup" Content="BACKUP" Margin="0,109,0,15" FontSize="12" Visibility="Hidden" Click="btnBackup_Click"/>
+                            <Button x:Name="btn_MantenimientoTablas" Content="Mantenimiento de Tablas" FontSize="12" Visibility="Hidden" Click="btn_MantenimientoTablas_Click" Height="24" VerticalAlignment="Top"/>
+                            <Button x:Name="btn_ActIndices" Content="Actualizacion de Indices" Margin="0,87,0,0" FontSize="12" Visibility="Hidden" Click="btn_ActIndices_Click" Height="24" VerticalAlignment="Top"/>
+                            <Button x:Name="btnMantenimientoParametros" Content="Mantenimiento de Parametros" Margin="0,58,0,0" FontSize="12" Visibility="Hidden" Click="btnMantenimientoParametros_Click" Height="24" VerticalAlignment="Top"/>
+                            <Button x:Name="btn_ActTablasEstadisticas" Content="Actualizacion de Tablas Estadisticas" Margin="0,29,0,0" FontSize="12" Visibility="Hidden" Click="btn_ActTablasEstadisticas_Click" Height="24" VerticalAlignment="Top"/>
+                            <Button x:Name="btn_Backup" Content="BACKUP" Margin="0,118,0,0" FontSize="12" Visibility="Hidden" Click="btnBackup_Click" Height="24" VerticalAlignment="Top"/>
                             <Button x:Name="btnUtilidades" Background="Transparent"  Click="btnUtilidades_Click" >
                                 <Grid Width="218">
                                     <Image x:Name="imgBD" Source="Image/confg1.png" HorizontalAlignment="Left" Width="109" Margin="109,0,0,29"/>
@@ -70,7 +71,7 @@
                             </Button>
                         </Grid>
                     </GroupBox>
-                    <Border BorderBrush="White" BorderThickness="4" Margin="10,1002,10,46">
+                    <Border BorderBrush="White" BorderThickness="4" Margin="10,935,10,0" Height="154" VerticalAlignment="Top">
                         <Button x:Name="btnSalir" Margin="0,0,0,-4" Background="Transparent" Click="btnSalir_Click">
                             <Grid>
                                 <Image Source="Image/salirLogo.png" Margin="0,0,0,28"></Image>

@@ -17,12 +17,11 @@
                     </Grid>
                 </Button>
                 <Button x:Name="btnEfectivos" Content="Efectivos" Margin="33,67,866,10" FontSize="14" Background="Black" Foreground="White" BorderBrush="White" />
-                <Button x:Name="btnDelegaciones" Content="Delegaciones" Margin="261,67,618,10" FontSize="14" Background="Black" Foreground="White" BorderBrush="White" />
-                <Button x:Name="Infracciones" Content="Infracciones" Margin="142,67,750,10" FontSize="14" Background="Black" Foreground="White" BorderBrush="White" />
-                <Button x:Name="btnDistritos" Content="Distritos" Margin="399,67,502,10" FontSize="14" Background="Black" Foreground="White" BorderBrush="White" />
-                <Button x:Name="Parametros" Content="Parametros" Margin="636,67,257,10" FontSize="14" Background="Black" Foreground="White" BorderBrush="White" />
-                <Button x:Name="btnUsuarios" Content="Usuarios" Margin="521,67,389,10" FontSize="14" Background="Black" Foreground="White" BorderBrush="White" />
-                <Button x:Name="btnControles" Content="Controles" Margin="768,67,137,10" FontSize="14" Background="Black" Foreground="White" BorderBrush="White" />
+                <Button x:Name="btnDelegaciones" Content="Delegaciones" Margin="303,67,576,10" FontSize="14" Background="Black" Foreground="White" BorderBrush="White" />
+                <Button x:Name="Infracciones" Content="Infracciones" Margin="162,67,730,10" FontSize="14" Background="Black" Foreground="White" BorderBrush="White" />
+                <Button x:Name="btnDistritos" Content="Distritos" Margin="458,67,443,10" FontSize="14" Background="Black" Foreground="White" BorderBrush="White" />
+                <Button x:Name="Parametros" Content="Parametros" Margin="720,67,173,10" FontSize="14" Background="Black" Foreground="White" BorderBrush="White" />
+                <Button x:Name="btnUsuarios" Content="Usuarios" Margin="592,67,318,10" FontSize="14" Background="Black" Foreground="White" BorderBrush="White" />
             </Grid>
         </Border>
 
